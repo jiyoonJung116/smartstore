@@ -1,6 +1,6 @@
 package dto;
 
-public class 카테고리Dto {
+public class CategoryDto {
 	private String large;
 	private String middle;
 	private String sub;
