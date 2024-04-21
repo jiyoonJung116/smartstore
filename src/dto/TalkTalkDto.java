@@ -1,6 +1,6 @@
 package dto;
 
-public class 톡톡Dto {
+public class TalkTalkDto {
 	private String sellerId;	//판매자ID
 	private String senderId;	//발신자ID
 	private String talkContent;	//톡톡내용
@@ -9,14 +9,14 @@ public class 톡톡Dto {
 	private String talkTime;  // date --> Stringz
 	
 
-	public 톡톡Dto(String sellerId, String senderId, String talkContent, boolean readStatus, String talkTime) {
+	public TalkTalkDto(String sellerId, String senderId, String talkContent, boolean readStatus, String talkTime) {
 		this.sellerId = sellerId;
 		this.senderId = senderId;
 		this.talkContent = talkContent;
 		this.readStatus = readStatus;
 		this.talkTime = talkTime;
 	}
-	public 톡톡Dto(String sellerId, String senderId, String talkContent, String customer_id, boolean readStatus, String talkTime) {
+	public TalkTalkDto(String sellerId, String senderId, String talkContent, String customer_id, boolean readStatus, String talkTime) {
 		this(sellerId, senderId, talkContent,readStatus, talkTime);
 		this.customer_id = customer_id;
 	}
