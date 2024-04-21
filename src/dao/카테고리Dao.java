@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.카테고리Dto;
+import dto.CategoryDto;
 
-public class 카테고리Dao {
-	public ArrayList<카테고리Dto> cate1() {
+public class CategoryDao {
+	public ArrayList<CategoryDto> cate1() {
 		Connection conn = Jdbc.connect();
-		ArrayList<카테고리Dto> catList = new ArrayList<카테고리Dto>();
+		ArrayList<CategoryDto> catList = new ArrayList<CategoryDto>();
 		String sql = "SELECT DISTINCT(large) FROM category";
 
 		PreparedStatement pstmt = null;
@@ -21,7 +21,7 @@ public class 카테고리Dao {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				String large = rs.getString("large");
-				카테고리Dto dto = new 카테고리Dto(large);
+				CategoryDto dto = new CategoryDto(large);
 				catList.add(dto);
 			}
 		} catch (SQLException e) {
@@ -39,9 +39,9 @@ public class 카테고리Dao {
 	}
 	// 카테고리 조회 메서드(중분류 조회)
 	// 파라미터 cate2(String) : 대분류 입력
-	public ArrayList<카테고리Dto> cate2(String large) {
+	public ArrayList<CategoryDto> cate2(String large) {
 		Connection conn = Jdbc.connect();
-		ArrayList<카테고리Dto> catList = new ArrayList<카테고리Dto>();
+		ArrayList<CategoryDto> catList = new ArrayList<CategoryDto>();
 		String sql = "SELECT DISTINCT(middle) FROM category WHERE large = ?";
 		PreparedStatement pstmt = null;
 		try {
@@ -56,7 +56,7 @@ public class 카테고리Dao {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				String middle = rs.getString("middle");
-				카테고리Dto dto = new 카테고리Dto(large,middle);
+				CategoryDto dto = new CategoryDto(large,middle);
 				catList.add(dto);
 			}
 		} catch (SQLException e) {
@@ -75,9 +75,9 @@ public class 카테고리Dao {
 
 	// 카테고리 조회 메서드(소분류 조회)
 	// 파라미터 cate2(String,String) : 대분류,중분류 입력
-	public ArrayList<카테고리Dto> cate3(String large, String middle) {
+	public ArrayList<CategoryDto> cate3(String large, String middle) {
 		Connection conn = Jdbc.connect();
-		ArrayList<카테고리Dto> catList = new ArrayList<카테고리Dto>();
+		ArrayList<CategoryDto> catList = new ArrayList<CategoryDto>();
 		String sql = "SELECT DISTINCT sub FROM category WHERE large = ? AND middle = ?";
 		PreparedStatement pstmt = null;
 		try {
@@ -93,7 +93,7 @@ public class 카테고리Dao {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				String sub = rs.getString("sub");
-				카테고리Dto dto = new 카테고리Dto(large,middle,sub);
+				CategoryDto dto = new CategoryDto(large,middle,sub);
 				catList.add(dto);
 			}
 		} catch (SQLException e) {
@@ -112,9 +112,9 @@ public class 카테고리Dao {
 
 	// 카테고리 조회 메서드(세분류 조회)
 	// 파라미터 cate2(String,String,String) : 대분류,중분류,소분류 입력
-	public ArrayList<카테고리Dto> cate4(String large, String middle, String sub) {
+	public ArrayList<CategoryDto> cate4(String large, String middle, String sub) {
 		Connection conn = Jdbc.connect();
-		ArrayList<카테고리Dto> catList = new ArrayList<카테고리Dto>();
+		ArrayList<CategoryDto> catList = new ArrayList<CategoryDto>();
 		String sql = "SELECT small FROM category WHERE large = ? AND middle = ? AND sub =?";
 		PreparedStatement pstmt = null;
 		try {
@@ -132,7 +132,7 @@ public class 카테고리Dao {
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				String small = rs.getString("small");
-				카테고리Dto dto = new 카테고리Dto(large,middle,sub,small);
+				CategoryDto dto = new CategoryDto(large,middle,sub,small);
 				catList.add(dto);
 			}
 		} catch (SQLException e) {
