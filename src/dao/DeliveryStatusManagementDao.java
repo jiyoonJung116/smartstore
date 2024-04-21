@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.배송현황관리Dto;
+import dto.DeliveryStatusManagementDto;
 
-public class 배송현황관리Dao {
-	public ArrayList<배송현황관리Dto> get배송현황관리list(String menu, String date, String date2, String choose, String name, String ds, long n) {
+public class DeliveryStatusManagementDao {
+	public ArrayList<DeliveryStatusManagementDto> getDeliveryStatusManagementList(String menu, String date, String date2, String choose, String name, String ds, long n) {
 		if(menu==null)
 			menu="결제일";
 		if(choose==null)
@@ -18,7 +18,7 @@ public class 배송현황관리Dao {
 			ds="";
 		
 		Connection conn = Jdbc.connect();
-		ArrayList<배송현황관리Dto> listdeliveryMng = new ArrayList<배송현황관리Dto>();
+		ArrayList<DeliveryStatusManagementDto> listdeliveryMng = new ArrayList<DeliveryStatusManagementDto>();
 		String sql = "SELECT po.product_order_num, d.delivery_num, d.delivery_way, p.deliver_company, "
 				+ "d.invoice_num, m.name, po.buyer_id, po.recipient_name, "
 				+ "po.order_status, po.pay_date, p.pnumber, p.pname, d.delivery_deadline, d.delivery_date, p.delivery_cost "
@@ -85,7 +85,7 @@ public class 배송현황관리Dao {
 				String dw = rs.getString("delivery_way");
 				String dc = rs.getString("deliver_company");
 				String in = rs.getString("invoice_num");
-				배송현황관리Dto dto = new 배송현황관리Dto(pon, den, dd, os, dw, dc, in);
+				DeliveryStatusManagementDto dto = new DeliveryStatusManagementDto(pon, den, dd, os, dw, dc, in);
 				listdeliveryMng.add(dto);
 			}
 		} catch (SQLException e) {
@@ -101,9 +101,9 @@ public class 배송현황관리Dao {
 		}
 		return listdeliveryMng;
 	}
-	public ArrayList<배송현황관리Dto> get배송상태list(String sellerId, String ds) {
+	public ArrayList<DeliveryStatusManagementDto> getDeliveryStatusList(String sellerId, String ds) {
 		Connection conn = Jdbc.connect();
-		ArrayList<배송현황관리Dto> listdeliveryMng = new ArrayList<배송현황관리Dto>();
+		ArrayList<DeliveryStatusManagementDto> listdeliveryMng = new ArrayList<DeliveryStatusManagementDto>();
 		String sql = "SELECT po.product_order_num, d.delivery_num, d.delivery_way, p.deliver_company, "
 				+ "d.invoice_num, m.name, po.buyer_id, po.recipient_name, "
 				+ "po.order_status, po.pay_date, p.pnumber, p.pname, d.delivery_deadline, d.delivery_date, p.delivery_cost "
@@ -131,7 +131,7 @@ public class 배송현황관리Dao {
 				String dw = rs.getString("delivery_way");
 				String dc = rs.getString("deliver_company");
 				String in = rs.getString("invoice_num");
-				배송현황관리Dto dto = new 배송현황관리Dto(pon, den, dd, os, dw, dc, in);
+				DeliveryStatusManagementDto dto = new DeliveryStatusManagementDto(pon, den, dd, os, dw, dc, in);
 				listdeliveryMng.add(dto);
 			}
 		} catch (SQLException e) {
