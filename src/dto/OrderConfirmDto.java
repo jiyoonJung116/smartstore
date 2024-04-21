@@ -1,6 +1,6 @@
 package dto;
 
-public class 주문확인Dto {
+public class OrderConfirmDto {
 	private long pon;	//상품주문번호
 	private long den;	//주문번호
 	private String dw;	//배송방법
@@ -29,7 +29,7 @@ public class 주문확인Dto {
 	private String ra;	//출시일
 	private String odt;	//주문일자
 
-	public 주문확인Dto(long pon, long den, String dw, String dc, String in, String na, String bi, String rn, String os,
+	public OrderConfirmDto(long pon, long den, String dw, String dc, String in, String na, String bi, String rn, String os,
 			String payd, long pnumber, String pname, String dd, String dda, String dct) {
 		this.pon = pon;
 		this.den = den;
