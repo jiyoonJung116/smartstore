@@ -1,6 +1,6 @@
 package dto;
 
-public class 반품Dto {
+public class ReturnGoodsDto {
 	private long pon;	//상품주문번호
 	private long den;	//주문번호
 	private String os;	//주문상태
@@ -27,7 +27,7 @@ public class 반품Dto {
 	private String phone;	//구매자 연락처
 	private String da;	//배송지
 	private int postn;	//우편번호
-	public 반품Dto(long pon, long den, String os, String rss, String pd, String rrd, String rr, String rad, String rcd,
+	public ReturnGoodsDto(long pon, long den, String os, String rss, String pd, String rrd, String rr, String rad, String rcd,
 			long pnumber, String pc, String pn, String cs, String sales, int pa, String opp, int p, int tp, String na,
 			String id, String rn, String dct, int dc, String phone, String da, int postn) {
 		super();
