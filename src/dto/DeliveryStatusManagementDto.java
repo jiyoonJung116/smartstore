@@ -1,6 +1,6 @@
 package dto;
 
-public class 배송현황관리Dto {
+public class DeliveryStatusManagementDto {
 	private long pon;	//상품주문번호
 	private long den;	//주문번호
 	private String dd;	//발송처리일
@@ -9,7 +9,7 @@ public class 배송현황관리Dto {
 	private String dc;	//택배사
 	private String in;	//송장번호
 	
-	public 배송현황관리Dto(long pon, long den, String dd, String os, String dw, String dc, String in) {
+	public DeliveryStatusManagementDto(long pon, long den, String dd, String os, String dw, String dc, String in) {
 		this.pon = pon;
 		this.den = den;
 		this.dd = dd;
