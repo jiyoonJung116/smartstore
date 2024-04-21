@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function getParamMap(queryString) {
+		let splited = queryString.replace("?","").split(/[=?&]/);
+		let param = {};
+		for(let i = 0; i<splited.length; i++){
+			param[splited[i]]=splited[++i];
+		}
+		return param;
+	}
+	
+	let queryString = location.search;
+	const paramObj = getParamMap(queryString);
+	let id = paramObj.id;
+	let pw = paramObj.pw;
+	
+	if(id=="jy"&&pw=="1234"){
+		alert("로그인 성공!");
+		location.href = "Ex24.html";
+	}else {
+		alert("로그인 실패");
+		location.href="Test_.html";
+	}
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

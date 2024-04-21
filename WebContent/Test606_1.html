@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Toast UI #1</title>
+	<link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+	<script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+	<style>
+		.custom-theme .tui-grid-cell {
+			background-color: #f8f8f8; /* 셀 배경색 */
+			border-color: #e0e0e0; /* 셀 테두리 색상 */
+		}
+
+		.custom-theme .tui-grid-header {
+			background-color: #f8f8f8; /* 헤더 배경색 */
+			border-color: #e0e0e0; /* 헤더 테두리 색상 */
+		}
+
+		.custom-theme .tui-grid-selected-header {
+			background-color: #e0e0e0; /* 선택된 헤더 배경색 */
+		}
+	</style>
+</head>
+<body>
+	<div style="width:1300px; height:80%;">
+		<div id="grid"></div>
+	</div>
+	<script>
+		window.onload = function() {
+			var Grid = tui.Grid;
+		
+			var instance = new Grid({
+			  el: document.getElementById('grid'), // Container element
+			  scrollX: true,
+			  columnOptions: {
+				    frozenCount: 4,
+				    frozenBorderWidth: 2
+			  },
+			  columns: [
+			    {
+			   	  width: 147,
+			      header: '상품주문번호',
+			      name: 'productordernum'
+			    },
+			    // ...다른 컬럼들...
+			    {
+						  width: 147,
+						  header: '출고지',
+						  name: 'shippingplace'
+						},
+						{
+						  width: 147,
+						  header: '주문일시',
+						  name: 'orderdate'
+						}
+			  ],
+			  data: [
+			    {
+			      productordernum: '2023041728844451',
+			      ordernum: '2023041790123011',
+			      deliveryway_purchase: '택배,등기,소포',
+			      deliverycompany: 'CJ대한통운',
+			      invoicenum: '123456789',
+			      senddate: '2023-04-25',
+			      buyer: '만채',
+			      buyerid: 'manchae1106',
+			      recipient: '만채',
+			      orderstatus: '결제완료',
+			      paydate: '2023.04.17 14:18:50',
+			      productnum: '4897977260',
+			      pname : '가구수평패드',
+			      optioninfo : '0',
+			      optioncode : '0',
+			      quantity : '1',
+			      oprice : 'null',
+			      productprice : '10',
+				  totalprice : '10',
+				  orderconfirmdate : '2023.04.18 14:18:50',
+				  deliverydeadline : '2023.04.25 14:18:50',
+				  shipmentprocessing : '2023-04-25',
+				  deliveryfeetype : '무료',
+				  shippingfeetype : '무료',
+				  totalshippingcost : '0',
+				  pcode :'1',
+				  receiptphone : '010-1234-5678',
+				  defaultdelivery : '서울특별시 마포구',
+				  detaildelivery : '신촌동 325',
+				  buyerphone :'010-1234-5678',
+				  postnum : '02654',
+				  postmessage : '안전하게 배송해주세요!',
+				  shippingplace : '서울특별시 마포구',
+				  orderdate : '2023.04.17 14:18:47'
+			    }
+			  ]
+			});
+		
+			Grid.applyTheme('custom-theme', {
+			      cell: {
+			        normal: {
+			          background: '#fff',
+			          border: '#e0e0e0',
+			          showVerticalBorder: false,
+			          showHorizontalBorder: true
+			        },
+			        header: {
+			          background: '#fff',
+			          border: '#e0e0e0'
+			        },
+			        selectedHeader: {
+			          background: '#e0e0e0'
+			        }
+			      }
+			    });
+		}
+	</script>
+</body>
+</html>

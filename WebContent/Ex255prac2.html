@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.7.0.min.js"></script>
+<script>
+	function calc_price() {
+		$(".unit_price").each(function(index, item) {
+			let u = Number($(item).text().replace("원", ""));
+			let q = Number($(item).parent().find(".qty").val());
+
+			$(item).parent().find(".price").html("<b>" + (u * q) + "</b>원");
+		});
+	}
+	$(function(){
+		$(".plus").click(function(){
+			let q = $(this).parent().find(".qty").val();
+			$(this).parent().find(".qty").val(Number(q)+1);
+			calc_price();
+		});
+		$(".minus").click(function(){
+			let q = $(this).parent().find(".qty").val();
+			if(Number(q)>=1){
+				$(this).parent().find(".qty").val(Number(q)-1);
+			}
+			calc_price();
+		});
+		calc_price();
+	});
+</script>
+<style>
+td, tr {
+	border: 1px solid grey;
+	padding: 8px;
+}
+
+td>img {
+	width: 150px;
+}
+
+table {
+	border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>품목</td>
+			<td>단가</td>
+			<td>수량</td>
+			<td>가격</td>
+		</tr>
+		<tr>
+			<td><img src="Images/육개장.png" />
+			<td>700원</td>
+			<td>
+				<button type="button" class="plus">+</button> <input type="text"
+				class="qty" value="0">
+				<button type="button" class="minus">-</button>
+			</td>
+			<td class="price"></td>
+		</tr>
+		<tr>
+			<td><img src="Images/햇반.png" />
+			<td>1500원</td>
+			<td>
+				<button type="button" class="plus">+</button> <input type="text"
+				class="qty" value="0">
+				<button type="button" class="minus">-</button>
+			</td>
+			<td class="price"></td>
+		</tr>
+		<tr>
+			<td><img src="Images/초코송이.png" />
+			<td>1000원</td>
+			<td>
+				<button type="button" class="plus">+</button> <input type="text"
+				class="qty" value="0">
+				<button type="button" class="minus">-</button>
+			</td>
+			<td class="price"></td>
+		</tr>
+	</table>
+</body>
+</html>

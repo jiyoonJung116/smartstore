@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+<script>
+function changePhone1(){
+	const phone1 = document.getElementById("phone1");
+	if(phone.length===3){
+		document.getElementById("phone2").focus();
+	}
+}
+function changePhone2(){
+	const phone2 = document.getElementById("phone2");
+	if(phone2.length===4){
+		document.getElementById("phone3").focus();
+	}
+}
+function changePhone3(){
+	const phone2 = document.getElementById("phone3");
+	if(phone2.length===4){
+		document.getElementById("sendMessage").focus();
+		document.getElementById("sendMessage").setAttribute("style","background-color:yellow;")
+		document.getElementById("sendMessage").disabled=false;
+	}
+}
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.seller-list-border>li:first-child>div.fl:nth-child(1) {
+	width: 170px;
+}
+
+.seller-list-border .column_name_color {
+	color: #767a83;
+}
+
+.seller-list-border>li:first-child>div.fl:nth-child(2) {
+	width: 117px;
+}
+
+.seller-list-border>li:first-child>div.fl:nth-child(3) {
+	width: 190px;
+}
+
+.seller-list-border>li:first-child>div.fl:nth-child(4) {
+	width: 237px;
+}
+
+.seller-list-border>li:first-child>div.fl:nth-child(4)>label>input[type="text"]
+	{
+	width: 180px;
+}
+
+.seller-list-border>li:first-child>div.fl:nth-child(5) {
+	width: 245px;
+	margin-left: 10px;
+}
+
+.seller-list-border .label_style {
+	padding: 7px 5px 7px 0;
+}
+
+.seller-list-border textarea::placeholder {
+	color: #8F95A0;
+}
+
+.seller-list-border input[type="radio"] {
+	display: none;
+}
+
+.seller-list-border input[type="radio"]:checked+span {
+	background-position: 0 -85px !important;
+	background:
+		url("https://sell.smartstore.naver.com/images/global/sp_input.png?dd5622921923e17cd4227084810a561d")
+		no-repeat;
+	background-size: 22px auto;
+	content: "";
+}
+
+.seller-list-border input[type="radio"]:NOT(:checked)+span {
+	background-color: #fff;
+	border: 1px solid #e0e4e8;
+}
+
+.seller-list-border input[type="radio"]+span {
+	border-radius: 50%;
+	position: absolute;
+	left: -25px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+.input-content labela input[type="radio"]+span {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 25px;
+	top: 4px;
+	background-color: #fff;
+	border: 1px solid #e0e4e8;
+	border-radius: 50px;
+}
+
+.seller-list-border label {
+	position: relative;
+	line-height: 33px;
+}
+
+.form_style {
+	padding: 4px 10px;
+	box-sizing: border-box;
+	font-size: 12px;
+	border: 1px solid #dbdde2;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	color: #4d5159;
+}
+
+.form_style:focus {
+	border-color: #2fd160;
+	outline: 0;
+}
+
+.icon_style {
+	position: absolute;
+	top: 30px;
+}
+
+.mr35 {
+	margin-right: 35px;
+}
+
+.fl {
+	float: left;
+}
+
+.liststyle{
+	list-style: none;
+}
+</style>
+</head>
+<body>
+	<ul class="seller-list-border">
+		<li class="liststyle">
+			<div class="fl">
+				<label class="column_name_color">선택</label>
+			</div>
+			<div class="fl mr35">
+				<label class="label_style"> <input type="radio" name="choose"
+					class="form_style" checked /> 전체 <span></span>
+				</label>
+			</div>
+			<div class="fl mr35">
+				<label class="label_style"> <input type="radio" name="choose"
+					class="form_style" /> 무료배송 <span></span>
+				</label>
+			</div>
+			<div class="fl mr35">
+				<label class="label_style"> <input type="radio" name="choose"
+					class="form_style" /> 즉시할인 <span></span>
+				</label>
+			</div>
+			<div class="fl mr35">
+				<label class="label_style"> <input type="radio" name="choose"
+					class="form_style" /> 리뷰 <span></span>
+				</label>
+			</div>
+			<div style="clear: both;"></div>
+		</li>
+	</ul>
+</body>
+</html>

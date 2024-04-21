@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JS(Query String)</title>
+</head>
+<body>
+	<script>
+		function getParamMap(queryString) {
+			let splited = queryString.replace("?", "").split(/[=?&]/);
+			let param = {};
+			for(let i = 0; i < splited.length; i++) {
+				param[splited[i]] = splited[++i];
+			}
+			return param;
+		}
+		
+		let queryString = location.search;			// ?id=HK&pw=A
+		//alert("queryString: "+queryString);
+		const paramObj = getParamMap(queryString);
+		//alert(paramObj.id + "," + paramObj.pw);
+	</script>
+	<h1>
+		로그인! 되었다고 치고.
+	</h1>
+	<h2>
+		아이디 : <script>document.write(paramObj.id);</script> <br/>
+		비번 : <script>document.write(paramObj.pw);</script>
+	</h2>
+	<script>
+		alert("들어가");
+	</script>
+</body>

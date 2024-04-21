@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.formstyle {
+	margin-left: 41px;
+}
+
+.formstyle1 {
+	margin-left: 25px;
+}
+.formstyle2 {
+	    margin-left: 58px;
+}
+.formstyle3 {
+	       margin-left: 44px;
+}
+.formstyle4 {
+    margin-left: 136px;
+}
+.formstyle5 {
+    width : 960px;
+    border : 3px solid #000;
+}
+</style>
+</head>
+
+<body>
+	<div class="formstyle5">
+	<form action="next_page.html">
+		<div>
+			아이디 <input type="text" placeholder="아이디" class="formstyle">
+		</div>
+		<div>
+			비밀번호 <input type="password" placeholder="비밀번호"  class="formstyle1">
+		</div>
+		<div>
+			이름 <input type="text" placeholder="이름" class="formstyle2">
+		</div>
+		<div>
+			나이 <input type="text" placeholder="나이" class="formstyle2">
+		</div>
+		<div>
+			이름 <input type="text" placeholder="이름" class="formstyle2">@ <input type="text"
+				placeholder="직접 입력">
+		</div>
+		<div>성별
+			<label class="formstyle2"><input type="radio" name="gender">여자</label> <label><input
+				type="radio" name="gender">남자</label>
+		</div>
+		<div> 취미
+			<label class="formstyle2"><input type="checkbox">운동</label> <label><input
+				type="checkbox">영화</label> <label><input type="checkbox">게임</label>
+			<label><input type="checkbox">책</label>
+		</div>
+		<div>
+			서식지 <select class="formstyle3">
+				<option>서식지 선택</option>
+				<option>서울</option>
+				<option>대전</option>
+				<option>부산</option>
+				<option>광주</option>
+				<option>인천</option>
+				<option>제주</option>
+				<option>국외</option>
+			</select>
+		</div>
+		</br>
+		<div>
+			개인정보취급방침에 동의함 <label><input type="radio" name="agree">동의함</label>
+			<label><input type="radio" name="agree">동의안함</label>
+		</div>
+		<div class="formstyle4">
+			<button type="submit">제출하기</button>
+			<button type="reset">내용 비우기</button>
+		</div>
+	</form>
+	</div>
+</body>
+</html>

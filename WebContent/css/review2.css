@@ -1,0 +1,858 @@
+@charset "UTF-8";
+
+body {
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+	font-family: 나눔고딕, NanumGothic, Helvetica Neue, Helvetica,
+		AppleSDGothicNeo-Regular, Arial, 맑은고딕, malgun gothic, 돋움, dotum,
+		sans-serif;
+	line-height: 20px;
+	color: #4d5159;
+	background-color: #edf0f5;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+div.seller-sub-title {
+	border-bottom: 1px solid #e3e7ee;
+	background-color: #fff;
+	height: 60px;
+	width: 1693px;
+}
+
+.ui-datepicker-trigger {
+	background-color: white;
+	border: 1px solid #dbdde2;
+	position: relative;
+	top: 10px;
+	height: 34px;
+}
+
+div.seller-sub-title h2.title {
+	padding-left: 56px;
+	line-height: 59px;
+	font-size: 20px;
+	text-align: left;
+	position: relative;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #303236;
+	font-weight: 400;
+	word-break: keep-all;
+}
+
+div .navbar {
+	position: absolute;
+	display: inline-block;
+	width: 26px;
+	height: 60px;
+	margin-bottom: 0;
+	background-color: #edf0f5;
+	border-right: 1px solid #dbdde2;
+	border-bottom: 1px solid #dbdde2;
+	vertical-align: top;
+	text-align: center;
+}
+
+.navbar:after {
+	position: absolute;
+	top: 25px;
+	left: 10px;
+	width: 5px;
+	height: 9px;
+	background:
+		url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c)
+		no-repeat;
+	content: "";
+	background-position: -180px -100px;
+}
+
+.seller-sub-content {
+	padding: 10px 25px 8px;
+}
+
+.panel-seller {
+	position: relative;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.panel, .panel-seller {
+	border: 1px solid #dbdde2;
+	box-shadow: none;
+}
+
+.panel {
+	border-radius: 0;
+}
+
+.panel-body {
+	padding: 20px 35px;
+}
+
+.seller-search-section {
+	margin: -20px -35px 0;
+	padding: 20px 35px 0;
+	background-color: #f8f9fd;
+}
+
+.seller-list-border {
+	margin-top: -15px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.seller-list-border li:nth-first-child {
+	border-top: 0;
+}
+
+.seller-list-border li {
+	position: relative;
+	padding: 15px 0;
+	border-top: 1px solid #e9edf2;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.seller-list-border li .control-label {
+	width: 170px;
+	color: #767a83;
+	padding: 7px 5px 7px 0;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
+.seller-list-border li .control-label+.input-content {
+	padding-left: 170px;
+}
+
+.form-inline {
+	margin-bottom: -10px;
+}
+
+.form-inline .form-group {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn-toolbar {
+	margin-left: 0;
+}
+
+#div_5113 {
+	margin-bottom: 10px;
+}
+
+.ml4 {
+	margin-left: -4px;
+}
+
+.selectday {
+	position: relative;
+	left: 23px;
+	font-size: 12px;
+	min-width: 50px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #d2d5dc;
+	line-height: 32px;
+	padding: 0;
+	color: #4d5159;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.selectday:focus {
+	color: #00c73c !important;
+	border-color: #00c73c !important;
+}
+
+#div_date_date>div:nth-child(1) input[type="text"], #div_date_date>div:nth-child(3) input[type="text"]
+	{
+	font-size: 14px !important;
+	width: 134px;
+	height: 30px;
+	color: #303236;
+	border: 1px solid #dbdde2;
+	background-color: #fff;
+	line-height: 28px;
+	text-indent: 10px;
+}
+
+#div_date_date>div {
+	margin-top: 0;
+}
+
+#div_date_date>div:nth-child(2), #div_date_date>div:nth-child(5) {
+	width: 22px;
+	height: 32px;
+	margin-left: 9px;
+}
+
+#div_date_date>div:nth-child(3) {
+	text-align: center;
+	font-size: 15px;
+	line-height: 32px;
+}
+
+div:nth-child(5) img {
+	margin-left: 4px;
+	font-size: 12px;
+	margin: -1px 0 1px;
+	vertical-align: middle;
+}
+
+.div_date_st {
+	margin-left: 27px;
+	position: relative;
+	bottom: 10px;
+}
+
+.seller-input label {
+	position: relative;
+	margin-bottom: 0;
+	padding: 5px 16px 5px 26px;
+	line-height: 24px;
+}
+
+.seller-input label input {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	pointer-events: none;
+}
+
+input[type=checkbox], input[type=radio] {
+	margin: 4px 0 0;
+	line-height: normal;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+.seller-input label input:not(:checked)+span {
+	background-color: #fff;
+	border: 1px solid #e0e4e8;
+}
+
+.seller-input label input[type=checkbox]+span, .seller-input label input[type=radio].checkbox+span
+	{
+	border-radius: 0;
+}
+
+.seller-input label input+span {
+	position: absolute;
+	left: 0;
+	top: 7px;
+	width: 20px;
+	height: 20px;
+}
+
+.
+.seller-input label input[type=checkbox]:checked+span, .seller-input label input[type=radio].checkbox:checked+span
+	{
+	background-position: 0 -60px !important;
+}
+
+.seller-input label input:focus+span {
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.seller-input label input:checked+span {
+	background:
+		url(https://sell.smartstore.naver.com/images/global/sp_input.png?dd5622921923e17cd4227084810a561d)
+		no-repeat;
+	background-size: 22px auto;
+	content: "";
+}
+
+input[type=checkbox][disabled] {
+	alignment-baseline: middle;
+	cursor: not-allowed;
+}
+
+.seller-input label input:checked:disabled+span {
+	border: none;
+	background-color: transparent;
+	opacity: .6;
+}
+
+.pc-inline-block {
+	display: inline-block;
+}
+
+.mg-right-lg {
+	margin-right: 15px !important;
+}
+
+.form-inline .form-group.form-group-bar {
+	display: inline-block;
+	width: 2px;
+	height: 14px;
+	margin: 8px 20px 18px 10px;
+	background-color: #eaebef;
+	vertical-align: middle;
+}
+
+.select_style {
+	background-color: #fff;
+	padding: 4px 30px 4px 10px;
+	vertical-align: middle;
+	border: 1px solid #dbdde2;
+	line-height: 24px;
+	width: 170px;
+	cursor: pointer;
+	color: #4d5159;
+}
+
+.item {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.item:after {
+	right: 10px;
+	border-color: #767a83 transparent transparent;
+	content: " ";
+	display: block;
+	top: 50%;
+	margin-top: -3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 5px 0px;
+	position: relative;
+	left: 182px;
+	bottom: 10px;
+}
+
+.select_dropdown {
+	display: none;
+	color: #4d5159;
+	margin-top: -1px;
+	border: 1px solid #e3e7ee;
+	z-index: 100;
+	line-height: 24px;
+	font-size: 12px;
+	margin: 2px 0 0;
+	color: #4d5159;
+	background: #fff;
+	word-break: break-all;
+	height: auto;
+	padding: 0;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.select_dropdown_content {
+	word-break: break-all;
+	font-size: 12px;
+	padding: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 200px;
+}
+
+.select_dropdown[data-selectable], .option {
+	padding: 4px 10px;
+	line-height: 24px;
+	font-size: 12px;
+}
+
+.dropbox1, .dropbox2 {
+	cursor: pointer;
+}
+
+.option {
+	cursor: pointer;
+}
+
+.form_style {
+	padding: 4px 10px;
+	box-sizing: border-box;
+	font-size: 12px;
+	border: 1px solid #dbdde2;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	color: #4d5159;
+}
+
+#textarea {
+	overflow: hidden;
+	width: 180px;
+	height: 80px;
+}
+
+.panel-footer {
+	padding: 0 35px;
+	background-color: #fff;
+	border-top: 1px solid #fff;
+}
+
+.panel-seller .panel-footer .seller-btn-area {
+	margin-top: 0;
+}
+
+.seller-btn-area {
+	position: relative;
+	margin: 20px 0 15px;
+	text-align: center;
+}
+
+.botton_style {
+	width: 785px;
+	position: relative;
+	bottom: 2px;
+}
+
+#searchbutton {
+	color: #fff;
+	position: relative;
+	right: -92px;
+	border-color: #00a933;
+	background-color: #00c73c;
+	font-size: 14px;
+	line-height: 36px;
+	width: 110px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	margin-left: 575px;
+}
+
+#resetbutton {
+	color: #666;
+	position: relative;
+	right: 570px;
+	border-color: #dbdde2;
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 36px;
+	width: 110px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	margin-left: 575px;
+}
+
+.panel-title {
+	color: #303236;
+	line-height: 30px;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.text-primary {
+	color: #00c73c;
+}
+/*---------------------------------------------------------*/
+.pd_date {
+	width: 140px;
+	height: 30px;
+	border: 1px solid #dbdde2;
+	background: #fff;
+	font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "돋움", Dotum,
+		Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 28px;
+	color: #4d5159;
+}
+
+.pd_date:before {
+	position: relative;
+	display: inline-block;
+	top: 12%;
+	left: 122px;
+	width: 9px;
+	height: 6px;
+	transform: translateY(-50%);
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAYAAAARx7TFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDQ5MjhBMDNFNDhGMTFFNzlCOUZGQkUwRkZDRjEwQTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ5MjhBMDRFNDhGMTFFNzlCOUZGQkUwRkZDRjEwQTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NDkyOEEwMUU0OEYxMUU3OUI5RkZCRTBGRkNGMTBBNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NDkyOEEwMkU0OEYxMUU3OUI5RkZCRTBGRkNGMTBBNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvFBIysAAAAtSURBVHjaYpw4c81/BgKAiYEIAFLESEANI8wkXAoZ0a1jxKYAm5sYsWkACDAAdWcC6TdijucAAAAASUVORK5CYII=)
+		no-repeat;
+	content: '';
+}
+
+.pdsel_date {
+	position: relative;
+	height: 30px;
+	top: -36px;
+	width: 140px;
+	border: 1px solid black;
+	background: #fff;
+	opacity: 0;
+}
+
+.selectoption {
+	appearance: none;
+}
+
+.pd_cnt {
+	width: 140px;
+	height: 30px;
+	border: 1px solid #dbdde2;
+	background: #fff;
+	font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "돋움", Dotum,
+		Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 28px;
+	color: #4d5159;
+	margin-left: 5px;
+}
+
+.pd_cnt:before {
+	position: relative;
+	display: inline-block;
+	top: 12%;
+	left: 81px;
+	width: 9px;
+	height: 6px;
+	transform: translateY(-50%);
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAYAAAARx7TFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDQ5MjhBMDNFNDhGMTFFNzlCOUZGQkUwRkZDRjEwQTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ5MjhBMDRFNDhGMTFFNzlCOUZGQkUwRkZDRjEwQTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NDkyOEEwMUU0OEYxMUU3OUI5RkZCRTBGRkNGMTBBNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NDkyOEEwMkU0OEYxMUU3OUI5RkZCRTBGRkNGMTBBNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvFBIysAAAAtSURBVHjaYpw4c81/BgKAiYEIAFLESEANI8wkXAoZ0a1jxKYAm5sYsWkACDAAdWcC6TdijucAAAAASUVORK5CYII=)
+		no-repeat;
+	content: '';
+}
+
+.pd_excel {
+	height: 30px;
+	border: 1px solid #dbdde2;
+	background: #fff;
+	font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "돋움", Dotum,
+		Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 28px;
+	color: #4d5159;
+	margin-left: 5px;
+}
+
+.panel_f {
+	height: 70px;
+	padding: 20px 35px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ebeef4;
+}
+
+.h34 {
+	height: 34px;
+}
+
+.h30 {
+	height: 30px;
+}
+
+.excel-icon {
+	margin: -1px 6px 1px;
+	width: 16px;
+	height: 16px;
+	background-position: -330px -100px !important;
+	background:
+		url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c)
+		no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.form_style:focus {
+	border-color: #2fd160;
+	outline: 0;
+}
+
+.panel-body {
+	padding: 20px 35px;
+}
+
+.mg-bottom {
+	margin-bottom: 10px !important;
+}
+
+.mg-top-reset {
+	margin-top: 0 !important;
+}
+
+.toast_txt {
+	margin: 10px 0 0;
+	font-size: 12px;
+	line-height: 18px;
+	color: #00c73c;
+}
+
+.seller-btn-group {
+	display: table;
+	width: 100%;
+}
+
+.seller-btn-left {
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+}
+
+.seller-btn-group .seller-btn-left .form-inline .form-group {
+	margin-right: 15px;
+}
+
+.form-inline .form-group .btn {
+	margin-bottom: 0;
+}
+
+.btn-sm {
+	padding: 2px 10px;
+	font-size: 12px;
+	line-height: 24px;
+	border-radius: 0;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #00c73c;
+	border-color: #00ae34;
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+}
+
+.btn-default {
+	color: #666;
+	background-color: #fff;
+	border-color: #dbdde2;
+}
+
+.text-info {
+	color: #1088ed;
+}
+
+.seller-rating {
+	display: inline-block;
+	position: relative;
+	margin: -1px 0 1px;
+	vertical-align: middle;
+}
+
+.seller-rating .seller-rating-total {
+	display: block;
+	background-position: 0 -15px;
+}
+
+.seller-rating .seller-rating-total, .seller-rating .seller-rating-value
+	{
+	width: 70px;
+	height: 15px;
+	background-color: transparent;
+	background-image:
+		url(https://sell.smartstore.naver.com/images/kr/sp_icon_rating.png?77d7e8f79d9c9a57bb4886b5056a99cd);
+	background-repeat: no-repeat;
+	background-size: 70px auto;
+}
+
+.seller-rating .seller-rating-value {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-position: 0 0;
+}
+
+.tui-grid-row-header-checkbox {
+	height: 55px;
+	box-sizing: border-box !important;
+	margin-top: 33px;
+}
+
+.seller-pagination .pagination {
+	margin: 0;
+}
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin: 20px 0;
+	border-radius: 0;
+}
+
+.hidden-xs {
+	text-align: center;
+}
+
+._page {
+	display: inline-block;
+	border: 1px solid #00c73c;;
+}
+
+.seller-pagination .pagination .active a, .seller-pagination .pagination .active span
+	{
+	color: #00c73c;
+	border-color: #00c73c;
+	background-color: #fff;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+	margin-left: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.seller-pagination .pagination a, .seller-pagination .pagination span {
+	padding: 3px 10px;
+	background-color: #fff;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.pagination>li>a, .pagination>li>span {
+	position: relative;
+	float: left;
+	padding: 4px 15px;
+	line-height: 24px;
+	text-decoration: none;
+	color: inherit;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+}
+
+.footer_area {
+	padding-bottom: 72px;
+	width: 100%;
+	border-top: 1px solid #ebebeb;
+}
+
+.footer_box {
+	width: 1365px;
+	margin: 0 auto;
+	padding: 27px 0;
+	line-height: 20px;
+	color: #333333;
+	text-align: center;
+}
+
+.top_footer {
+	margin-bottom: 11px;
+}
+
+.top_footer a {
+	color: #333333;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.top_footer a+a::before {
+	display: inline-block;
+	width: 1px;
+	height: 11px;
+	margin: 5px 5px 0 4px;
+	background-color: #d7d7d7;
+	vertical-align: top;
+	content: '';
+}
+
+.marketing_footer {
+	margin-bottom: 11px;
+	color: #888888;
+	letter-spacing: -1px;
+}
+
+.address {
+	margin-bottom: 9px;
+	font-style: normal;
+}
+
+.address span, a {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.address a {
+	color: #333333;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.address span+span::before {
+	display: inline-block;
+	width: 1px;
+	height: 11px;
+	margin: 5px 6px 0 9px;
+	background-color: #d7d7d7;
+	vertical-align: top;
+	content: '';
+}
+
+.footer_copyright {
+	font-size: 10px;
+	font-family: verdana;
+	color: #494948;
+}
+
+.footer_navericon {
+	color: #494948;
+	background-image:
+		url(https://shopv.pstatic.net/web/modules/gnb/p/static/20210605_1730/img/sprite/png/spSv_global_210723.png);
+	background-size: 427px 419px;
+	background-position: -189px -209px !important;
+	width: 63px;
+	height: 11px;
+	display: inline-block;
+	position: relative;
+	margin: -2px 10px 0 0;
+	vertical-align: middle;
+}
+
+.footer_copyright a {
+	text-decoration: none;
+}
+
+.navercorp {
+	color: #494948;
+}

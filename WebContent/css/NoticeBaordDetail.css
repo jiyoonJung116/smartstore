@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+.board {
+	border: 1px solid #ebecef;;
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.board_font {
+	font-size: 28px;
+}
+
+body {
+	font-family: "Nanum Gothic", "Malgun Gothic", "맑은 고딕", "돋움", "Dotum",
+		"Apple Gothic", "Apple SD Gothic Neo", sans-serif;
+	color: rgb(85, 85, 85);
+}
+
+li {
+	list-style: none;
+}
+
+.detail_st {
+	width: 1180px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.detail_st1 {
+	padding: 9px 0 9px 15px;
+	border-bottom: 1px solid #e7e7e7;
+	background-color: #fff;
+	text-align: left;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+.detail_st2 {
+	width: 80px;
+}
+
+.detail_st3 {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.detail_st4 {
+	margin-left: 18px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.detail_st5 {
+	margin-left: 19px;
+}
+
+.detail_st6 {
+	position: relative;
+	bottom: 17px;
+}
+
+.detail_st7 {
+	margin-left: 25px;
+}
+
+.detail_bt {
+	background: #f1f1f1;
+	color: #414141;
+	border: 1px solid #e0e0e0;
+	min-width: 80px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.po_rela {
+	position: relative;
+}
+
+.board_background {
+	background-color: #dcfaf0;
+	height: 176px;
+}
+
+.board_font {
+	font-size: 100px;
+	padding: 8px 26px;
+	position: absolute;
+}
+
+.board_area {
+	resize: none;
+	width: 1163px;
+	height: 515px;
+}
+
+.wirte_bt {
+	width: 120px;
+	height: 40px;
+}
+
+#commentForm {
+	margin-bottom: 20px;
+}
+
+.comment {
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.comment p {
+	margin: 0;
+}
+
+.comment_nickname {
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.comment_content {
+	font-size: 13px;
+}
+
+.comment_date {
+	font-size: 12px;
+	color: #979797;
+}

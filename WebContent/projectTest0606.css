@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+.seller-status-list {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+ul li {
+	list-style: none;
+}
+
+.seller-status-list>li .status-icon {
+	display: table-cell;
+	width: 46px;
+	height: 46px;
+	background-color: #767a83;
+	border-radius: 50%;
+	vertical-align: middle;
+	color: #fff;
+}
+
+.seller-status-list>li {
+	float: left;
+	padding-bottom: 25px;
+}
+
+.seller-status-list>li .status-icon i {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.seller-status-list>li .text {
+	display: table-cell;
+	padding-left: 15px;
+	width: 120px;
+	text-align: left;
+	vertical-align: middle;
+	line-height: 0;
+}
+
+address, cite, dfn, em, i, var {
+	font-style: normal;
+}
+
+.icon-all {
+	width: 22px;
+	height: 23px;
+	background-position: 0 -590px;
+}
+
+.icon-wait {
+	width: 28px;
+	height: 26px;
+	background-position: -30px -590px;
+}
+
+.icon-sale {
+	width: 24px;
+	height: 21px;
+	background-position: -60px -590px;
+}
+
+.icon-outofstock {
+	width: 30px;
+	height: 27px;
+	background-position: -90px -590px;
+}
+
+.icon-unadmission {
+	width: 27px;
+	height: 26px;
+	background-position: -125px -590px;
+}
+
+.icon-suspension {
+	width: 28px;
+	height: 26px;
+	background-position: -155px -590px;
+}
+
+.icon-close {
+	width: 28px;
+	height: 26px;
+	background-position: -185px -590px;
+}
+
+.icon-prohibition {
+	width: 28px;
+	height: 26px;
+	background-position: -215px -590px;
+}
+
+.seller-status-list>li .text strong {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.redstyle {
+	color: #ff545c;
+}
+
+.greenstyle {
+	color: #00c73c;
+}
+
+.redstyle2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 182px;
+	padding-right: 12px;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 19px;
+	word-break: break-all;
+	transform: translateY(-50%);
+}
+
+.deliveryYg {
+	position: relative;
+	padding: 20px 0 20px 194px;
+	margin: 0 35px;
+}
+
+.ygsectionstyle {
+	background-color: #fff;
+	border: 1px solid #e3e7ee;
+}
+
+.mstyle {
+	margin-bottom: -20px;
+}
+
+.iconstyle {
+	position: relative;
+	min-height: 46px;
+	padding-left: 56px;
+	font-size: 13px;
+	color: #494e54;
+	text-align: left;
+	border: none;
+	vertical-align: middle;
+}
+
+.ygiconstyle1 {
+	position: relative;
+	bottom: 10px;
+}
+.ygiconstyle2 {
+	left: 2px;
+    bottom: 8px;
+}

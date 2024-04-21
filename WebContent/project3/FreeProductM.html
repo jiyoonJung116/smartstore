@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/FreeProductM.css" />
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+	$(function() {
+		$(".design_list").click(function() {
+			$(this).find("input[type='radio']").prop('checked', true);
+		});
+		
+		$(".freest28").click(function() {
+			if ($(".freest30").css('display') === 'none') {
+				$(".freest30").css('display', 'block');
+			} else if ($(".freest30").css('display') === 'block') {
+				$(".freest30").css('display', 'none');
+			}
+		});
+		
+	});
+	
+	function open1(){
+		window.open('FindProduct.html','_blank');
+	}
+</script>
+<title>자유상품_최종</title>
+</head>
+<body>
+	<div class="fl">
+		<img src="../Images/공통사이드바.png">
+	</div>
+	<div class="freest border fl freest37">
+		<div class="freest1 ">
+			<div class="freest2">
+				<strong class="freefont">자유상품 관리</strong>
+			</div>
+			<div class="freest3">
+				<div class="custom_product_list_form">
+					<div class="title">
+						<div class="freest4">
+							<strong class="freest5">제목</strong>
+						</div>
+						<div class="input_style">
+							<input name="title" type="text" class="input_style1 fl"
+								placeholder="제목을 입력해주세요." maxlength="15" value="자유상품">
+							<div class="fl">
+								<span class="freefont1">4</span><span class="freefont2">15</span>
+							</div>
+						</div>
+					</div>
+					<div class="freest6"></div>
+					<div class="custom_project1">
+						<div class="freest7">
+							<strong class="freefont3">디자인 유형</strong>
+						</div>
+						<ul class=freest8>
+							<li class="freest9_1"><div class="freest10"
+									data-value="LIST">
+									<input id="customProductWidget-display-size-type-LIST"
+										class="_1EF5iAWwDG blind" type="radio"
+										name="productDisplayType" value="LIST"> <label
+										class="freest11"
+										for="customProductWidget-display-size-type-LIST"> <span
+										class="freest12"></span> <span class="freest13">리스트형</span> <span
+										class="freest14"></span>
+									</label>
+								</div></li>
+							<li class="freest9"><div class="freest10"
+									data-value="FULL_IMAGE">
+									<input id="customProductWidget-display-size-type-FULL_IMAGE"
+										class="_1EF5iAWwDG blind" type="radio"
+										name="productDisplayType" value="FULL_IMAGE"><label
+										class="freest11"
+										for=customProductWidget-display-size-type-FULL_IMAGE><span
+										class="freest12"></span><span class="freest13">풀이미지형</span><span
+										class="freest14"></span></label>
+								</div></li>
+						</ul>
+					</div>
+					<div class="custom_product_list_area">
+						<div class="freest15"></div>
+						<div class="custom_project2">
+							<div class="freest16">
+								<strong class="freest17">썸네일 타입</strong>
+							</div>
+							<ul class="freest8">
+								<li class="freest18"><div class="freest19 custom1"
+										data-value="SQUARE">
+										<input id="customProductWidget-thumbnail-type-SQUARE"
+											class="O1gTqVQj7O blind" type="radio"
+											name="thumbnailShapeType" value="SQUARE" checked><label
+											class="freest20"
+											for="customProductWidget-thumbnail-type-SQUARE"><span
+											class="freest21"></span><span class="freest22">정사각형</span><span
+											class="freest23"></span></label>
+									</div></li>
+								<li class="freest18 freest24"><div class="freest19 custom2"
+										data-value="V_RECT">
+										<input id="customProductWidget-thumbnail-type-V_RECT"
+											class="O1gTqVQj7O blind" type="radio"
+											name="thumbnailShapeType" value="V_RECT"><label
+											class="freest20"
+											for="customProductWidget-thumbnail-type-V_RECT"><span
+											class="freest21"></span><span class="freest22">세로직사각형</span><span
+											class="freest23"></span></label>
+									</div></li>
+								<li class="freest18 freest24"><div class="freest19 custom3"
+										data-value="H_RECT">
+										<input id="customProductWidget-thumbnail-type-H_RECT"
+											class="O1gTqVQj7O blind" type="radio"
+											name="thumbnailShapeType" value="H_RECT"><label
+											class="freest20"
+											for="customProductWidget-thumbnail-type-H_RECT"><span
+											class="freest21"></span><span class="freest22">가로직사각형</span><span
+											class="freest23"></span></label>
+									</div></li>
+							</ul>
+						</div>
+						<div class="freest25"></div>
+						<div class="custom_project3">
+							<div class="freest26">
+								<div class="freest4">
+									<strong class="freest27">전시할 상품</strong>
+								</div>
+							</div>
+							<div class="freest28">
+								<div class="freest4">
+									<a href="#" class="freest29" aria-owns="props_select_box"
+										aria-expanded="false" aria-haspopup="listbox" role="button">8</a>
+									<ul id="display-count-form-select-box-customProductWidget"
+										class="freest30" role="listbox">
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">3</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">4</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">5</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">6</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">7</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="true">8</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">9</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">10</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">11</a></li>
+										<li role="presentation"><a href="#" class="freest31"
+											role="option" aria-selected="false">12</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="product_button" style="margin-top: 13px;">
+							<p class="detail_style " style="margin-bottom: 3px;">Drag&amp;Drop
+								으로 전시순서와 원하는 상품을 자유롭게 전시할 수 있습니다.</p>
+							<div class="display1">
+								<div class="display1" style="margin-top: 22px;">
+									<strong class="display2 display3">총 상품 수<span
+										class="display4"> 1</span>개
+									</strong>
+								</div>
+								<div class="display5">
+									<button class="display6" type="button" onclick="open1()">상품
+										추가</button>
+									<button class="display6" type="button">삭제</button>
+								</div>
+							</div>
+							<div class="display7">
+								<div class="display8">
+									<button type="button" class="display9 display9_1">
+										<span class="blind">맨 아래로</span>
+									</button>
+									<button type="button" class="display9 display9_2 display10">
+										<span class="blind">한칸 아래로</span>
+									</button>
+									<button type="button" class="display9 display9_3 display10">
+										<span class="blind">한칸 위로</span>
+									</button>
+									<button type="button" class="display9 display9_4 display10">
+										<span class="blind">맨 위로</span>
+									</button>
+								</div>
+								<ul class="freest32">
+									<li class="freest33"><div class="freest4">
+											<input
+												id="customProductWidget-product-table-filter-type-ONGOING"
+												class="_1KZycvyi6X blind" type="checkbox"
+												name="productDisplayFilterType" value="ONGOING" checked><label
+												class="freest34"
+												for="customProductWidget-product-table-filter-type-ONGOING"><span
+												class="freest35"></span><span class="freest36">전시중(1개)</span></label>
+										</div></li>
+									<li class="freest33"><div class="freest4">
+											<input
+												id="customProductWidget-product-table-filter-type-DISPLAYABLE"
+												class="_1KZycvyi6X blind" type="checkbox"
+												name="productDisplayFilterType" disabled value="DISPLAYABLE"><label
+												class="freest34"
+												for="customProductWidget-product-table-filter-type-DISPLAYABLE"><span
+												class="freest35"></span><span class="freest36">전시가능(0개)</span></label>
+										</div></li>
+									<li class="freest33"><div class="freest4">
+											<input
+												id="customProductWidget-product-table-filter-type-NOT_DISPLAYABLE"
+												class="_1KZycvyi6X blind" type="checkbox"
+												name="productDisplayFilterType" disabled
+												value="NOT_DISPLAYABLE"><label class="freest34"
+												for="customProductWidget-product-table-filter-type-NOT_DISPLAYABLE"><span
+												class="freest35"></span><span class="freest36">전시불가(0개)</span></label>
+										</div></li>
+								</ul>
+							</div>
+							<div class="display17">
+								<table class="display16">
+									<caption>
+										<span class="blind">전시 상품</span>
+									</caption>
+									<thead class="display18">
+										<tr>
+											<th class="display19" scope="col"><div class="display20">
+													<input type="checkbox" id="check_all"
+														class="display21_1 blind" checked> <label
+														for="check_all" class="display21"><span
+														class="blind">전체 선택</span></label>
+												</div></th>
+											<th class="display19" scope="col"><div class="display22">
+													전시<br>순서
+												</div></th>
+											<th class="display19" scope="col"><div class="display23">상품번호
+													/ 상품명 / 카테고리</div></th>
+											<th class="display19" scope="col"><div class="display24">주문수</div></th>
+											<th class="display19" scope="col"><div class="display24">유입수</div></th>
+											<th class="display19" scope="col"><div class="display24">구매율</div></th>
+											<th class="display19" scope="col"><div class="display24">찜수</div></th>
+											<th class="display19" scope="col"><div class="display25">판매가</div></th>
+											<th class="display19" scope="col"><div class="display25">할인가</div></th>
+											<th class="display19" scope="col"><div class="display26">전시상태</div></th>
+										</tr>
+									</thead>
+									<tbody class="display27">
+										<tr class="_3Xmg5ZrngK" draggable="true" style="opacity: 1;">
+											<td class="display28"><div class="display29">
+													<input type="checkbox" id="check_4897832395"
+														class="display29_1 blind" checked><label
+														for="check_4897832395" class="display30"><span
+														class="blind">상품 선택</span></label>
+												</div></td>
+											<td class="display28"><div class="display31">
+													<input type="text" class="display32" value="1">
+												</div></td>
+											<td class="display28"><div class="display33">
+													<div class="display34"
+														style="background-image: url(&quot;https://shop-phinf.pstatic.net/20200418_185/1587177491423jftcj_JPEG/24540879945101569_322730714.jpg?type=f80_80&quot;);"></div>
+													<div class="display35">
+														<a class="display36" target="_blank"
+															href="https://smartstore.naver.com/customerfordaily/products/4897832395">[4897832395]
+															월드온 NBR 요가매트 30mm 25mm 필라테스 매트 운동</a><span class="display37">스포츠/레저&gt;요가/필라테스&gt;요가매트</span>
+													</div>
+													<a class="display38" target="_blank"
+														href="https://sell.smartstore.naver.com/#/products/edit/4882283804">수정</a>
+												</div></td>
+											<td class="display28"><div class="display40 display39">0</div></td>
+											<td class="display28"><div class="display40 display39">4</div></td>
+											<td class="display28"><div class="display40 display39">0</div></td>
+											<td class="display28"><div class="display40 display39">0</div></td>
+											<td class="display28"><div class="display41">29,900원</div></td>
+											<td class="display28"><div class="display41">할인없음</div></td>
+											<td class="display28"><div class="display42">
+													전시중<em></em>
+												</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

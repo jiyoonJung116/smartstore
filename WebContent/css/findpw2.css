@@ -1,0 +1,361 @@
+@charset "UTF-8";
+	body {
+		font-family: '돋움',Dotum,AppleGothic,sans-serif;
+	    font-size: 12px;
+	    margin: 0;
+	    padding: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+	.fl { float: left;}
+	.fr { float: right;}
+	
+	.findpw_main {
+	   	position: relative;
+	    width: 100%;
+	    min-width: 1020px;
+	    min-height: 100%;
+	}
+	.header {
+		height: 86px;
+   	 	background: url(https://static.nid.naver.com/images/web/user/bg_header2.jpg) repeat-x 0 0;
+	}
+	.header_top {
+		height: 29px;
+    	margin: 0 0 0 auto;
+        width: 980px;
+	}
+	.top_left {
+		position: absolute;
+	    top: 0;
+	    left: 20px;
+	    height: 25px;
+	    margin-bottom: 12px;
+	    font-size: 2em;
+    	font-weight: bold;
+	}
+	.top_logo {
+		display: inline-block;
+	    width: 51px;
+	    height: 9px;
+	    margin: 9px 0 2px 0;
+	    background: url(https://static.nid.naver.com/images/web/user/tit_logo.png) no-repeat 0 0;
+	}
+	.mypage {
+		width: 35px;
+	    height: 14px;
+	    margin-top: 7px;
+	    display: inline-block;
+	    background: url(https://static.nid.naver.com/images/web/user/tit_logo_sub.png) no-repeat 0 0;
+	}
+	#right_body {
+		position: relative;
+	    font-family: '나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important;
+	    color: #444;
+	    font-size: 12px;
+	    text-align: left !important;
+        height: 22px;
+        display: inline-block;
+    	right: 30px!important;
+	}
+	.top_right {
+		margin: 0;
+	    padding: 0;
+	    zoom: 1;
+	}
+	.login_btn {
+		height: 23px;
+    	padding: 5px 7px 0 0;
+    	float: left;
+	    margin-right: 2px;
+	    overflow: visible;
+	}
+	.link_btn {
+	    position: relative;
+	    z-index:100;
+	}
+	.top_logbox, .top_logbdr, .link_btn {
+		display: inline-block;
+	    width: 46px;
+	    height: 20px;
+	    font-size: 12px;
+	}
+	.top_logbox {
+		background-color: #fff;
+    	opacity: 0.05;
+	}
+	.top_logbdr {
+		position: absolute;
+	    top: -1px;
+	    left: -1px;
+	    width: 46px;
+	    height: 20px;
+	    border: 1px solid #000;
+	    opacity: 0.12;
+	}
+	.login_text {
+		color: #fff;
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 45px;
+	    height: 20px;
+	    padding-left: 1px;
+	    line-height: 21px;
+	    text-align: center;
+	}
+	.top_menu {
+	    margin-right: 0;
+	    float: left;
+        overflow: visible;
+        width: 18px;
+	    height: 18px;
+	    padding: 6px 8px 4px;
+	    cursor: pointer;
+	    display: block;
+	}
+	.menu_icon {
+		display:inline-block;
+		width: 18px;
+	    height: 18px;
+	    background-position: -261px -140px !important;
+	    background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat;
+	}
+	.header2 {
+    	height: 57px;
+    	position: relative;
+    	margin: 0 auto;
+   	    background-image: url(https://static.nid.naver.com/images/web/user/sp_lnb_131226.png);
+	    background-repeat: no-repeat;
+	    width: 670px;
+	    background-position: 0 -638px !important;
+	}
+	.center {
+		width: 980px;
+	    height: 647px;
+	    background: 0 0;
+	    position: relative;
+	    margin: 0 auto;
+	    padding-bottom: 30px;
+	    height: auto!important;
+	    zoom: 1;
+	}
+	.header2 .m5 {
+		left: -76px;
+    	height: 57px;
+	}
+	ul, ol {
+		list-style: none;
+	}
+	.header2 div {
+		position: absolute;
+	    top: 0;
+	    width: 254px;
+	}
+	.header2 .m5 a {
+		display: block;
+		width: 100%;
+		height: 100%
+	}
+	.header2 .m6 {
+		left: 177px;
+	    height: 57px;
+	}
+
+	.header2 .m6 a {
+		display: block;
+		width: 100%;
+		height: 100%
+	}
+	.center_content {
+		padding: 25px 0 20px;
+		float: none;
+		width: 670px !important;
+    	margin: 0 auto !important;
+    	padding-bottom: 50px !important;
+	}
+	.center_top {
+		position: relative;
+	    margin: 10px 0;
+        border-bottom: 2px solid #e5e5e5;
+	}
+	.center_ltop {
+	    position: relative;
+	    height: 21px;
+	    margin-bottom: -2px;
+	    padding: 0 2px 0 1px;
+	    border-bottom: 2px solid #4d4d4d;
+	}
+	.center_ltop img {
+		width: 84px;
+		height: 16px;
+	}
+	.center_rtop {
+		position: absolute;
+		top: 2px;
+		right:-2px;
+		float: left;
+	}
+	.center_rtop div{
+	    float: left;
+    	color: #8e8e8e;
+	}
+	.center_rtop span {
+		padding: 0 2px;
+    	color: #8e8e8e;
+	}
+	.nd_div{
+		color: #390 !important;
+	}
+	.precaution {
+		margin: 0;
+	    padding: 2px 0 41px;
+	    color: #666;
+	    font-size: 12px;
+    	line-height: 17px;
+	}
+	.phonecheck {
+	    padding: 39px 40px 20px;
+	    border: 1px solid #e5e5e5;
+	}
+	.box_check {
+		padding-bottom: 27px !important;
+    	padding: 0 0 17px 19px;
+    	display: inline-block;
+	}
+	.check_txt {
+		font-size: 14px;
+	    font-weight: 700;
+	    line-height: 18px;
+	    margin-left: -2px;
+	    letter-spacing: -1px;
+	    color: #333;
+	}
+	.box_check > .check_txt span {
+		color: #390;
+	    padding-left: 5px;
+    	letter-spacing: 0;
+	}
+	.detail {
+	    line-height: 18px;
+	    padding-top: 4px;
+	    color: #666;
+	    margin: 0;
+	}
+	.input_table {
+		padding-top: 14px;
+	}
+	.input_name {
+	    font-weight: 700;
+	    float: left;
+	    width: 80px;
+	    height: 25px;
+	    margin-top: 6px;
+	}
+	.input_name > .name_txt {
+	    line-height: 25px;
+    	color: #333;
+   	    cursor: pointer;
+	}
+	.input_box {
+		position: relative;
+	    float: left;
+	    width: 488px;
+	    height: 25px;
+	    margin-top: 6px;
+	    vertical-align: top;
+	}
+	.input_txt {
+		width: 217px;
+		line-height: 23px;
+	    height: 23px;
+	    padding-left: 3px;
+	    vertical-align: top;
+	    border: 1px solid #ccc;
+	}
+	.country_num {
+		position: relative;
+	    border: solid 1px #ccc;
+	    vertical-align: top;
+        display: inline-block;
+	}
+	.select_box {
+		display: block;
+	    width: 54px;
+	    padding: 3px 6px 3px 0;
+	    margin-left: 4px;
+	    height: 17px;
+	    font-size: 12px;
+	    line-height: 18px;
+	    color: #000;
+	    background: #fff url(https://static.nid.naver.com/images/web/user/ico_select_arr.png) no-repeat 100% 50%;
+	}
+	.input_txt2 {
+		width: 147px;
+		line-height: 23px;
+	    height: 23px;
+	    padding-left: 3px;
+	    vertical-align: top;
+	    border: 1px solid #ccc;
+	}
+	.btn_injung {
+		width: 97px;
+	    height: 25px;
+	    margin-left: 1px;
+	    background-position: 0 -210px !important;
+	    position: relative;
+	    display: inline-block;
+	    background: url(https://static.nid.naver.com/images/web/user/sp_find_idpw.png) no-repeat;
+	}
+	.updatebox {
+		display: none;
+	}
+	.finded_id {
+	    font-size: 14px;
+	    font-weight: 700;
+	    margin: 0 0 15px 19px;
+	}
+	.navid {
+	    display: inline-block;
+	}
+	.colorid {
+		color: #390;
+		display: inline-block;
+	}
+	.changepw {
+		position: relative;
+	    width: 299px;
+	    height: 34px;
+	    margin: 0 auto 20px 19px;
+	    background: url(https://static.nid.naver.com/images/web/user/sp_sech_box.png) no-repeat 0 0;
+	}
+	.newpw_text {
+		font-size: 14px;
+	    font-weight: 700;
+	    line-height: 32px;
+	    width: 288px;
+	    height: 32px;
+	    margin: 1px;
+	    padding-left: 9px;
+	    border: 0;
+	    background: 0 0;
+	}
+	.changepw_check {
+		position: relative;
+	    width: 299px;
+	    height: 34px;
+	    margin: -14px auto 20px 19px;
+	    background: url(https://static.nid.naver.com/images/web/user/sp_sech_box.png) no-repeat 0 0;
+	}
+	.btn_confirmation {
+		padding: 17px 0 15px;
+		text-align: center;
+	}
+	.confi_border {
+		width: 60px;
+	    height: 33px;
+	    background-position: -65px 0 !important;
+	    position: relative;
+	    display: inline-block;
+	    background: url(https://static.nid.naver.com/images/web/user/sp_find_idpw.png) no-repeat;
+	}

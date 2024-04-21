@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>톡톡</title>
+<link rel="stylesheet" href="../css/TopSidebar.css" />
+<link rel="stylesheet" href="../css/TalkTalk.css" />
+<script src = "../js/jquery-3.7.0.min.js"></script>
+<script>
+	function dis(){
+		if($("#talktalk_dis").css('display')=="none"){
+			$("talktalk_dis").show();
+		}else {
+			$("talktalk_dis").hide();
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<div id="header">
+		<div class="left-header fl">
+			<div class="fl smartlogo"></div>
+			<div class="fl topmenu">
+				<span>쇼핑파트너센터</span> <span>커머스솔루션마켓</span> <span>네이버광고 <img
+					src="../Images/headerlogo.png">
+				</span>
+			</div>
+		</div>
+		<div class="right-header fr">
+			<div class="topright fl">
+				<div class="fl">
+					<span class="topid">mpkung</span>님 <span class="myhome">내정보</span>
+				</div>
+				<div class="fl">
+					<i class="bell"></i> <i class="newicon"></i>
+				</div>
+				<div class="logout fl">로그아웃</div>
+				<div class="imformation fl">도움말</div>
+				<div class="header-talk fl">
+					<img src="../Images/headertalk.png" /> <span>톡톡상담</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+
+	<!-- 왼쪽 사이드바 -->
+	<div id="left_side" class="fl">
+		<div>
+			<img src="https://sell.smartstore.naver.com/images/no-img.jpg">
+			<p>CustomerDaily</p>
+		</div>
+		<!-- 2번쨰________________ -->
+		<div>
+			<div class="top">
+				<label>수취인명 <span class="fr"><img
+						src="../Images/dropicon.png" /></span>
+				</label>
+
+				<!-- <select>
+					<option value="addressee_name">수취인명</option>
+					<option value="buyer_name">구매자명</option>
+					<option value="buyer_phone">구매자연락처</option>
+					<option value="buyer_id">구매자ID</option>
+					<option value="ordernumber">주문번호</option>
+					<option value="order_pnumber">상품주문번호</option>
+					<option value="pnumber">상품번호</option>
+				</select>  -->
+			</div>
+			<div class="input_title">
+				<input type="text" /> <img src="../Images/searchicon.png" />
+			</div>
+		</div>
+		<!-- 3번쨰________________________-->
+		<div>
+			<div class="menu">
+				<div>상품관리</div>
+			</div>
+			<div class="menu">
+				<div>
+					판매관리 <i></i>
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					정산관리 <i></i>
+				</div>
+			</div>
+			<div class="menu">
+				<div>문의/리뷰관리</div>
+			</div>
+			<div class="menu">
+				<div class="talk">
+					톡톡상담관리 <img src="../Images/talkicon.png" />
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					스토어 전시관리 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>노출관리</div>
+			</div>
+			<div class="menu">
+				<div>
+					고객혜택관리 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>마케팅메세지</div>
+			</div>
+			<div class="menu">
+				<div>
+					커머스솔루션 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					통계 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					원쁠딜 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>판매자지원프로그램</div>
+			</div>
+			<div class="menu">
+				<div>판매자정보</div>
+			</div>
+			<div class="menu">
+				<div>지식재산권침해관리</div>
+			</div>
+			<div class="menu">
+				<div>
+					물류 관리 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>공지사항</div>
+			</div>
+		</div>
+		<div id="menuline"></div>
+		<!-- 4번쨰 _______________________-->
+		<div>
+			<h2 class="title">교육 프로그램 바로가기</h2>
+			<div class="shortcut">
+				<div>
+					온라인 교육 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					쇼핑 라이브 교육 <img src="../Images/shorcuticon.png" />
+				</div>
+			</div>
+			<h2 class="title mg35">네이버 비즈니스 금융센터</h2>
+			<div class="shortcut">
+				<div>
+					정책지원금 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					빠른정산 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					사업자 대출 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					사업자 보험 <img src="../Images/shorcuticon.png" />
+				</div>
+			</div>
+			<h2 class="title mg35">공식 블로그 바로가기</h2>
+			<div class="shortcut">
+				<div>
+					네이버쇼핑 파트너 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					쇼핑윈도 <img src="../Images/shorcuticon.png" />
+				</div>
+			</div>
+		</div>
+
+		<!-- 5번째 ______________ -->
+		<div>
+			<div class="clicktalk">
+				<img src="../Images/talkicon2.png" />톡톡상담
+			</div>
+		</div>
+
+		<!-- 6번째 ______________ -->
+
+	</div>
+	<div id="right_side" class="fl">
+		<div class="backgroundtheme">
+			<div class="fl yg1 linestyle">
+
+				<div class="yg3">
+					<input type="text" id="chatsearch" placeholder="대화내용, 닉네임, 태그 검색">
+
+					<button class="buttonstyle">
+						<svg class="deletebutton">
+					<span class="buttonfont">x</span>
+					</svg>
+					</button>
+					<button class="buttonstyle1">
+						<svg class="searchbutton">
+					<img class="glass" src="../Images/돋보기.png">
+					</svg>
+					</button>
+					<div style="clear: both;"></div>
+				</div>
+
+				<div class="yg1 yg2">
+					<button type="button" class="buttonstyle2">
+						<img src="../Images/말풍선.png" class="imgstyle"> <span
+							class="yg4"><span class="ygfont">전체</span><span
+							class="ygfont1">4</span></span>
+					</button>
+					<button type="button" class="buttonstyle3">
+						<img src="../Images/말풍선1.png" class="imgstyle1"> <span
+							class="yg4"><span class="ygfont">대기</span><span
+							class="ygfont1">0</span></span>
+					</button>
+					<button type="button" class="buttonstyle2">
+						<img src="../Images/말풍선2.png" class="imgstyle2"> <span
+							class="yg4 yg5"><span class="ygfont">진행중</span><span
+							class="ygfont1">4</span></span>
+					</button>
+					<button type="button" class="buttonstyle2 buttonstyle4">
+						<img src="../Images/말풍선3.png" class="imgstyle3"> <span
+							class="yg4 yg6"><span class="ygfont">보류</span><span
+							class="ygfont1">0</span></span>
+					</button>
+					<button type="button" class="buttonstyle2 yg16">
+						<img src="../Images/화살표1.png" class="imgstyle4 yg17">
+					</button>
+					<div style="clear: both;"></div>
+				</div>
+
+				<div class="yg7 yg9">
+					<button type="button" class="buttonstyle2">
+						<span class="yg6 yg10"><span class="yg8">최근 3개월</span> <img
+							src="../Images/화살표2.png" class="imgstyle5"> </span>
+					</button>
+					<button type="button" class="buttonstyle2">
+						<span class="yg6 yg10"><span class="yg8">읽음여부</span> <img
+							src="../Images/화살표2.png" class="imgstyle5"> </span>
+					</button>
+					<button type="button" class="buttonstyle2">
+						<span class="yg6 yg10"><span class="yg11">최근 대화순</span> <img
+							src="../Images/화살표3.png" class="imgstyle6"> </span>
+					</button>
+					<div style="clear: both;"></div>
+				</div>
+
+				<div class="yg12">
+
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div  onclick="dis()">
+							<p class="ygfont2">
+								<span class="ygfont3">jyd</span> <span class="ygfont4">5월
+									23일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">안녕하세용</span>
+							</p>
+							<p class="ygstyle1">가구수평패드</p>
+							<button type="button" class="buttonstyle2">
+								<img src="../Images/화살표4.png" class="imgstyle8">
+							</button>
+						</div>
+					</div>
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div>
+							<p class="ygfont2">
+								<span class="ygfont3 ygfont7">긍정부자</span><span class="ygfont6">YG</span>
+								<span class="ygfont4 ygfont8">5월 15일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">ㅇㅇㅇㅇ</span>
+							</p>
+							<button type="button" class="buttonstyle2">
+								<img src="../Images/화살표4.png" class="imgstyle8 yg14">
+							</button>
+						</div>
+					</div>
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div>
+							<p class="ygfont2">
+								<span class="ygfont3">sarah</span><span class="ygfont6">예쁜이</span>
+								<span class="ygfont4 ygfont9">4월 18일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">너냐</span>
+							</p>
+							<p class="ygstyle1">가구수평패드</p>
+							<button type="button" class="buttonstyle2">
+								<img src="../Images/화살표4.png" class="imgstyle8">
+							</button>
+						</div>
+					</div>
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div>
+							<p class="ygfont2">
+								<span class="ygfont3">mgw0****</span> <span
+									class="ygfont4 ygfont10">4월 9일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">?</span>
+							</p>
+							<p class="ygstyle1">가구수평패드</p>
+							<button type="button" class="buttonstyle2">
+								<img src="../Images/화살표4.png" class="imgstyle8">
+							</button>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+
+
+
+			<div id="talktalk_dis" class="fl yg2 yg15" style="display: none;">
+				<div class="ygstyle2">
+					<div>
+						<img src="../Images/아이콘.png" class="imgstyle9"> <strong
+							class="ygfont11">대화내역이 없습니다.</strong>
+						<p class="ygfont12">기간과 기준, 필터를 확인한 후 다시 조회해 주세요.</p>
+					</div>
+				</div>
+			</div>
+			<div class="fl yg2 yg18 yg35">
+				<div class="ygstyle3">
+					<div>
+						<img class="imgstyle11 imgstyle10"
+							src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+					</div>
+					<div class="ygstyle4">
+						<strong>jyd</strong>
+						<div>
+							<button class="ygstyle5">
+								<span>닉네임을 입력하세요.</span> <img src="../Images/연필.png"
+									class="imgstyle12">
+							</button>
+						</div>
+						<div class="ygstyle6">
+							<button type="button" class="buttonstyle5">상담완료</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/점.png" class="imgstyle13">
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="message_balloon card_message rgt">
+						<p class="ygfont13 ygfont14">읽음</p>
+						<span class="ygfont13 ">오후 <span>3:42</span></span>
+						<p class="hi speechbubble">안녕하세용</p>
+					</div>
+
+					<div class="message_balloon card_message rgt">
+						<p class="ygfont13 ygfont14">읽음</p>
+						<span class="ygfont13 ">오후 <span>3:46</span></span>
+						<p class="hi speechbubble">반가워용</p>
+					</div>
+
+					<span class="ygfont15 speechbubble1"><strong>5.17.</strong>(수)</span>
+
+					<div class="message_balloon card_message rgt">
+						<p class="ygfont13 ygfont16">읽음</p>
+						<span class="ygfont13 speechbubble3">오후 <span>5:14</span></span>
+						<p class="hi speechbubble2">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+					</div>
+
+					<span class="ygfont15 speechbubble1"><strong>5.23.</strong>(화)</span>
+
+					<div class="message_balloon card_message rgt">
+						<p class="ygfont13 ygfont17">읽음</p>
+						<span class="ygfont13 ygfont18">오후 <span>2:21</span></span>
+						<p class="hi speechbubble4">
+							상품을 문의 주셨습니다. <br />어떤 점이 궁금하신가요?
+						</p>
+					</div>
+					<div class="yg19">
+						<div>
+							<img class="imgstyle14"
+								src="https://shop-phinf.pstatic.net/20200418_210/15871866582182zgqf_JPEG/24548991791616982_1239311195.jpg?type=f344">
+						</div>
+						<div class="ygstyle7 yg20">상품문의</div>
+						<div class="ygstyle7">
+							<p class="yg21">가구수평패드</p>
+						</div>
+						<p class="yg22">25,000원</p>
+					</div>
+
+					<div class="message_balloon card_message rgt">
+						<img src="../Images/사람.png" class="imgstyle15">
+						<p class="hi speechbubble5">안녕하세용</p>
+						<span class="ygfont19">오후 <span>2:21</span></span>
+					</div>
+
+					<span class="ygfont15 speechbubble1"><strong>6.09.</strong>(금)</span>
+
+					<div class="message_balloon card_message rgt">
+						<span class="ygfont20 ">오후 <span>3:42</span></span>
+						<p class="hi speechbubble6">안녕하세용</p>
+					</div>
+
+
+					<div class="yg23">
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/스마일.png" class="imgstyle16">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/사진.png" class="imgstyle17">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/연필2.png" class="imgstyle18">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/좋아요.png" class="imgstyle19">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/파일.png" class="imgstyle20">
+							</button>
+						</div>
+						<div class="ygstyle8">
+							<input type="text" placeholder="메시지를 입력해 주세요" class="ygstyle9">
+							<button id="searchbutton">
+								<span>전송</span>
+							</button>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+
+
+
+			<div class="yg24">
+				<div class="yg25">
+					<div class="yg26">
+						<h3 class="yg27">
+							스마트 요약<span class="betastyle">Beta</span>
+						</h3>
+					</div>
+					<div class="yg29">
+						<img
+							src="https://shop-phinf.pstatic.net/20200418_210/15871866582182zgqf_JPEG/24548991791616982_1239311195.jpg?type=f344"
+							class="yg30">
+						<p class="yg31">
+							<u class="ygfont21">가구수평패드</u>에서 문의했어요.
+						</p>
+						<p class="ygstyle10">https://smartstore.naver.com/inflow/outlink/product?p=4897977260&amp;tr=tsf&amp;frm=chat</p>
+					</div>
+				</div>
+				<div>
+					<div class="ygstyle11">
+						<button id="searchbutton" class="buttonstyle6">
+							<span>구매이력</span>
+						</button>
+						<button id="searchbutton" class="buttonstyle7">
+							<span>상담정보</span>
+						</button>
+						<div class="yg32">
+							<h3 class="ygfont22">상담정보</h3>
+							<div class="ygfont23">
+								<div>상담시작</div>
+								<div class="yg33">오후 15:41 2023/05/15</div>
+							</div>
+							<div class="ygfont23 yg34">
+								<div>첫 응대시작</div>
+								<div class="yg33">오후 15:42 2023/05/15</div>
+							</div>
+						</div>
+					</div>
+					<div class="ygstyle12">
+						<div class="yg36">
+							<h3 class="ygstyle13">태그</h3>
+							<div class="ygstyle14">
+								<button type="button" class="tagstyle">+태그 추가</button>
+							</div>
+						</div>
+					</div>
+					<div class="ygstyle17">
+						<div class="ygstyle22">
+							<h3 class="ygstyle15">이전 대화 이력</h3>
+							<div class="ygstyle16">이전 대화 이력이 없습니다.</div>
+						</div>
+					</div>
+					<div class="ygstyle18">
+						<div class="ygstyle19">
+							<h3 class="ygfont24">고객메모</h3>
+							<div class="ygfont25">0/200</div>
+						</div>
+						<div class="ygstyle20">
+							<textarea cols="30" rows="3" maxlength="200"
+								placeholder="고객메모를 입력해 주세요." class="ygstyle21"></textarea>
+
+						</div>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<div>
+			<footer class="storefooter" role="contentinfo" ng-if="::!vm.isMobile">
+				<div class="innerfooter" ncp-click-log action-id="footer.link">
+					<ul class="provis bottomstyle">
+						<li class="li2"><a class="footerstyle"
+							href="https://sell.smartstore.naver.com/#/terms/agreement"
+							target="_blank">이용약관</a></li>
+						<li class="li2"><a class="footerstyle"
+							href="https://new-m.pay.naver.com/member/terms-policy/finance"
+							role="button" target="_blank" title="전자금융거래 이용약관">전자금융거래 이용약관</a></li>
+						<li class="li2"><a class="footerstyle"
+							href="https://business.naver.com/privacy/privacy.html"
+							target="_blank" title="새창"><strong>개인정보 처리방침</strong></a></li>
+						<li class="li2"><a class="footerstyle"
+							href="https://policy.naver.com/policy/youthpolicy.html"
+							target="_blank" title="새창">청소년 보호정책</a></li>
+						<li class="li2"><a class="footerstyle"
+							href="javascript:void(0)" role="button"
+							ng-click="vm.responsibilityPopup()" title="팝업">책임의 한계와 법적고지</a></li>
+						<li class="li2"><a class="footerstyle"
+							href="https://ips.smartstore.naver.com/main/rules/safety"
+							target="_blank" title="새창">안전거래가이드</a></li>
+						<li class="li2"><a class="footerstyle"
+							href="https://help.sell.smartstore.naver.com/index.help"
+							target="_blank">고객센터</a></li>
+					</ul>
+					<p class="notice noticestyle bottomstyle">
+						네이버㈜는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게
+						있습니다. <br> 또한 판매자와 구매자간의 직거래에 대하여 당사는 관여하지 않기 때문에 거래에 대해서는
+						책임을 지지 않습니다.
+					</p>
+					<ul class="provis bottomstyle">
+						<li class="liststyles">사업자등록번호 : 220-81-62517</li>
+						<li class="liststyles">통신판매업신고번호 : 제2006-경기성남-0692호</li>
+						<li class="liststyles">대표이사 : JSMG</li>
+						<li class="liststyles"><a id="businessinfo"
+							href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208162517"
+							class="btn-box" target="_blank" title="새창">사업자정보확인</a></li>
+					</ul>
+					<ul class="provis totalinfo bottomstyle">
+						<li id="addressinformat" class="address">주소 : 경기도 성남시 분당구
+							정자일로 95, NAVER 1784, 13561</li>
+						<li><button id="callchat" class="totalinfo2 totalinfo4"
+								type="button" ng-click="vm.openTelephoneSupportModal()"
+								class="btn-box">전화상담 (전화 전 클릭)</button></li>
+						<li><a class="talktalkline totalinfo3"
+							ng-href="https://talk.naver.com/ct/wcbgqj?frm=cstpn"
+							class="btn-box" target="_blank"
+							data-action-location-id="talktalkCounseling"
+							href="https://talk.naver.com/ct/wcbgqj?frm=cstpn"><i class=""
+								aria-hidden="true"></i> <img src="../Images/talktalk.png">
+								톡톡상담</a></li>
+					</ul>
+					<adderss class="naverlinkstyle2 bottomstyle">
+					<p>
+						<a class="navericon" href="https://www.navercorp.com/"
+							class="logo" target="_blank" title="새창"></a>
+					</p>
+					<p class="naverlinkstyle3">Copyright ©</p>
+					<a class="naverlinkstyle4" href="https://www.navercorp.com/"
+						class="copy-navercorp" target="_blank" title="새창"><strong
+						class="naverlinkstyle">NAVER Corp.</strong></a>
+					<p class="naverlinkstyle5">All rights reserved.</p>
+					</adderss>
+				</div>
+			</footer>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+</body>
+</html>

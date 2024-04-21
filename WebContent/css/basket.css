@@ -1,0 +1,1226 @@
+@charset "UTF-8";
+body {
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, HelveticaNeue, AppleSDGothicNeo, sans-serif;
+    font-size: 14px;
+    line-height: 1.25em;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.fl { float:left;}
+.fr { float:right;}
+.header {
+    font-family: '나눔고딕', NanumGothic, '맑은고딕', MalgunGothic, '돋움', Dotum, Helvetica, 'Apple SD Gothic Neo', sans-serif;
+    font-size: 12px;
+}
+.header > .header_toptop {
+	position: relative;
+    z-index: 30;
+    background: #01c73c url(https://shopv.pstatic.net/web/modules/gnb/p/static/20210605_1730/img/sv/global/bg_gheader.jpg) no-repeat 100% 0;
+    min-width: 990px;
+}
+.header > .header_toptop::before {
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 102px;
+    background-color: rgba(0, 0, 0, 0.12);
+    content: '';
+}
+.toptop_height {
+	position: relative;
+    height: 36px;
+}
+.toptop_bar {
+	width: 1280px;
+    position: relative;
+    margin: 0 auto;
+}
+.left_con {
+	padding: 11px 0 12px;
+}
+.naverlogo {
+	background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20230518_1900/img/sprite/png/spSv_global.png);
+    background-size: 429px 398px;
+    background-position: -346px -54px !important;
+    width: 48px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+}
+.naverpay{
+	background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20230518_1900/img/sprite/png/spSv_global.png);
+    background-size: 429px 398px;
+    background-position: -109px -209px !important;
+    width: 67px;
+    height: 13px;
+    margin-left: 18px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+}
+.right_con {
+    position: relative;
+    margin: 3px -9px 0 0;
+}
+.basket_space {
+	display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 11px;
+    line-height: 19px;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+    vertical-align: top;
+    text-decoration: none;
+}
+.basket_icon {
+	display: inline-block;
+    min-width: 22px;
+    margin-right: 2px;
+    vertical-align: top;
+}
+.update_cnt {
+	display: inline-block;
+    position: relative;
+    margin: -4px 0 0 -8px;
+    padding: 0 4px;
+    border-radius: 68px;
+    background-color: #12a741;
+    font-family: tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    vertical-align: top;
+    font-style: normal;
+}
+.mypage {
+	display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 2147483646;
+    font-family: '나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important;
+    color: #444;
+    font-size: 12px;
+    letter-spacing: 0 !important;
+    line-height: normal !important;
+    text-align: left !important;
+}
+.mypage {
+	cursor: pointer;
+	background-image: url(https://ssl.pstatic.net/static/common/gnb/2014/ico_arrow_wh.gif);
+    padding: 2px 9px 0 0;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    zoom: 1;
+}
+.arrowdown {
+	top: 25px;
+    margin-left: 8px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 8px;
+    background-position: -175px -10px !important;
+    background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat -999px -999px;
+}
+.nickname {
+	margin-right: -1px;
+    padding-left: 5px;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    font-size: 11px;
+    color: #fff;
+}
+.mypage_img {
+	vertical-align: top;
+    border-radius: 16px;
+    border: 0;
+    width: 26px;
+    height: 26px;
+}
+.hotkey {
+    margin-right: 2px;
+    display: inline-block;
+}
+.bell {
+	cursor: pointer;
+	width: 17px;
+    height: 19px;
+    padding: 6px 8px 3px;
+    position: relative;
+    z-index: 100;
+}
+.bell_icon {
+	display: inline-block;
+	width: 17px;
+    height: 19px;
+    background-position: -220px -120px !important;
+    background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat -999px -999px;
+}
+.new_cnt {
+	display: inline-block;
+    position: absolute;
+    margin: -4px 0 0 -8px;
+    padding: 0 4px;
+    border-radius: 68px;
+    background-color: #12a741;
+    font-family: tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    vertical-align: top;
+    font-style: normal;
+    color: #ffffff;
+}
+.mail {
+	width: 22px;
+    height: 16px;
+    padding: 7px 8px 4px;
+    cursor:pointer;
+    position: relative;
+    z-index: 100;
+}
+.mail_icon {
+	display: inline-block;
+	width: 22px;
+    height: 16px;
+    background-position: -238px -121px !important;
+    background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat -999px -999px;
+}
+.menu {
+	display: inline-block;
+   	width: 18px;
+    height: 18px;
+    padding: 6px 8px 4px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+.menu_icon {
+	display: inline-block;
+	width: 18px;
+    height: 18px;
+    background-position: -261px -120px !important;
+    background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat -999px -999px;
+}
+.toptop_height::after {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    content: '';
+}
+.top_under {
+	height: 66px;
+}
+.under_width {
+	width: 1280px;
+    position: relative;
+    margin: 0 auto;
+}
+.navershop {
+	width: 82px;
+    padding-top: 19px;
+}
+.shoplogo {
+	display: inline-block;
+    background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20230518_1900/img/sprite/png/spSv_global.png);
+    background-size: 429px 398px;
+    background-position: -180px -78px;
+    width: 68px;
+    height: 28px;
+    position: relative;
+}
+.shoplive {
+    width: 67px;
+    margin: 24px 20px 0 0;
+}
+.shoplive_logo {
+	display: inline-block;
+	background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20230518_1900/img/sprite/png/spSv_global.png);
+    background-size: 429px 398px;
+    background-position: -111px -21px !important;
+    width: 54px;
+    height: 20px;
+    position: relative;
+    vertical-align: top;
+}
+.shoplive:before {
+	display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 3px 8px 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    vertical-align: top;
+    content: '';
+}
+.search {
+	position: relative;
+    width: 430px;
+    padding-top: 16px;
+}
+.input_search {
+	position: relative;
+    width: 267px;
+    height: 32px;
+    padding-right: 81px;
+    border: 1px solid #00b637;
+    border-right: 0;
+    background-color: #fff;
+}
+.search_txt {
+	width: 100%;
+    height: 18px;
+    margin: 7px 0 0 10px;
+    border: 0 none;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #000000;
+    outline: medium none;
+}
+.autof {
+	position: absolute;
+    top: 0;
+    right: 50px;
+    width: 31px;
+    height: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.autof span {
+	background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20230518_1900/img/sprite/png/spSv_global.png);
+    background-size: 429px 398px;
+    background-position: -419px -113px !important;
+    width: 7px;
+    height: 4px;
+    position: absolute;
+    top: 14px;
+    left: 12px;
+}
+.click_btn {
+	position: absolute;
+    top: -1px;
+    right: 0;
+}
+.shop_best {
+	position: absolute;
+    top: 25px;
+    right: 107px;
+    height: 14px;
+}
+.shop_txt {
+	overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.my_shop {
+	position: absolute;
+    top: 25px;
+    right: 9px;
+    height: 14px;
+}
+.my_shop:before {
+	display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin-top: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    vertical-align: top;
+    content: '';
+}
+.shop_icon {
+    display: inline-block;
+	position: relative;
+    padding-left: 12px;
+    vertical-align: top;
+}
+.shop_icon::after {
+	display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 6px 0 0 4px;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-color: #ffffff transparent transparent;
+    vertical-align: top;
+    content: '';
+}
+#delivery {
+	background-color: #ffffff;
+}
+.delivery_con{
+	width: 1280px;
+    position: relative;
+    padding: 31px 0 35px;
+    margin: 0 auto;
+}
+.delivery_txt {
+	margin-left: -14px;
+}
+button {
+	outline: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.deli_btn {
+	font-weight: bold;
+    color: #000000;
+    padding: 0 14px;
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: top;
+}
+.deli_num {
+	font-weight: bold;
+    color: #000000;
+    font-size: 20px;
+    line-height: 28px;
+}
+.deli_step {
+	position: absolute;
+    top: 36px;
+    right: 0;
+}
+.deli_step div {
+	display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    vertical-align: top;
+    font-weight: bold;
+    color: #000000;
+}
+.deli_step div+div {
+	margin-left: 5px;
+	display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    color: #9a9a9a;
+    vertical-align: top;
+}
+.deli_step svg {
+	display: inline-block;
+    margin-right: 4px;
+    vertical-align: top;
+}
+.total_click {
+	height: auto;
+    border-top: 1px solid #e9ecef;
+    position: relative;
+    background-color: #ffffff;
+}
+.all_width {
+	width: 1280px;
+	padding: 15px 0;
+    margin: 0 auto;
+}
+.allcheck_box {
+	font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    font-weight: bold;
+    color: #222222;
+    text-align: left;
+    vertical-align: top;
+    margin-top: 5px;
+}
+.allcheck_box span {
+	display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    border-color: #03c75a;
+    background-color: #03c75a;
+    border: 1px solid #c7cacd;
+    border-radius: 2px;
+    vertical-align: top;
+}
+.allcheck_box svg{
+	width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 2px;
+    vertical-align: top;
+}
+.choose_click {
+	padding: 0 11px;
+    border-color: #d5dade;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #444444;
+    border: 1px solid #d9dde0;
+    background-color: #ffffff;
+}
+.choose_click svg {
+	display: inline-block;
+    margin: 6px 3px 0 -3px;
+    vertical-align: top;
+}
+.content {
+	padding: 30px 0 44px;
+	background-color: #f4f4f4;
+}
+.content_box {
+    margin-right: 32px;
+    margin-left: 32px;
+}
+.order_box {
+	width: 1280px;
+	padding: 0 30px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.05);
+}
+.home_check {
+    padding: 25px 0 18px;
+    border-bottom: 2px solid #383d4a;
+}
+.nickname_check {
+	padding-bottom: 0;
+    line-height: 23px;
+    min-width: 0;
+}
+.nickname_check button {
+	font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #222222;
+    text-align: left;
+    vertical-align: top;
+}
+.back_check {
+	width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    background-color: #ffffff;
+    border: 1px solid #c7cacd;
+    border-radius: 2px;
+    vertical-align: top;
+    display: inline-block;
+}
+.aria_true{
+	border-color: #03c75a;
+    background-color: #03c75a;
+}
+
+.back_check svg {
+	width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 2px;
+    vertical-align: top;
+}
+.storename {
+	display: inline-block;
+}
+.storename a {
+	font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 20px;
+    letter-spacing: 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.storename span {
+	margin-left: 6px;
+    vertical-align: top;
+    display: inline-block;
+}
+.totalp_box {
+	position: relative;
+}
+.p_box {
+	min-width: 0;
+    padding-left: 35px;
+    border-bottom: 1px solid #ececef;
+    margin-top: -20px;
+    
+}
+.pcheck {
+	top: 85px;
+	position: relative;
+	left: -40px;
+}
+.p_btn {
+	font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #222222;
+    text-align: left;
+    vertical-align: top;
+}
+.p_btn span {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    border: 1px solid #c7cacd;
+    border-radius: 2px;
+    vertical-align: top;
+    display: inline-block;
+}
+.p_btn svg {
+	width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 2px;
+    vertical-align: top;
+}
+.product-box {
+	width: 490px;
+    padding: 0;
+}
+.product {
+    padding: 20px 20px 20px 0;
+}
+.imforp {
+	position: relative;
+}
+.pimg {
+	width: 100px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 4px;
+}
+.pimg img {
+	width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    vertical-align: top;
+    border: 0;
+}
+.p_txt {
+	padding-left: 14px;
+    padding-right: 26px;
+    position: relative;
+    left:10px;
+}
+.title {
+	max-height: 44px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+.pprice {
+	margin-top: 4px;
+    font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+}
+.smart_name {
+    margin-top: 6px;
+    letter-spacing: 0;
+    line-height: 17px;
+    color: #959595;
+}
+.smart_name a {
+	text-decoration: none;
+	color: black;
+}
+.smart_name span::before {
+	display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 3px 5px 0;
+    background-color: #e8ecef;
+    vertical-align: top;
+    content: '';
+}
+.like_icon {
+	top: 66px;
+    left: 66px;
+    position: absolute;
+    z-index: 10;
+}
+.like_icon svg {
+    width: 26px;
+    height: 26px;
+}
+.link_home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    color: transparent;
+    content: '';
+}
+.delete_btn {
+	position: absolute;
+    top: 18px;
+    left: 410px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+}
+.delete_btn svg {
+	width: 12px;
+	height: 12px;
+}
+.order_table {
+	height: 100px;
+	width: 262px;
+	padding: 8px 20px 30px;
+	border-left: 1px solid #ececef;
+}
+.num_box {
+	margin-top: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+.order_num {
+	padding: 12px 0;
+    line-height: 18px;
+    margin-left: 2px;
+    letter-spacing: -0.5px;
+}
+.order_correction {
+	display: block;
+    margin-top: 3px;
+    padding: 0 12px;
+    line-height: 26px;
+    border-radius: 4px;
+    border: 1px solid #d5d9dc;
+    color: #333333;
+}
+.price_box {
+	height: 100px;
+    border-left: 1px solid #ececef;
+    width: 250px;
+    padding: 20px 15px;
+}
+.pwon {    
+	margin: 12px 0 10px;
+	display: block;
+    text-align: center;
+    margin-top: 0;
+    min-width: 0;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+}
+.pwon span {
+	display: block;
+    font-size: 12px;
+    line-height: 23px;
+    color: #444444;
+    font-weight: bold;
+    text-align: center;
+}
+.pwon em {
+	font-style: normal;
+    font-weight: bold;
+	font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    padding-left: 0;
+    letter-spacing: 0;
+}
+.pwon em span {
+	font-size: 15px;
+    vertical-align: top;
+}
+.order_start {
+	text-align: center;
+	margin: 0;
+	min-width: 0;
+}
+.order_gobtn {
+	margin: 0 auto;
+    padding: 0 12px;
+    line-height: 26px;
+    border-radius: 4px;
+    border: 1px solid #03c75a;
+    font-weight: bold;
+    color: #03c75a;
+}
+.deli_pricebox {
+	width: 200px;
+	min-width: 0;
+	margin: 0;
+    padding: 20px 15px;
+    border-top: 0;
+    border-left: 1px solid #ececef;
+    height: 100px;
+}
+.deli_pbox {
+	display: block;
+    text-align: center;
+}
+.deli_pboxspan {
+	padding-left: 10px;
+    padding-top: 27px;
+	display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #444444;
+    text-align: center;
+}
+.money2 {
+	position: relative;
+    display: block;
+    font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    font-style: normal;
+}
+.total_price {
+	border-top: 1px solid #222222;
+	justify-content: center;
+    border-color: #cacbd4;
+    display: flex;
+    padding: 24px 0 30px 0;
+    margin: 0;
+    position: relative;
+}
+.pay_total {
+	align-items: center;
+	display: flex;
+    padding: 0 43px 0 0;
+    margin: 0;
+}
+.pay_calc {
+	align-items: center;
+    padding-right: 40px;
+    display: flex;
+    position: relative;
+}
+.choose_price {
+	flex-direction: column;
+	margin-bottom: 0;
+	line-height: 18px;
+	display: flex;
+    min-width: 0;
+    position: relative;
+}
+.choose_pricespan {
+	font-size: 14px;
+    line-height: 21px;
+    display: block;
+    font-weight: bold;
+    color: #222222;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+.choose_price em {
+	margin-top: 3px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222222;
+    text-align: left;
+    letter-spacing: 0;
+    white-space: nowrap;
+    font-weight: 600;
+    font-style: normal;
+}
+.money3 {
+	font-size: 16px;
+    font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    vertical-align: top;
+}
+.plus {
+	display: block;
+    margin: 0 20px;
+}
+.total_paydeli {
+	flex-direction: column;
+	margin-bottom: 0;
+	line-height: 18px;
+	display: flex;
+    min-width: 0;
+    position: relative;
+}
+.paydeli_span {
+	font-size: 14px;
+    line-height: 21px;
+    display: block;
+    font-weight: bold;
+    color: #222222;
+    position: relative;
+    letter-spacing: -0.5px
+}
+.total_paydeli em {
+	margin-top: 3px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222222;
+    text-align: left;
+    letter-spacing: 0;
+    white-space: nowrap;
+    font-weight: 600;
+    font-style: normal;
+}
+.money4 {
+	font-size: 16px;
+	font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    vertical-align: top;
+}
+.minus {
+	display: block;
+    margin: 0 20px;
+}
+.discount {
+	flex-direction: column;
+	margin-bottom: 0;
+	line-height: 18px;
+	display: flex;
+    min-width: 0;
+    position: relative;
+}
+.discount_span {
+	font-size: 14px;
+    line-height: 21px;
+    display: block;
+    font-weight: bold;
+    color: #222222;
+    position: relative;
+    letter-spacing: -0.5px
+}
+.discount em {
+	color: #f85151;
+	margin-top: 3px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 0;
+    display: block;
+    white-space: nowrap;
+    font-weight: 600;
+    font-style: normal;
+}
+.money5 {
+	font-size: 16px;
+	font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    vertical-align: top;
+}
+.pay_calc::after {
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    max-height: 46px;
+    background-color: #d1d4d7;
+    content: '';
+}
+.total_payarea {
+	display: flex;
+    min-width: 0;
+    padding: 0 0 0 40px;
+    position: relative;
+}
+.payarea_inner {
+	flex-direction: column;
+	display: flex;
+}
+.price_area {
+	line-height: 23px;
+	display: block;
+	margin-bottom: 0;
+    position: relative;
+}
+.total_payspan {
+	padding-right: 10px;
+	display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+    font-weight: bold;
+    color: #222222;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+.price_area em {
+	padding-left: 0;
+    color: #00c63a;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+    text-align: left;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-style: normal;
+}
+.money6 {
+	font-size: 18px;
+	font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    vertical-align: top;
+    color: #00c63a;
+}
+.link_payment {
+	padding: 0;
+    margin: 0;
+}
+.link_buy {
+	position: static;
+    min-width: 224px;
+    max-width: 290px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 15px;
+    line-height: 48px;
+    letter-spacing: -0.3px;
+    text-align: center;
+    display: flex;
+    background-color: #03c75a;
+    font-weight: bold;
+    justify-content: center;
+    color: #ffffff;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.link_buy em {
+	font-style: normal;
+}
+.explanation {
+	width: 1280px;
+	margin: 44px auto;
+	padding: 20px 39px;
+    background-color: #fafbfc;
+    border-radius: 6px;
+    color: #777777;
+}
+.explanation div::before {
+    position: absolute;
+    top: 5px;
+    left: -7px;
+    width: 3px;
+    height: 3px;
+    background-color: #c6c9cb;
+    border-radius: 50%;
+    content: '';
+}
+.explanation div {
+	position: relative;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.5px;
+}
+.explanation div em {
+	color: #03c75a;
+	font-style: normal;
+}
+.explanation div+div {
+	margin-top: 9px;
+}
+.buttom_orderarea {
+	height: 76px;
+    background-color: #03c75a;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+}
+.buttom_orderarea::before {
+	position: absolute;
+    top: -10px;
+    right: 0;
+    left: 0;
+    height: 10px;
+    opacity: 0.06;
+    background: linear-gradient(180deg, rgba(11,26,58,0.0001) 0%, #0b1a3a 100%);
+    content: '';
+}
+.payment_bar {
+	width: 1280px;
+	position: relative;
+    margin: 0 auto;
+    text-align: right;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.payment_content {
+	padding: 14px 0;
+    display: block;
+    position: relative;
+    background-color: #03c75a;
+}
+.paycon_txt {
+	font-weight: bold;
+    line-height: 48px;
+    vertical-align: top;
+    margin-right: 10px;
+    white-space: nowrap;
+    color: #ffffff;
+    text-align: left;
+}
+.buttom_orderarea button {
+	outline: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.paycon_span {
+	display: inline-block;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+.paycon_txt em {
+	display: inline-block;
+    margin-left: 12px;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: bold;
+    font-style: normal;
+}
+.money7 {
+	font-family: tahoma,"나눔고딕","Nanum Gothic","맑은고딕","Malgun Gothic","돋움",dotum,helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 24px;
+    line-height: 48px;
+}
+.paycon_txt svg {
+	width: 20px;
+    height: 20px;
+    margin: 13px 0 0 3px;
+    display: inline-block;
+}
+.click_totalbtn {
+	display: inline-block;
+    width: 224px;
+    max-width: none;
+    margin-left: 29px;
+    border-radius: 6px;
+    border: 0;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #ffffff !important;
+    font-weight: bold;
+}
+.click_totalbtn span {
+	margin: 15px 0 0 4px;
+	display: inline-block;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 2px;
+    box-sizing: border-box;
+    background-color: #03c75a;
+    border-radius: 9px;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.footer_area {
+	padding-bottom: 72px;
+	width: 100%;
+    border-top: 1px solid #ebebeb;
+}
+.footer_box {
+	width: 1365px;
+	margin: 0 auto;
+    padding: 27px 0;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+}
+.top_footer {
+    margin-bottom: 11px;
+}
+.top_footer a {
+	color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+.top_footer a+a::before {
+	display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 5px 5px 0 4px;
+    background-color: #d7d7d7;
+    vertical-align: top;
+    content: '';
+}
+.marketing_footer {
+	margin-bottom: 11px;
+    color: #888888;
+    letter-spacing: -1px;
+}
+.address {
+	margin-bottom: 9px;
+	font-style: normal;
+}
+.address span,a {
+	display: inline-block;
+    vertical-align: top;
+}
+.address a {
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+.address span+span::before {
+	display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 5px 6px 0 9px;
+    background-color: #d7d7d7;
+    vertical-align: top;
+    content: '';
+}
+.footer_copyright {
+	font-size: 10px;
+    font-family: verdana;
+    color: #494948;
+}
+.footer_navericon {
+	color: #494948;
+    background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20210605_1730/img/sprite/png/spSv_global_210723.png);
+    background-size: 427px 419px;
+    background-position: -189px -209px !important;
+    width: 63px;
+    height: 11px;
+    display: inline-block;
+    position: relative;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+}
+.footer_copyright a {
+	text-decoration: none;
+}
+.navercorp {
+	color: #494948;
+}
+
+
+
+
+
+
+
+
+

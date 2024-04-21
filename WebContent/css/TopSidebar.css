@@ -1,0 +1,387 @@
+@charset "UTF-8";
+		body { margin:0; 
+		position: relative;
+	    height: 100%;
+	    min-height: 100%;
+	    font-family: 나눔고딕,NanumGothic,Helvetica Neue,Helvetica,AppleSDGothicNeo-Regular,Arial,맑은고딕,malgun gothic,돋움,dotum,sans-serif;
+	    line-height: 20px;
+	    color: #4d5159;
+	    background-color: #edf0f5;
+	    font-size: 13px
+	    }
+		.border { border:1px solid red; }
+		#header { min-height:55px; background-color: #2d3539; }
+		#left_side { position: absolute; width:210px; min-height:100%; background-color: #445163; box-sizing: border-box;}
+		#header > .left-header {
+			margin: 15px 0 9px 25px;
+		}
+		.smartlogo {
+		    background-image: url(https://sell.smartstore.naver.com/images/kr/logo/logo-pc.svg?a19f02f8ea62b512eee8b4c1909b6a52);
+		    background-repeat: no-repeat;
+		    background-size: 220px auto;
+		    width: 220px;;
+   			height: 24px;
+   			cursor: pointer;
+		}
+		.topmenu {
+			display: inline-block;
+		    margin: -3px 0 0 10px;
+		    line-height: 27px;
+		    vertical-align: top;
+		}
+		.topmenu span {
+			position: relative;
+		    padding: 0 10px 0 11px;
+		    color: #fff;
+		    font-size: 16px;
+			opacity: .5;
+		}	
+		.topmenu span:before {
+		    position: absolute;
+		    left: 0px;
+		    top: 50%;
+		    margin-top: -8px;
+		    width: 1px;
+		    height: 15px;
+		    background-color: #000;
+		    content: "";
+		    box-sizing: border-box;
+		}
+		.topmenu img {
+			border-top: 3px;
+		}
+		.right-header {
+			max-height: 55px;
+    		margin: 0 25px 0 0;
+		}
+		.topright {
+			margin-right: 0;
+    		font-size: 12px;
+    		color: #fff;
+    		line-height: 1.5;
+    		padding: 18px 10px 18px 0;
+    		position: relative;
+		}
+		.topid {
+			vertical-align: bottom;
+		    max-width: 160px;
+		    padding-right: 2px;
+		    cursor: pointer;
+		}
+		.myhome {
+			margin-left: 4px;
+		    padding: 0 7px;
+		    border-radius: 20px;
+		    border: 1px solid #dedede;
+		    color: #fff;
+		    font-size: 10px;
+		    line-height: 15px;
+		    cursor: pointer;
+		}
+		.bell {
+			margin-left: 20px;
+			display: inline-block;
+			width: 20px !important;
+   			height: 21px !important;
+			background: url(https://sell.smartstore.naver.com/images/kr/sprites/sp_alarm-mini.svg?2b504cdc350da7f35286342230af80f8) 97.19626168224299% 18.072289156626507% no-repeat;
+		}
+		.bell:after {
+			position: absolute;
+		    top: 46%;
+		    left: 120px;
+		    width: 1px;
+		    height: 10px;
+		    margin-top: -5px;
+		    background-color: #000;
+		    opacity: .3;
+		    content: "";
+		}
+		.newicon {
+			background: url(https://sell.smartstore.naver.com/images/kr/sprites/sp_alarm-mini.svg?2b504cdc350da7f35286342230af80f8) 93.69369369369369% 62.5% no-repeat;
+			width: 16px;
+   			height: 16px;
+			position: absolute;
+		    left: 41%;
+		    top: 12px;
+		}
+		.logout {
+			margin-left: 10px;
+		}
+		.imformation {
+			margin-left: 10px;
+		}
+		.header-talk {
+			margin: -2px 0 14px 10px;
+		    padding: 4px 7px;
+		    text-decoration: none;
+		    background-color: #455264;
+		    border-color: #202528;
+		    font-size: 11px;
+		}
+		.header-talk img {
+			margin-left: 4px;
+    		font-size: 12px;
+   		    margin: 3px 0 1px;
+   		 	vertical-align: middle;
+		}
+
+		#left_side > div:nth-child(1) {
+		    padding: 20px 25px 10px;
+		    text-align: center;
+		    color: #fff;
+		    background-color: #3f4b5c; 
+		}
+		#left_side > div:nth-child(1) > img {
+			width:68px;
+		    border-radius: 50%;
+		}
+		#left_side > div:nth-child(1) > p {
+			margin-top: 7px;
+		    font-size: 15px;
+		    line-height: 24px;
+		}
+		
+		#left_side > div:nth-child(2) {
+			padding: 2px 25px 22px;
+	        box-sizing: border-box;
+	        background-color: #3f4b5c; 
+		}
+		#left_side > div:nth-child(2) > .top {
+		    background-color: #37404d;
+		    border: 1px solid #646d7b;
+		    color: #cdced1;
+		    cursor: pointer;
+		    padding-top: 2px;
+		    padding-bottom: 2px;
+		    min-height: 25px;
+		    line-height: 24px;
+		    position: relative;
+		}
+		#left_side > div:nth-child(2) > .top > .toptext {
+			padding: 4px 30px 4px 10px;
+    		vertical-align: middle;
+    		font-size: 13px;
+    		line-height:24px;
+		}
+		.drop_serach::after {
+			border-color: #8d8d92 transparent transparent;
+		    right: 10px;
+		    content: " ";
+		    display: block;
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -3px;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    border-width: 5px 5px 0;
+		}
+		.after_serach::after {
+			border-color: transparent transparent #767a83;
+		    right: 10px;
+		    content: " ";
+		    display: block;
+		    position: absolute;
+		    top: 50%;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    margin-top: -4px;
+		    border-width: 0 5px 5px;
+		}
+		.drop_serachtext {
+			position: absolute;
+			width: 160px;
+		    background-color: #37404d;
+		    border: 1px solid #646d7b;
+		    color: #cdced1;
+    		z-index: 100;
+    		margin-top: -1px;
+    		border-radius: 0;
+    		line-height: 24px;
+		}
+		.find_text {
+			padding-bottom: 4px;
+			padding: 0;
+			max-height: 200px;
+			overflow-y: auto;
+		}
+		.option_text {
+			padding-top: 2px;
+    		padding-bottom: 2px;
+    		padding: 4px 10px;
+    		cursor: pointer;
+		}
+
+		#left_side > div:nth-child(2) > .input_title{
+			height: 26px;
+			padding: 8px 0 0;
+    		border-bottom: 2px solid #646d7b;
+		}
+		#left_side > div:nth-child(2) > .input_title > input[type="text"] {
+			width: 125px;
+			color: #e8e8e8;
+		    font-size: 14px;
+		    line-height: 1;
+		    border: none;
+		    background-color: #3f4b5c;
+	        outline: none;
+		}
+		#left_side > div:nth-child(2) > .input_title > img {
+			cursor: pointer;
+		}
+		#left_side > div:nth-child(3) {
+			padding-top: 16px;
+		    color: #4d5159;
+			margin: 0 25px;
+			cursor: pointer;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+		#left_side > div:nth-child(3) > .menu {
+		    position: relative;
+		    padding: 16px 15px 16px 5px;
+		    color: #fff;
+		    font-size: 14px;
+		    font-weight: 500;
+		    line-height: 1.5;
+	        word-break: keep-all;
+    		border-top: 1px solid #515d6e;
+		}
+		#left_side > div:nth-child(3) > .menu:nth-child(1) {
+    		border-top: none;
+		}
+		.dropbtn:after {
+			background-position: -200px -100px !important;
+			position: absolute;
+		    top: 25px;
+		    right: 5px;
+		    width: 9px;
+		    height: 5px;
+		    background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+		    content: "";
+		}
+		.afterdropbtn:after {
+			background-position: -210px -100px !important;
+			position: absolute;
+		    top: 25px;
+		    right: 5px;
+		    width: 9px;
+		    height: 5px;
+		    background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+		    content: "";
+		}
+		.dropcontent {
+		    margin: 0 -25px;
+		    padding: 0;
+		    background-color: #414958;
+			padding-top: 20px;	
+			padding-bottom: 20px;	    
+		}
+		.droptext {
+			position: relative;
+    		margin: 0 25px;
+		}
+		.dropcontent > .droptext div {
+			position: relative;
+			padding: 5px 5px 9px;
+		    border-top: none;
+		}
+		.droptext a {
+		 	font-size: 13px;
+		    color: #949ca6;
+		    line-height: 1.5;
+		    font-weight: 500;
+		    text-decoration: none;
+		}
+		
+		#left_side > div:nth-child(3) > .menu i{
+			width: 38px;
+		    height: 15px;
+		    background-position: -360px -230px !important;
+			background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+		    margin: -1px 0 1px;
+		    display: inline-block;
+		    vertical-align: middle;
+				}
+		#left_side > div:nth-child(3) > .menu > .talk img {
+			vertical-align: middle;
+		}
+		.upicon {
+			padding: 1px 2px;
+    		font-size: 10px;
+    		font-weight: 600;
+   		    background-color: #ff545c;
+		}
+		#left_side > div:nth-child(5) {
+			padding: 30px;
+		}
+		.title {
+			font-size: 12px;
+		    color: #95b7e3;
+		    font-weight: 400;
+		    margin-top: 7px;
+		    margin-bottom: 7px;
+		    line-height: 1.6;
+		}	
+		#left_side > div:nth-child(5) > .shortcut {
+			margin: 0px;
+			padding: 0px;
+			font-size: 14px;
+		    color: #dedede;
+		    cursor: pointer;
+		}
+		.subtitle { 
+			padding-top: 12px;
+		}
+		.talk img {
+			margin-left: 4px;
+    		font-size: 12px;
+   		    margin: -2px 0 1px;
+   		 	vertical-align: middle;
+		}
+		.mg35 {
+			margin-top: 35px;
+		}
+		.last_leftside{
+			padding: 0 30px;
+			
+		}
+		div:nth-child(6) > .clicktalk {
+			background-color: #525e6f;
+		    border-color: #3e4859;
+		    color: #fff;
+			margin-bottom: 0;
+		    font-weight: 400;
+		    text-align: center;
+		    cursor: pointer;
+		    border: 1px solid transparent;
+		    padding: 4px 15px;
+		    line-height: 24px;
+		    border-radius: 0;
+		    font-size: 12px;
+		}
+		.minitalk {
+    		vertical-align: middle;
+	    	font-size: 16px;
+	    	margin-right: 5px;
+		}
+
+		
+		
+#right_side { 
+			padding: 0 0 0 210px;
+			 width: 100%; 
+			 }  /* 1100px : 임시적인 값 */ 
+
+.fl { float: left; }
+.fr { float: right; }
+#menuline{
+	height:1px;
+	background-color: #3d4858;
+}
+
+
+.droptext a:hover, .droptext a:focus{
+   color: #00c73c;
+}

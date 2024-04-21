@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Toast UI #1</title>
+	<link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+	<script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+	<script>
+		window.onload = function() {
+			var Grid = tui.Grid;
+		
+			var instance = new Grid({
+			  el: document.getElementById('grid'), // Container element
+			  scrollX: true,
+			  columnOptions: {
+				    frozenCount: 4, // 2개의 컬럼을 고정하고
+				    frozenBorderWidth: 2 // 고정 컬럼의 경계선 너비를 2px로 한다.
+			  },
+			  columns: [
+			    {
+			   	  width: 147,
+			      header: '상품주문번호',
+			      name: 'productordernum'
+			    },
+			    {
+				  width: 147,
+			      header: '주문번호',
+			      name: 'ordernum'
+			    },
+			    {
+				   	  width: 147,
+				      header: '배송방법(구매자 요청)',
+				      name: 'deliveryway_purchase'
+				    },
+				    {
+				   	  width: 147,
+				      header: '택배사',
+				      name: 'deliverycompany'
+				    },
+				    {
+				   	  width: 147,
+				      header: '송장번호',
+				      name: 'invoicenum'
+				    },
+					    {
+					   	  width: 147,
+					      header: '발송일',
+					      name: 'senddate'
+					    },
+						{
+						  width: 147,
+						  header: '구매자명',
+						  name: 'buyer'
+						},
+						{
+						  width: 147,
+						  header: '구매자ID',
+						  name: 'buyerid'
+						},
+						{
+						  width: 147,
+						  header: '수취인명',
+						  name: 'recipient'
+						},
+					    {
+						  width: 147,
+						  header: '주문상태',
+						  name: 'orderstatus'
+						},
+						{
+						  width: 147,
+						  header: '결제일',
+						  name: 'paydate'
+						},
+					    {
+						  width: 147,
+						  header: '상품번호',
+						  name: 'productnum'
+						},
+						{
+						  width: 147,
+						  header: '상품명',
+						  name: 'pname'
+						},
+					    {
+						  width: 147,
+						  header: '옵션정보',
+						  name: 'optioninfo'
+						},
+						{
+						  width: 147,
+						  header: '옵션관리코드',
+						  name: 'optioncode'
+						},
+						{
+						  width: 147,
+						  header: '수량',
+						  name: 'quantity'
+						},
+						{
+						  width: 147,
+						  header: '옵션가격',
+						  name: 'oprice'
+						},
+					    {
+						  width: 147,
+						  header: '상품가격',
+						  name: 'productprice'
+						},
+						{
+						  width: 147,
+						  header: '상품별 총 주문금액',
+						  name: 'totalprice'
+						},
+					    {
+						  width: 147,
+						  header: '발주확인일',
+						  name: 'orderconfirmdate'
+						},
+						{
+						  width: 147,
+						  header: '발송기한',
+						  name: 'deliverydeadline'
+						},
+						{
+						  width: 147,
+						  header: '발송처리일',
+						  name: 'shipmentprocessing'
+						},
+						{
+						  width: 147,
+						  header: '배송비형태',
+						  name: 'deliveryfeetype'
+						},
+					    {
+						  width: 147,
+						  header: '배송비 유형',
+						  name: 'shippingfeetype'
+						},
+						{
+						  width: 147,
+						  header: '배송비 합계',
+						  name: 'totalshippingcost'
+						},
+						{
+						  width: 147,
+						  header: '판매자 상품코드',
+						  name: 'pcode'
+						},
+						{
+						  width: 147,
+						  header: '수취인연락처',
+						  name: 'receiptphone'
+						},
+						{
+						  width: 147,
+						  header: '기본배송지',
+						  name: 'defaultdelivery'
+						},
+					    {
+						  width: 147,
+						  header: '상세배송지',
+						  name: 'detaildelivery'
+						},
+						{
+						  width: 147,
+						  header: '구매자연락처',
+						  name: 'buyerphone'
+						},
+						{
+						  width: 147,
+						  header: '우편번호',
+						  name: 'postnum'
+						},
+						{
+						  width: 147,
+						  header: '배송메세지',
+						  name: 'postmessage'
+						},
+					    {
+						  width: 147,
+						  header: '출고지',
+						  name: 'shippingplace'
+						},
+						{
+						  width: 147,
+						  header: '주문일시',
+						  name: 'orderdate'
+						}
+
+
+			  ],
+			  data: [
+			    {
+			      productordernum: '2023041728844451',
+			      ordernum: '2023041790123011',
+			      deliveryway_purchase: '택배,등기,소포',
+			      deliverycompany: 'CJ대한통운',
+			      invoicenum: '123456789',
+			      senddate: '2023-04-25',
+			      buyer: '만채',
+			      buyerid: 'manchae1106',
+			      recipient: '만채',
+			      orderstatus: '결제완료',
+			      paydate: '2023.04.17 14:18:50',
+			      productnum: '4897977260',
+			      pname : '가구수평패드',
+			      optioninfo : '0',
+			      optioncode : '0',
+			      quantity : '1',
+			      oprice : 'null',
+			      productprice : '10',
+				  totalprice : '10',
+				  orderconfirmdate : '2023.04.18 14:18:50',
+				  deliverydeadline : '2023.04.25 14:18:50',
+				  shipmentprocessing : '2023-04-25',
+				  deliveryfeetype : '무료',
+				  shippingfeetype : '무료',
+				  totalshippingcost : '0',
+				  pcode :'1',
+				  receiptphone : '010-1234-5678',
+				  defaultdelivery : '서울특별시 마포구',
+				  detaildelivery : '신촌동 325',
+				  buyerphone :'010-1234-5678',
+				  postnum : '02654',
+				  postmessage : '안전하게 배송해주세요!',
+				  shippingplace : '서울특별시 마포구',
+				  orderdate : '2023.04.17 14:18:47'
+			    }
+			  ]
+			});
+		
+			instance.resetData(newData); // Call API of instance's public method
+		
+			Grid.applyTheme('striped'); // Call API of static method
+		}
+	</script>
+</head>
+<body>
+	<div style="width:1200px;">
+		<div id="grid"></div>
+	</div>
+</body>
+</html>

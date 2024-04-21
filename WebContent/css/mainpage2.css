@@ -1,0 +1,726 @@
+@charset "UTF-8";
+body {
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+    font-family: 나눔고딕,NanumGothic,Helvetica Neue,Helvetica,AppleSDGothicNeo-Regular,Arial,맑은고딕,malgun gothic,돋움,dotum,sans-serif;
+    line-height: 20px;
+    color: #4d5159;
+    background-color: #edf0f5;
+    font-size: 13px;
+}
+.fl { float: left;}
+.fr { float: right;}
+div.seller-sub-title{
+	border-bottom: 1px solid #e3e7ee;
+ 	background-color: #fff;
+ 	height : 60px;
+}
+div.seller-sub-title h2.title {
+   	padding-left: 60px;
+    line-height: 59px;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #303236;
+    font-weight: 400;
+    word-break: keep-all;
+}  
+
+div .navbar {
+    position: absolute;
+    display: inline-block;
+    width: 26px;
+    height: 60px;
+    margin-bottom: 0;
+    background-color: #edf0f5;
+    border-right: 1px solid #dbdde2;
+    border-bottom: 1px solid #dbdde2;
+    vertical-align: top;
+    text-align: center;
+}
+.navbar:after {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    width: 5px;
+    height: 9px;
+    background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+    content: "";
+    background-position: -180px -100px;
+}
+
+.alert {
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+.no-decoration {
+	display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.round-ico-area {
+    position: relative;
+    top: 0px;
+    left: 50px;
+    font-size: 14px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #00c73c;
+    border-radius: 50px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.round-ico-area .fn {
+    vertical-align: -2px;
+}
+.fn, .fn-booking, .fn-shopping {
+    margin: -1px 0 1px;
+    vertical-align: middle;
+}
+.fn, .fn:before {
+    display: inline-block;
+    line-height: 1em;
+}
+.fn {
+    height: 1em;
+}
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+.fn-alert2:before {
+    content: "\EA08";
+}
+.fn:before {
+    font-family: Naver Icons;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+}
+.notice-date {
+	color: #767a83;
+    font-size: 13px;
+    line-height: 20px;
+}
+.seller-sub-content {
+    font-size: 14px;
+    padding: 10px 25px 8px;
+    box-sizing: border-box;
+}
+.seller-sub-content2 {
+    font-size: 14px;
+    padding: 10px 25px 8px;
+    box-sizing: border-box;
+    height: 415px;
+}
+
+.bx-wrapper .topimg {
+	height: 30px;
+	vertical-align: middle;
+	border: 0;
+	margin: 0 auto;
+}
+.bx-wrapper {
+	margin-bottom: none !important;
+     box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+}
+.img_div {
+	margin: 0 auto;
+}
+.slider_div {
+	margin : 0 auto;
+	width: 800px;
+	box-sizing: border-box;
+}
+.panel-wrap {
+    padding: 5px;
+    max-width: 50%;
+    box-sizing: border-box;
+    background-color: #f2fcea;
+    border: 1px solid #dbdde2;
+}
+.panel {
+   padding-top: 15px;
+}
+.text-center {
+	text-align: center;
+}
+.panel-heading {
+	padding: 0 25px;
+    border-bottom: 1px solid #e2e6ee;
+	width: 800px;
+	height: 52px;
+	box-sizing: border-box;
+}
+.panel-title {
+	line-height: 52px;
+	color: #303236;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.panel-body {
+	position: relative;
+    padding: 15px 0;
+    width: 800px;
+    height: 135px;
+    background-color: #fff !important;
+}
+.list_wrap {
+    padding-left: 25px;
+   	padding-right: 25px;
+   	width: 349px;
+   	height: 134px;
+}
+.panel-text {
+	margin-right: 25px;
+    padding: 3px 0 0 57px;
+    margin-top: 0;
+}
+.bx-wrapper {
+    margin-bottom: 20px!important;
+}
+.bx-wrapper .bx-pager{
+    position: absolute;
+    bottom: -10px!important;
+    width: 100%;
+}
+
+
+.orderclaim {
+	margin: 0;
+    padding: 5px;
+    border: 1px solid #dbdde2;
+    box-shadow: none;
+    background-color: #fff;
+}
+.panel-body {
+    padding: 15px 0;
+}
+.panel-text li {
+    margin-bottom: 9px;
+    line-height: 18px;
+    list-style: none;
+}
+.order_div {
+	box-sizing: border-box;
+}
+.info-title {
+	color: #303236;
+    vertical-align: middle;
+    font-size: 15px;
+}
+.pull_left {
+    font-style: normal;
+}
+a{
+	text-decoration: none;
+	background-color: transparent;
+}
+.text-number {
+	position: relative;
+    top: -1px;
+    font-size: 20px;
+    font-family: tahoma,HelveticaNeue-Medium,Helvetica,Arial,나눔고딕,NanumGothic,맑은고딕,malgun gothic,"\B3CB\C6C0",dotum,sans-serif;
+    color: #4dc089;
+    display: inline-block;
+}
+.number-area span {
+    padding-left: 4px;
+    color: #767a83;
+    font-size: 13px;
+    vertical-align: top;
+}
+.lf-bd {
+    border-left: 1px solid #e2e6ee;
+}
+.panel-icon-box {
+	position: relative;
+}
+.square-ico {
+    background-color: #4dc089;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.order-icon {
+	width: 27px;
+    height: 28px;
+    background-position: -295px -300px !important;
+    background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+    display: inline-block;
+    margin: -1px 0 1px;
+    vertical-align: middle;
+    font-style: normal;
+}
+.deli-ico {
+	background-color: #d390e6;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.delivery-icon {
+	width: 34px;
+    height: 24px;
+    background-position: -330px -300px !important;
+	background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+	display: inline-block;
+    margin: -1px 0 1px;
+    vertical-align: middle;
+    font-style: normal;
+}
+.text-number1 {
+	position: relative;
+    top: -1px;
+    font-size: 20px;
+    font-family: tahoma,HelveticaNeue-Medium,Helvetica,Arial,나눔고딕,NanumGothic,맑은고딕,malgun gothic,"\B3CB\C6C0",dotum,sans-serif;
+    color: #d390e6;
+    display: inline-block;
+}
+.re-ico {
+	background-color: #69c6ce;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  	display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.return-icon {
+	width: 23px;
+    height: 24px;
+    background-position: -370px -300px !important;
+	background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+	display: inline-block;
+    margin: -1px 0 1px;
+    vertical-align: middle;
+    font-style: normal;
+}
+.text-number2 {
+	position: relative;
+    top: -1px;
+    font-size: 20px;
+    font-family: tahoma,HelveticaNeue-Medium,Helvetica,Arial,나눔고딕,NanumGothic,맑은고딕,malgun gothic,"\B3CB\C6C0",dotum,sans-serif;
+    color: #69c6ce;
+    display: inline-block;
+}
+.pay-ico {
+	background-color: #628ca6;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  	display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.payment-icon {
+	width: 29px;
+    height: 29px;
+    background-position: -340px -360px !important;
+	background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+	display: inline-block;
+    margin: -1px 0 1px;
+    vertical-align: middle;
+    font-style: normal;
+}
+.text-number3 {
+	position: relative;
+    top: -1px;
+    font-size: 20px;
+    font-family: tahoma,HelveticaNeue-Medium,Helvetica,Arial,나눔고딕,NanumGothic,맑은고딕,malgun gothic,"\B3CB\C6C0",dotum,sans-serif;
+	color: #628ca6;
+    display: inline-block;
+}
+.panel-body2 {
+	position: relative;
+    padding: 15px 0;
+    width: 800px;
+    height: 333px;
+    background-color: #fff !important;
+    box-sizing: border-box;
+}
+.buy-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.buy-cnt {
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #00c73c!important;
+    border-color: #00ae34!important;
+    color: #fff;
+    margin-left: 0;
+    box-shadow: none;
+    min-width: 115px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 4px 15px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 0;
+}
+.chart_div {
+	position: relative;
+    padding: 0 40px;
+    margin-top: 24px;
+}
+.panel-answer {
+	margin: 0;
+	padding: 0;
+	display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.panel-answer>li[role=tab] {
+    position: relative;
+    display: table-cell;
+    background-color: #f8f9fd;
+    border-right: 1px solid #eaeced;
+    border-bottom: 1px solid #eaeced;
+    text-align: center;
+}
+[role=tab] {
+	cursor: pointer;
+}
+ul li {
+    list-style: none;
+}
+.panel-answer>li[role=tab][aria-selected=true] {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+.tab-container {
+    display: block;
+    padding: 50px 0 10px;
+    color: #767a83;
+}
+a {
+	text-decoration: none;
+	background-color: transparent;
+    color: inherit;
+}
+.panel-answer>li[role=tab][aria-selected=true] .tab-content.product:before {
+    background-position: -40px -620px !important;
+}
+.panel-answer>li[role=tab] .tab-content.product:before {
+    background-position: 0 -620px !important;
+}
+.panel-answer>li[role=tab] .tab-content:before {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    margin-left: -15px;
+    width: 34px;
+    height: 30px;
+    content: "";
+    background: url(https://sell.smartstore.naver.com/images/kr/sp_icon_pc.png?29352b8c2d5a5b969559df3820a3275c) no-repeat;
+}
+.panel-answer>li[role=tab][aria-selected=true] .text-service {
+    color: #00c73c;
+}
+.panel-answer>li[role=tab] .tab-content.customer:before {
+    background-position: -80px -620px !important;
+}
+.panel-answer>li[role=tab][aria-selected=true] .tab-content.customer:before {
+    background-position: -120px -620px !important;
+}
+.panel-answer>li[role=tab][aria-selected=true] .tab-content.talk:before {
+    background-position: -200px -620px !important;
+}
+.panel-answer>li[role=tab] .tab-content.talk:before {
+    background-position: -160px -620px !important;
+}
+.inquiry-content {
+    padding: 20px 24px 10px;
+}
+.inquiry-content2 {
+    padding: 20px 24px 10px;
+}
+.inquiry-content3 {
+    padding: 20px 24px 10px;
+}
+.content-list {
+    height: 220px;
+    margin:0;
+}
+.content-list li {
+    margin-bottom: 10px;
+}
+.content-list li a{
+    padding-left: 20px;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+.question {
+	position: absolute;
+    top: -1px;
+    left: 0;
+    color: #00c73c;
+}
+.inquiry_title {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+p {
+	margin: 5px 0 0;
+	word-break: break-all;
+    font-size: 13px;
+}
+.date {
+    color: #767a83;
+    font-size: 13px;
+    font-family: tahoma,HelveticaNeue,Helvetica,Arial,나눔고딕,NanumGothic,맑은고딕,malgun gothic,"\B3CB\C6C0",dotum,sans-serif;
+    display: inline-block;
+    word-break: break-all;
+}
+.panel-border-list li {
+    line-height: 40px;
+    border-bottom: 1px solid rgba(234,236,237,.6);
+}
+.panel-border-list {
+	padding-right: 40px;
+}
+.storefooter {
+	padding-left: 210px;
+	transition: all .4s;
+	margin-top: 59px;
+}
+
+.innerfooter {
+	margin: 0 40px;
+	padding: 0px 0 40px;
+	border-top: 1px solid #dddfe0;
+	font-family: NanumGothic;
+	font-size: 12px;
+	color: #303236;
+}
+
+.provis {
+	overflow: hidden;
+	margin: 0 auto;
+	zoom: 1;
+	text-align: center;
+}
+
+.li2 {
+	position: relative;
+	display: inline-block;
+	padding: 0 7px 0 11px;
+	line-height: 14px;
+}
+
+.li2:before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1px;
+	height: 11px;
+	margin-top: -5px;
+	background-color: #dadde2;
+	content: "";
+}
+
+ul li {
+	list-style: none;
+}
+
+.footerstyle {
+	color: #303236;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.noticestyle {
+	margin: 12px 0;
+	color: #767a83;
+	line-height: 1.5;
+	text-align: center;
+	font-size: 12px;
+}
+
+.liststyles {
+	position: relative;
+	display: inline-block;
+	padding: 0 7px 0 11px;
+}
+
+#businessinfo {
+	color: #303236;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 5px;
+	border: 1px solid #d6d8dc;
+	background-color: #f2f5f8;
+	font-size: 11px;
+	line-height: 19px;
+}
+
+#callchat {
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 5px;
+	border: 1px solid #d6d8dc;
+	background-color: #f2f5f8;
+	-webkit-appearance: button;
+	cursor: pointer;
+	overflow: visible;
+	color: inherit;
+	font: inherit;
+}
+
+.talktalkline {
+	color: #303236;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 5px;
+	border: 1px solid #d6d8dc;
+	background-color: #f2f5f8;
+	font-size: 11px;
+	line-height: 19px;
+}
+
+#addressinformat {
+	position: relative;
+	bottom: -6px;
+	right: 246px;
+}
+
+.totalinfo {
+	position: relative;
+	left: 47px;
+}
+
+.totalinfo2 {
+	position: relative;
+	left: 1px;
+	bottom: 11px;
+}
+
+.totalinfo3 {
+	position: relative;
+	left: 120px;
+	top: -30px;
+}
+
+.totalinfo4 {
+	position: relative;
+	right: 11px;
+}
+
+.navericon {
+	margin-right: 3px;
+	display: inline-block;
+	width: 60px;
+	height: 11px;
+	background:
+		url(https://sell.smartstore.naver.com/images/kr/sp_common.png?0aaf083…)
+		no-repeat -200px -40px;
+	vertical-align: middle;
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+	right: 70px;
+	bottom: 20px;
+}
+
+.naverlinkstyle {
+	position: relative;
+	left: 583px;
+}
+
+.naverlinkstyle2 {
+	margin: 20px 0 0;
+	font-size: 10px;
+	font-family: verdanan, sans-serif;
+	line-height: 13px;
+	color: #494949;
+	text-align: center;
+}
+
+.naverlinkstyle3 {
+	position: relative;
+	bottom: 43px;
+	right: 9px;
+}
+
+.naverlinkstyle4 {
+	text-decoration: none;
+	color: #666;
+	background-color: transparent;
+	position: relative;
+	left: 121px;
+	bottom: 68px;
+}
+
+.naverlinkstyle5 {
+	position: relative;
+	left: 130px;
+	bottom: 92px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.ygsection {
+	margin-top: 11px;
+	background-color: #fff;
+	border: 1px solid #e3e7ee;
+}
+
+.ygsection2 {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 14px 0 14px 194px;
+	margin: 0 35px;
+}
+
+.ygfont {
+	position: absolute;
+	top: 24px;
+	left: 0;
+	width: 182px;
+	padding-right: 12px;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 19px;
+	color: #00c73c;
+}
+
+.ygsection2_1 {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.ygsection2_0 {
+	display: inline-block;
+	padding: 10px 0;
+	vertical-align: top;
+}
+
+.ygsection2_2 {
+	position: relative;
+	display: inline-block;
+	margin-right: 15px;
+	vertical-align: middle;
+}
+
+
+.seller-list input[type="checkbox"]:not(:checked) + span {
+	background-color: #fff;
+	border: 1px solid #e0e4e8;
+}
+
+.seller-list input[type="checkbox"]:checked + span {
+	background-position: 0 -60px !important;
+	background: url("https://sell.smartstore.naver.com/images/global/sp_input.png?dd5622921923e17cd4227084810a561d") no-repeat;
+	background-size: 22px auto;
+	content: "";
+}
+
+.seller-list input[type="checkbox"] + span {
+	position: absolute;
+	left: -3px;
+	top: 1px;
+	width: 20px;
+	height: 20px;
+}
+.label_sty { left : -25px; }
+
+#searchbutton {
+	color: #fff;
+	border-color: #00a933;
+	background-color: #00c73c;
+	font-size: 14px;
+	line-height: 28px;
+	width: 110px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+}
+
+.fl{
+	float : left;
+}
+.fr{
+	float : right;
+}
+
+
+
+
+
+
+

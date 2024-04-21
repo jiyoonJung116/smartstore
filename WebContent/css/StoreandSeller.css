@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+.border {
+	border: 1px solid green;
+}
+
+.fl {
+	float: left;
+}
+
+.pist1 {
+	font-size: 18px;
+	line-height: 24px;
+	color: #212121;
+}
+
+.pist {
+	position: relative;
+	padding: 24px 8px 24px 24px;
+}
+
+.pist2 {
+	position: relative;
+	padding: 24px 8px 24px 24px;
+}
+
+.pist3 {
+	position: absolute;
+	top: 20px;
+	right: 4px;
+	padding: 8px;
+}
+
+.pist3:before {
+	background-image:
+		url(https://static-resource-smartstore.pstatic.net/smartstore/c/static/20230614141702/img/sprite/center/svg/spCenter_icon_svg.svg);
+	background-size: 179px 170px;
+	background-position: -159px -4px;
+	width: 16px;
+	height: 16px;
+	display: block;
+	content: "";
+}
+
+.pist4 {
+	margin-top: 8px;
+	padding: 0 24px 20px;
+}
+
+.pist5 {
+	font-size: 11px;
+	line-height: 18px;
+	color: #999;
+}
+
+.pist5 a {
+	display: inline-block;
+	position: relative;
+	color: #222;
+	vertical-align: top;
+}
+
+.pist6 {
+	position: relative;
+	padding: 15px 0;
+}
+
+.pist7 {
+	position: relative;
+}
+
+.pist8 {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.pist9 {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+
+.pist10 {
+	display: block;
+	position: relative;
+	padding: 10px 4px;
+	cursor: pointer;
+}
+
+.pist12 {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.pist13 {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+
+.piimg {
+	display: block;
+	position: relative;
+	padding: 10px 4px;
+	cursor: pointer;
+}
+
+.pist13 .blind:checked+.piimg:before {
+	background-color: #03c75a;
+}
+
+.pist13 .piimg:before {
+	display: block;
+	width: 24px;
+	height: 8px;
+	border-radius: 8px;
+	background-color: #bebebe;
+	content: "";
+}
+
+.pist13 .blind:checked+.piimg:after {
+	left: 14px;
+}
+
+.pist13 .piimg:after {
+	position: absolute;
+	top: 7px;
+	left: 4px;
+	width: 14px;
+	height: 14px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 50%;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .17);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .17);
+	-webkit-transition-duration: .1s;
+	-o-transition-duration: .1s;
+	transition-duration: .1s;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	content: "";
+}
+
+.pist11 {
+	font-size: 11px;
+	line-height: 18px;
+	color: #999;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.blind {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+.pibutton {
+	position: absolute;
+	top: 20px;
+	right: 4px;
+	padding: 8px;
+}
+
+.pifont {
+	font-size: 18px;
+	line-height: 24px;
+	color: #212121;
+}
+
+.pifont1 {
+	font-size: 13px;
+	line-height: 18px;
+	display: inline-block;
+	color: #212121;
+	vertical-align: top;
+}

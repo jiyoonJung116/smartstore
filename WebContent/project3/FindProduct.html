@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스마트스토어 판매자 상품 찾기</title>
+<link rel="stylesheet" href="../css/FindProduct.css" />
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+	function unit(a, b) {
+		let u = document.getElementById(a);
+		let n = document.getElementById(b);
+
+		if (u.style.display == "none") {
+			u.style.display = "block";
+		} else if (u.style.display == "block") {
+			u.style.display = "none";
+		}
+	}
+
+	$(function() {
+		$(".prepare ")
+		.click(function() {
+			alert("준비중입니다");
+		});
+		$("#0").click(function() {
+			if ($(this).prop('checked')) {
+				$('#1').prop('checked', true);
+				$('#2').prop('checked', true);
+				$('#3').prop('checked', true);
+			} else {
+				$('#1').prop('checked', false);
+				$('#2').prop('checked', false);
+				$('#3').prop('checked', false);
+			}
+		});
+		$(".option").click(function() {
+			let option_value = $(this).attr("data-value");
+			if (option_value === "50") {
+				$(".item").text("50개씩");
+			} else if (option_value === "100") {
+				$(".item").text("100개씩");
+			} else if (option_value === "200") {
+				$(".item").text("200개씩");
+			} else if (option_value === "300") {
+				$(".item").text("300개씩");
+			} else if (option_value === "400") {
+				$(".item").text("400개씩");
+			} else if (option_value === "500") {
+				$(".item").text("500개씩");
+			}
+		});
+		$(".select-input").click(function() {
+			$(this).toggleClass("rotate");
+		});
+
+		$("#sel_namename").change(function() {
+			$("#lbl_selectleft").text(this.value);
+		});
+
+		$(".selectize-input").click(
+				function() {
+					$(this).toggleClass("rotate");
+					if ($(this).hasClass("rotate")) {
+						$(this).parent().find(".selectize-dropdown").css(
+								'display', 'block');
+					} else {
+						$(this).parent().find(".selectize-dropdown").css(
+								'display', 'none');
+					}
+				});
+
+		$(".selectize-dropdown-content").click(function() {
+			$(this).css("display", "none");
+		});
+
+		$("#total").click(function() {
+			if ($(this).prop('checked')) {
+				$('#common_order').prop('checked', true);
+				$('#today_start').prop('checked', true);
+				$('#reservation').prop('checked', true);
+				$('#subscribe').prop('checked', true);
+				$('#rental').prop('checked', true);
+			} else {
+				$('#common_order').prop('checked', false);
+				$('#today_start').prop('checked', false);
+				$('#reservation').prop('checked', false);
+				$('#subscribe').prop('checked', false);
+				$('#rental').prop('checked', false);
+			}
+		});
+
+		$(".searchstyle3").click(
+				function() {
+					$(this).parents(".totalstyle").find(".categorystyle").css(
+							'display', 'none');
+					$(this).css('background-color', '#00c73c');
+					$(this).css('color', '#fff');
+					$(this).parents(".totalstyle").find(".searchstyle1").css(
+							'background-color', 'white');
+					$(this).parents(".totalstyle").find(".searchstyle1").css(
+							'color', '#666');
+					$(this).parents(".totalstyle").find(".searchstyle1").css(
+							'border', '1px solid #dbdde2');
+					$(this).parents(".totalstyle").find("#choosecategory").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#choosecategory1")
+							.css('display', 'none');
+					$(this).parents(".totalstyle").find("#detailsearch1").css(
+							'display', 'block');
+					$(this).parents(".totalstyle").find("#detailsearch2").css(
+							'display', 'block');
+					$(this).parents(".totalstyle").find("#detailsearch3").css(
+							'display', 'block');
+					$(this).parents(".totalstyle").find("#detailsearch4").css(
+							'display', 'block');
+					$(this).parents(".totalstyle").find("#detailsearch5").css(
+							'display', 'block');
+					$(this).parents(".totalstyle").find(".choose_category")
+							.css('display', 'none');
+					$(this).parents(".totalstyle").find(".choose_category1")
+							.css('display', 'none');
+					$(this).parents(".totalstyle").find(".seller-data").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#pname").css(
+							'display', 'block');
+				}); /*상품번호 등 상세검색*/
+				
+				$("#white1").click(function() {
+					  let boxst = $(this).closest(".ag-row-focus").css('background-color');
+					  if (boxst === 'rgb(255, 255, 255)') {
+					    $(this).closest(".ag-row-focus").css('background-color', '#e9f4f5');
+					  } else if (boxst === 'rgb(233, 244, 245)') {
+					    $(this).closest(".ag-row-focus").css('background-color', '#fff');
+					  }
+					});
+				$("#white2").click(function() {
+					  let boxst = $(this).closest(".ag-row").css('background-color');
+					  if (boxst === 'rgb(255, 255, 255)') {
+					    $(this).closest(".ag-row").css('background-color', '#e9f4f5');
+					  } else if (boxst === 'rgb(233, 244, 245)') {
+					    $(this).closest(".ag-row").css('background-color', '#fff');
+					  }
+					});
+				$("#white3").click(function() {
+					  let boxst = $(this).closest(".ag-row").css('background-color');
+					  if (boxst === 'rgb(255, 255, 255)') {
+					    $(this).closest(".ag-row").css('background-color', '#e9f4f5');
+					  } else if (boxst === 'rgb(233, 244, 245)') {
+					    $(this).closest(".ag-row").css('background-color', '#fff');
+					  }
+					});
+				
+
+		$(".searchstyle1").click(
+				function() {
+					$(this).parents(".totalstyle").find(".categorystyle").css(
+							'display', 'block');
+					$(this).css('background-color', '#00c73c');
+					$(this).css('color', '#fff');
+					$(this).css('border', '1px solid #00ae34');
+					$(this).parents(".totalstyle").find(".searchstyle3").css(
+							'background-color', 'white');
+					$(this).parents(".totalstyle").find(".searchstyle3").css(
+							'color', '#666');
+					$(this).parents(".totalstyle").find(".searchstyle3").css(
+							'border', '1px solid #dbdde2');
+					$(this).parents(".totalstyle").find("#choosecategory").css(
+							'display', 'block');
+					$(this).parents(".totalstyle").find("#choosecategory1")
+							.css('display', 'block');
+					$(this).parents(".totalstyle").find("#detailsearch1").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#detailsearch2").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#detailsearch3").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#detailsearch4").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#detailsearch5").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find(".choose_category")
+							.css('display', 'block');
+					$(this).parents(".totalstyle").find(".choose_category1")
+							.css('display', 'block');
+					$(this).parents(".totalstyle").find("#deliveryinfo").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#manysearch").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#mname").css(
+							'display', 'none');
+					$(this).parents(".totalstyle").find("#pname").css(
+							'display', 'none');
+				});/*카테고리 검색*/
+
+		$(".button1").click(
+				function() {
+					$(this).parents(".searchstyle5").find("#manysearch").css(
+							'display', 'block');
+					$(this).parents(".searchstyle5").find("#pname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#mname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#deliveryinfo").css(
+							'display', 'none');
+				}); /*상품번호*/
+
+		$(".button2").click(
+				function() {
+					$(this).parents(".searchstyle5").find("#pname").css(
+							'display', 'block');
+					$(this).parents(".searchstyle5").find("#manysearch").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#mname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#deliveryinfo").css(
+							'display', 'none');
+				}); /*상품명*/
+
+		$(".button3").click(
+				function() {
+					$(this).parents(".searchstyle5").find("#mname").css(
+							'display', 'block');
+					$(this).parents(".searchstyle5").find("#pname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#manysearch").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#deliveryinfo").css(
+							'display', 'none');
+				}); /*모델명*/
+
+		$(".button4").click(
+				function() {
+					$(this).parents(".searchstyle5").find("#manysearch").css(
+							'display', 'block');
+					$(this).parents(".searchstyle5").find("#pname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#mname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#deliveryinfo").css(
+							'display', 'none');
+				}); /*판매자상품코드*/
+
+		$(".button5").click(
+				function() {
+					$(this).parents(".searchstyle5").find("#deliveryinfo").css(
+							'display', 'block');
+					$(this).parents(".searchstyle5").find("#manysearch").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#pname").css(
+							'display', 'none');
+					$(this).parents(".searchstyle5").find("#mname").css(
+							'display', 'none');
+				}); /*배송정보*/
+
+		$(".detailsearch2").click(function() {
+			$(this).parent().find("#pname").css('display', 'block');
+		});
+
+		$("#choosecategory").click(
+				function() {
+					$(this).parents(".searchstyle5").find(".categorystyle")
+							.css('display', 'block');
+					$(this).parents(".searchstyle5").find(".seller-data").css(
+							'display', 'none');
+				});
+
+		$("#choosecategory1").click(
+				function() {
+					$(this).parents(".searchstyle5").find(".seller-data").css(
+							'display', 'block');
+					$(this).parents(".searchstyle5").find(".categorystyle")
+							.css('display', 'none');
+				});
+	});
+</script>
+</head>
+<body>
+	<div class="background">
+		<div class="top_style">
+			<button type="button" class="close">
+				<img class="img_style xbt" src="../Images/x.png">
+			</button>
+			<h3 class="font_style">스마트스토어 판매자 상품 찾기</h3>
+		</div>
+		<div class="totalstyle">
+			<div class="totalstyle1">
+				<div class="searchstyle">
+					<label class="searchstyle1"><span class="searchstyle2">카테고리
+							검색</span></label> <label class="searchstyle3"><span class="searchstyle2">상품번호등
+							상세검색 검색</span></label>
+				</div>
+			</div>
+			<div class="searchstyle4">
+				<div class="searchstyle5">
+					<div>
+						<div class="seller">
+							<ul class="seller-list-border">
+								<li>
+									<div class="fl mr35 choose_category">
+										<label class="label_style"> <input type="radio"
+											name="cate" class="form_style" checked /> 카테고리 선택 <span
+											id="choosecategory"></span>
+										</label>
+									</div>
+									<div class="fl mr36 choose_category1">
+										<label class="label_style"> <input type="radio"
+											name="cate" class="form_style" /> 상품이 등록된 카테고리 선택 <span
+											id="choosecategory1"></span>
+										</label>
+									</div>
+									<ul class="seller-list-border">
+										<li>
+											<div id="detailsearch1" class="fl mr40"
+												style="display: none;">
+												<label class="label_style"> <input type="radio"
+													name="payd" class="form_style" /> 상품번호 <span
+													class="button1"></span>
+												</label>
+											</div>
+											<div id="detailsearch2" class="fl mr36"
+												style="display: none;">
+												<label class="label_style"> <input type="radio"
+													name="payd" class="form_style" checked /> 상품명 <span
+													class="button2"></span>
+												</label>
+											</div>
+											<div id="detailsearch3" class="fl mr38"
+												style="display: none;">
+												<label class="label_style"> <input type="radio"
+													name="payd" class="form_style" /> 모델명 <span
+													class="button3"></span>
+												</label>
+											</div>
+											<div id="detailsearch4" class="fl mr39"
+												style="display: none;">
+												<label class="label_style"> <input type="radio"
+													name="payd" class="form_style" /> 판매자상품코드 <span
+													class="button4"></span>
+												</label>
+											</div>
+											<div id="detailsearch5" class="fl mr39"
+												style="display: none;">
+												<label class="label_style"> <input type="radio"
+													name="payd" class="form_style" /> 배송정보 <span
+													class="button5"></span>
+												</label>
+											</div>
+											<div style="clear: both;"></div>
+										</li>
+									</ul>
+									<div style="clear: both;"></div>
+								</li>
+							</ul>
+
+							<div id="pname" style="display: none;">
+								<input type="text" class="pnamest" placeholder="상품명을 입력하세요"
+									title="상품명 입력">
+							</div>
+							<div id="mname" style="display: none;">
+								<input type="text" class="pnamest" placeholder="모델명을 입력하세요"
+									title="모델명 입력">
+							</div>
+							<div id="manysearch" style="display: none;">
+								<textarea class="pcodest" rows="3"
+									placeholder="복수 검색 (enter 또는 “,” 로 구분)" title="판매자상품코드,상품번호 입력"></textarea>
+							</div>
+							<div id="deliveryinfo" class="form-inline"
+								ng-if="vm.viewData.searchKeywordType === 'DELIVERY_INFO'"
+								style="display: none;">
+								<div class="form-group form-group-sm" style="min-width: 205px">
+									<div
+										class="selectize-control ng-pristine ng-untouched ng-valid single">
+										<div
+											class="selectize-input items full has-options has-items ng-valid ng-pristine focus input-active dropdown-active">
+											<div data-value="" class="item">배송비 유형 전체</div>
+											<input type="text" autocomplete="off" tabindex="0"
+												readonly=""
+												style="width: 4px; opacity: 1; position: relative; left: 0px;">
+										</div>
+										<div
+											class="selectize-dropdown single ng-pristine ng-untouched ng-valid"
+											style="display: none; width: 206px; top: 30px; left: 0px; visibility: visible;">
+											<div class="selectize-dropdown-content">
+												<div data-value="" data-selectable=""
+													class="option selected">배송비 유형 전체</div>
+												<div data-value="FREE" data-selectable=""
+													class="option active">무료</div>
+												<div data-value="PAID" data-selectable="" class="option">유료</div>
+											</div>
+										</div>
+									</div>
+									<select selectize="" placeholder="배송비 유형 전체"
+										config="vm.selectizeConfig.enumType"
+										options="vm.selectizeOptions.deliveryType"
+										ng-model="vm.searchFormData.deliveryFeeType"
+										ng-disabled="vm.viewData.searchTabType !== 'nameAndIdSearch' || vm.viewData.searchKeywordType !== 'DELIVERY_INFO'"
+										ncp-disabled=""
+										class="ng-pristine ng-untouched ng-valid selectized ng-valid-required ng-empty"
+										tabindex="-1"
+										style="width: 4px; opacity: 0; position: absolute; left: -10000px;"
+										style="display: none;"><option value="">배송비
+											유형 전체</option></select>
+								</div>
+							</div>
+
+
+							<div class="seller-data category-list" ng-show="vm.categoryShow"
+								style="display: none;">
+								<div>
+									<div class="data-group">
+										<div class="seller-input">
+											<p>
+												<label><input id="total" type="checkbox"
+													class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty"
+													style="">전체<span></span></label>
+											</p>
+											<!---->
+											<p ng-repeat="usedCategory in vm.usedCategories" class=""
+												style="">
+												<label><input id="common_order" type="checkbox"
+													ng-disabled="vm.categoryDisabled || vm.checkedAllCategory"
+													checklist-value="usedCategory.id" ng-model="checked"
+													class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched"
+													checklist-model="vm.viewData.checkedCategoryIds" style="">
+													스포츠/레저 &gt; 요가/필라테스 &gt; 요가매트<span></span></label>
+											</p>
+											<!---->
+											<p ng-repeat="usedCategory in vm.usedCategories" class="">
+												<label><input id="today_start" type="checkbox"
+													ng-disabled="vm.categoryDisabled || vm.checkedAllCategory"
+													checklist-value="usedCategory.id" ng-model="checked"
+													class="ng-pristine ng-untouched ng-valid ng-empty"
+													checklist-model="vm.viewData.checkedCategoryIds" style="">
+													디지털/가전 &gt; 카메라/캠코더용품 &gt; 렌즈용품 &gt; 렌즈캡<span></span></label>
+											</p>
+											<!---->
+											<p ng-repeat="usedCategory in vm.usedCategories" class="">
+												<label><input id="reservation" type="checkbox"
+													ng-disabled="vm.categoryDisabled || vm.checkedAllCategory"
+													checklist-value="usedCategory.id" ng-model="checked"
+													class="ng-pristine ng-untouched ng-valid ng-empty"
+													checklist-model="vm.viewData.checkedCategoryIds" style="">
+													가구/인테리어 &gt; DIY자재/용품 &gt; 가구부속품 &gt; 기타가구부속품<span></span></label>
+											</p>
+											<!---->
+											<p ng-repeat="usedCategory in vm.usedCategories" class="">
+												<label><input id="subscribe" type="checkbox"
+													ng-disabled="vm.categoryDisabled || vm.checkedAllCategory"
+													checklist-value="usedCategory.id" ng-model="checked"
+													class="ng-pristine ng-untouched ng-valid ng-empty"
+													checklist-model="vm.viewData.checkedCategoryIds" style="">
+													가구/인테리어 &gt; 홈데코 &gt; 쿠션/방석 &gt; 팔꿈치/손목쿠션<span></span></label>
+											</p>
+											<!---->
+											<p ng-repeat="usedCategory in vm.usedCategories" class="">
+												<label><input id="rental" type="checkbox"
+													ng-disabled="vm.categoryDisabled || vm.checkedAllCategory"
+													checklist-value="usedCategory.id" ng-model="checked"
+													class="ng-pristine ng-untouched ng-valid ng-empty"
+													checklist-model="vm.viewData.checkedCategoryIds" style="">
+													생활/건강 &gt; 악기 &gt; 관악기 &gt; 리코더<span></span></label>
+											</p>
+											<!---->
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="categorystyle">
+								<div class="fl categorystyle1 categorystyle3">
+									<ul class="data-group ulstyle">
+										<!---->
+										<li ng-repeat="category1 in vm.categories1 track by $index"
+											ng-class="{on: category1.id == vm.category1.id}" class="on"
+											style=""><a role="button" href="">가구/인테리어</a></li>
+										<!---->
+										<li><a role="button" href="">도서</a></li>
+										<!---->
+										<li><a role="button" href="">디지털/가전</a></li>
+										<!---->
+										<li><a role="button" href="">생활/건강</a></li>
+										<!---->
+										<li><a role="button" href="">스포츠/레저</a></li>
+										<!---->
+										<li><a role="button" href="">식품</a></li>
+										<!---->
+										<li><a role="button" href="">여가/생활편의</a></li>
+										<!---->
+										<li><a role="button" href="">출산/육아</a></li>
+										<!---->
+										<li><a role="button" href="">패션의류</a></li>
+										<!---->
+										<li><a role="button" href="">패션잡화</a></li>
+										<!---->
+										<li><a role="button" href="">화장품/미용</a></li>
+										<!---->
+									</ul>
+								</div>
+								<div class="fl categorystyle1">
+									<ul class="data-group ulstyle">
+										<li class="no-depth ng-hide"><a href="">중분류</a></li>
+										<!---->
+										<li class="on" style=""><a role="button" href="">DIY자재/용품</a></li>
+										<!---->
+										<li><a role="button" href="">거실가구</a></li>
+										<!---->
+										<li><a role="button" href="">서재/사무용가구</a></li>
+										<!---->
+										<li><a role="button" href="">솜류</a></li>
+										<!---->
+										<li><a role="button" href="">수납가구</a></li>
+										<!---->
+										<li><a role="button" href="">수예</a></li>
+										<!---->
+										<li><a role="button" href="">아동/주니어가구</a></li>
+										<!---->
+										<li><a role="button" href="">아웃도어가구</a></li>
+										<!---->
+										<li><a role="button" href="">인테리어소품</a></li>
+										<!---->
+										<li><a role="button" href="">주방가구</a></li>
+										<!---->
+										<li><a role="button" href="">침구단품</a></li>
+										<!---->
+										<li><a role="button" href="">침구세트</a></li>
+										<!---->
+										<li><a role="button" href="">침실가구</a></li>
+										<!---->
+										<li><a role="button" href="">카페트/러그</a></li>
+										<!---->
+										<li><a role="button" href="">커튼/블라인드</a></li>
+										<!---->
+										<li><a role="button" href="">홈데코</a></li>
+										<!---->
+									</ul>
+								</div>
+								<div class="fl categorystyle1">
+									<ul class="data-group ulstyle">
+										<li class="no-depth ng-hide"><a href="">소분류</a></li>
+										<!---->
+										<li class="on" style=""><a role="button" href="">가구부속품</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">데코스티커</a></li>
+										<!---->
+										<li class=""><a role="button" href="">리모델링</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">목재</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">몰딩</a></li>
+										<!---->
+										<li class=""><a role="button" href="">바닥재</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">반제품</a></li>
+										<!---->
+										<li class=""><a role="button" href="">벽지</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">손잡이</a></li>
+										<!---->
+										<li class=""><a role="button" href="">시트지</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">접착제/보수용품</a></li>
+										<!---->
+										<li class=""><a role="button" href="">타일</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">파벽돌</a></li>
+										<!---->
+										<li class="no-depth"><a role="button" href="">패널</a></li>
+										<!---->
+									</ul>
+								</div>
+								<div class="fl categorystyle1 categorystyle2 categorystyle4">
+									<ul class="data-group ulstyle">
+										<li class="no-depth ng-hide" style=""><a href="">세분류</a></li>
+										<!---->
+										<li class="on" style=""><a role="button" href="">가구다리</a></li>
+										<!---->
+										<li class=""><a role="button" href="">가구바퀴</a></li>
+										<!---->
+										<li class=""><a role="button" href="">경첩/꺽쇠/자석철물류</a></li>
+										<!---->
+										<li class=""><a role="button" href="">기타가구부속품</a></li>
+										<!---->
+										<li class=""><a role="button" href="">나사/못</a></li>
+										<!---->
+										<li class=""><a role="button" href="">로프/철망</a></li>
+										<!---->
+										<li class=""><a role="button" href="">서랍레일</a></li>
+										<!---->
+										<li class=""><a role="button" href="">소켓/옷걸이봉</a></li>
+										<!---->
+									</ul>
+								</div>
+							</div>
+							<ul class="seller-list-border ul-style">
+								<li class="liststyle">
+									<div class="fl">
+										<label class="column_name_color">선택</label>
+									</div>
+									<div class="fl mr36">
+										<label class="label_style"> <input type="radio"
+											name="choose" class="form_style" checked /> 전체 <span></span>
+										</label>
+									</div>
+									<div class="fl mr36">
+										<label class="label_style"> <input type="radio"
+											name="choose" class="form_style" /> 무료배송 <span></span>
+										</label>
+									</div>
+									<div class="fl mr36">
+										<label class="label_style"> <input type="radio"
+											name="choose" class="form_style" /> 즉시할인 <span></span>
+										</label>
+									</div>
+									<div class="fl mr37">
+										<label class="label_style"> <input type="radio"
+											name="choose" class="form_style" /> 리뷰 <span></span>
+										</label>
+									</div>
+									<div style="clear: both;"></div>
+								</li>
+							</ul>
+							<ul class="seller-list-border ul-style">
+								<li class="liststyle liststyle2">
+									<div class="fl">
+										<label class="column_name_color">정렬</label>
+									</div>
+									<div class="fl mr36">
+										<label class="label_style"> <input type="radio"
+											name="sort" class="form_style" checked /> 인기도순 <span></span>
+										</label>
+									</div>
+									<div class="fl mr36">
+										<label class="label_style"> <input type="radio"
+											name="sort" class="form_style" /> 누적판매순 <span></span>
+										</label>
+									</div>
+									<div class="fl mr36">
+										<label class="label_style"> <input type="radio"
+											name="sort" class="form_style" /> 최신등록순 <span></span>
+										</label>
+									</div>
+									<div class="fl mr37">
+										<label class="label_style"> <input type="radio"
+											name="sort" class="form_style" /> 리뷰수순 <span></span>
+										</label>
+									</div>
+									<div style="clear: both;"></div>
+								</li>
+							</ul>
+							<div class="sellerbtn">
+								<button type="submit" class="btn btn-default2">검색</button>
+								<button type="button" class="btn btn-default prepare">초기화</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sellerbtngroup" style="height: 50px">
+					<div class="btnleft">
+						<p class="textsub subtext">
+							<span class="textnumber primary">3</span>개의 상품이 조회되었습니다. <em
+								class="mobile-right"><span class="text-muted hidden-xs bar">|</span>
+								<span class="visible-xs-inline square-bracket">[</span>선택된 상품 <span
+								class="text-info text-number">0</span>개<span
+								class="visible-xs-inline square-bracket">]</span></em>
+						</p>
+					</div>
+					<div class="btnright hidden-xs">
+						<div class="formgroup btn-group-sm"
+							onclick="unit('unitcontent','unitcontent1')">
+							<div class="control ng-pristine ng-untouched ng-valid single">
+								<div
+									class="select-input items ng-valid ng-pristine has-options full has-items">
+									<div data-value="50" class="item">50개씩</div>
+									<input type="text" autocomplete="off" tabindex="0" readonly=""
+										style="width: 4px; opacity: 0; position: absolute; left: -10000px;">
+								</div>
+								<div id="unitcontent"
+									class="dropdown single ng-pristine ng-untouched ng-valid"
+									style="display: none; visibility: visible; width: 487.922px; top: 31px; left: 0px;">
+									<div id="unitcontent1" class="dropdown-content">
+										<div data-value="50" data-selectable=""
+											class="option selected">50개씩</div>
+										<div data-value="100" data-selectable="" class="option">100개씩</div>
+										<div data-value="200" data-selectable="" class="option">200개씩</div>
+										<div data-value="300" data-selectable="" class="option">300개씩</div>
+										<div data-value="400" data-selectable="" class="option">400개씩</div>
+										<div data-value="500" data-selectable="" class="option">500개씩</div>
+									</div>
+								</div>
+							</div>
+							<select selectize="" options="vm.selectizeOptions.pageSize"
+								ng-model="vm.pageSize" config="vm.selectizeConfig.pageSize"
+								class="ng-pristine ng-untouched ng-valid selectized ng-valid-required ng-not-empty"
+								tabindex="-1"
+								style="width: 4px; opacity: 0; position: absolute; left: -10000px;"><option
+									value="50" selected="selected">50개씩</option></select>
+						</div>
+					</div>
+				</div>
+				<div class="seller-area tbtheme" ag-grid="vm.gridOptions"
+					style="width: 100%; height: 320px;">
+					<div class="root-wrapper layout-normal agltr">
+						<div class="root-wrapper-body ag-layout-normal"
+							ref="rootWrapperBody">
+							<!--AG-GRID-COMP-->
+							<div class="root ag-unselectable ag-layout-normal" role="grid"
+								unselectable="on" ref="gridPanel" aria-rowcount="4">
+								<!--AG-HEADER-ROOT-->
+								<div class="ag-head ag-pivot-off" role="presentation"
+									ref="headerRoot" unselectable="on"
+									style="height: 40px; min-height: 40px;">
+									<div class="ag-left-header ag-hidden" ref="ePinnedLeftHeader"
+										role="presentation"
+										style="width: 0px; max-width: 0px; min-width: 0px;">
+										<div class="ag-header-row" role="row" aria-rowindex="1"
+											style="top: 0px; height: 40px; width: 0px;"></div>
+									</div>
+									<div class="ag-header-viewport" ref="eHeaderViewport"
+										role="presentation">
+										<div class="ag-header-container" ref="eHeaderContainer"
+											role="rowgroup"
+											style="width: 2280px; transform: translateX(0px);">
+											<div class="ag-header-row" role="row" aria-rowindex="1"
+												style="top: 0px; height: 40px; width: 2280px;">
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="representImageUrl"
+													style="width: 100px; left: 150px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">이미지</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="channelProductName"
+													style="width: 250px; left: 250px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">상품명</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="channelServiceType"
+													style="width: 100px; left: 500px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">채널</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="productStatusType"
+													style="width: 100px; left: 600px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">판매상태</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="channelProductDisplayStatusType"
+													style="width: 100px; left: 700px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">전시상태</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="productSearch.salePrice"
+													style="width: 100px; left: 800px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">판매가</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on"
+													col-id="productSearch.discountedSalePrice"
+													style="width: 100px; left: 900px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">할인가(PC)</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on"
+													col-id="productSearch.mobileDiscountedSalePrice"
+													style="width: 100px; left: 1000px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">할인가(모바일)</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on"
+													col-id="productSearch.managerImmediateDiscountAmount"
+													style="width: 100px; left: 1100px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">리뷰수</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on"
+													col-id="productSearch.mobileManagerImmediateDiscountAmount"
+													style="width: 100px; left: 1200px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">평점</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on"
+													col-id="productSearch.sellerImmediateDiscountAmount"
+													style="width: 100px; left: 1300px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">판매자즉시할인(PC)</span>
+															<span ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on"
+													col-id="productSearch.mobileSellerImmediateDiscountAmount"
+													style="width: 100px; left: 1400px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">판매자즉시할인(모바일)</span>
+															<span ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="category1Name"
+													style="width: 120px; left: 1500px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">대분류</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="category2Name"
+													style="width: 120px; left: 1620px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">중분류</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="category3Name"
+													style="width: 120px; left: 1740px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">소분류</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="category4Name"
+													style="width: 120px; left: 1860px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">세분류</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="deliveryFeeType"
+													style="width: 100px; left: 1980px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">배송비유형</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="deliveryFeeType"
+													style="width: 100px; left: 1980px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="deliveryFeeType"
+													style="width: 100px; left: 1980px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="0"
+													style="width: 50px; left: 0px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="seller-input ag-header-cell-label">
+															<label><input id="0" type="checkbox"
+																class="ag-selection-checkbox"><span
+																class="ag-header-cell-text whitebox"></span></label>
+														</div>
+													</div>
+												</div>
+												<div class="ag-header-cell" role="presentation"
+													unselectable="on" col-id="channelProductNo"
+													style="width: 100px; left: 50px;">
+													<div ref="eResize" class="ag-header-cell-resize"
+														role="presentation"></div>
+													<!--AG-CHECKBOX-->
+													<div
+														class="ag-header-select-all ag-labeled ag-label-align-right ag-checkbox ag-hidden"
+														role="presentation" ref="cbSelectAll">
+														<label ref="eLabel" class="ag-hidden"></label>
+														<div ref="eWrapper" class="ag-wrapper ag-input-wrapper"
+															role="presentation">
+															<input ref="eInput" type="checkbox" class="ag-hidden">
+															<div>
+																<i class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i>
+															</div>
+														</div>
+													</div>
+													<div class="ag-cell-label-container" role="presentation">
+														<div ref="eLabel" class="ag-header-cell-label"
+															role="presentation" unselectable="on">
+															<span ref="eText" class="ag-header-cell-text"
+																role="columnheader" unselectable="on">상품번호</span> <span
+																ref="eFilter"
+																class="ag-header-icon ag-filter-icon ag-hidden"
+																aria-hidden="true"><span
+																class="ag-icon ag-icon-filter" unselectable="on"></span></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ag-pinned-right-header ag-hidden"
+										ref="ePinnedRightHeader" role="presentation"
+										style="width: 0px; max-width: 0px; min-width: 0px;">
+										<div class="ag-header-row" role="row" aria-rowindex="1"
+											style="top: 0px; height: 40px; width: 0px;"></div>
+									</div>
+								</div>
+								<div class="ag-floating-top" ref="eTop" role="presentation"
+									unselectable="on"
+									style="min-height: 0px; height: 0px; display: none; overflow-y: hidden;">
+									<div class="ag-pinned-left-floating-top ag-hidden"
+										ref="eLeftTop" role="presentation" unselectable="on"></div>
+									<div class="ag-floating-top-viewport" ref="eTopViewport"
+										role="presentation" unselectable="on">
+										<div class="ag-floating-top-container" ref="eTopContainer"
+											role="presentation" unselectable="on"
+											style="transform: translateX(0px);"></div>
+									</div>
+									<div class="ag-pinned-right-floating-top ag-hidden"
+										ref="eRightTop" role="presentation" unselectable="on"></div>
+									<div class="ag-floating-top-full-width-container ag-hidden"
+										ref="eTopFullWidthContainer" role="presentation"
+										unselectable="on"></div>
+								</div>
+								<div
+									class="ag-body-viewport ag-layout-normal ag-row-no-animation"
+									ref="eBodyViewport" role="presentation" unselectable="on">
+									<div class="ag-pinned-left-cols-container ag-hidden"
+										ref="eLeftContainer" role="presentation" unselectable="on"
+										style="height: 120px;">
+										<div role="row" row-index="0" aria-rowindex="2" row-id="0"
+											comp-id="64"
+											class="ag-row ag-row-even ag-row-level-0 ag-row-position-absolute ag-row-first ag-row-focus ag-row-selected"
+											style="height: 40px; transform: translateY(0px);"></div>
+										<div role="row" row-index="1" aria-rowindex="3" row-id="1"
+											comp-id="84"
+											class="ag-row ag-row-no-focus ag-row-odd ag-row-level-0 ag-row-position-absolute"
+											style="height: 40px; transform: translateY(40px);"></div>
+										<div role="row" row-index="2" aria-rowindex="4" row-id="2"
+											comp-id="104"
+											class="ag-row ag-row-no-focus ag-row-even ag-row-level-0 ag-row-position-absolute ag-row-last"
+											style="height: 40px; transform: translateY(80px);"></div>
+									</div>
+									<div class="ag-center-cols-clipper" ref="eCenterColsClipper"
+										role="presentation" unselectable="on" style="height: 120px;">
+										<div class="ag-center-cols-viewport" ref="eCenterViewport"
+											role="presentation" unselectable="on"
+											style="height: calc(100% + 17px);">
+											<div class="ag-center-cols-container" ref="eCenterContainer"
+												role="rowgroup" unselectable="on"
+												style="width: 2280px; height: 120px;">
+												<div role="row" row-index="0" aria-rowindex="2" row-id="0"
+													comp-id="64"
+													class="ag-row ag-row-even ag-row-level-0 ag-row-position-absolute ag-row-first ag-row-focus ag-row-selected"
+													style="height: 40px; transform: translateY(0px);">
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="53" col-id="0"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-focus"
+														style="width: 50px; left: 0px;">
+														<div class="seller-input ag-header-cell-label">
+															<label><input id="1" type="checkbox"
+																class="ag-selection-checkbox"><span id="white1"
+																class="ag-header-cell-text whitebox"></span></label>
+														</div>
+													</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="145" col-id="channelProductNo"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 50px;">8420795718</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="67" col-id="representImageUrl"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 150px;">
+														<span><img
+															src="https://sell.smartstore.naver.com/shop1.phinf.naver.net/20230418_111/1681799580486YXXTK_JPEG/31283187665536431_1220162550.jpg?type=f100"
+															style="height: 40px" class="full-img"></span>
+													</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="68" col-id="channelProductName"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 250px; left: 250px;">폼폼푸린 손목쿠션</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="69" col-id="channelServiceType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 500px;">스마트스토어</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="70" col-id="productStatusType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 600px;">판매중</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="71" col-id="channelProductDisplayStatusType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 700px;">전시중</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="72" col-id="productSearch.salePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 800px;">400,000</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="73" col-id="productSearch.discountedSalePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 900px;">400,000</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="74"
+														col-id="productSearch.mobileDiscountedSalePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1000px;">400,000</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="75"
+														col-id="productSearch.managerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1100px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="75"
+														col-id="productSearch.managerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1100px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="76"
+														col-id="productSearch.mobileManagerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1200px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="77"
+														col-id="productSearch.sellerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1300px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="78"
+														col-id="productSearch.mobileSellerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1400px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="79" col-id="category1Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1500px;">가구/인테리어</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="80" col-id="category2Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1620px;">홈데코</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="81" col-id="category3Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1740px;">쿠션/방석</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="82" col-id="category4Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1860px;">팔꿈치/손목쿠션</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="83" col-id="deliveryFeeType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1980px;">유료</div>
+												</div>
+												<div role="row" row-index="1" aria-rowindex="3" row-id="1"
+													comp-id="84"
+													class="ag-row ag-row-no-focus ag-row-odd ag-row-level-0 ag-row-position-absolute"
+													style="height: 40px; transform: translateY(40px);">
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="53" col-id="0"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-focus"
+														style="width: 50px; left: 0px;">
+														<div class="seller-input ag-header-cell-label">
+															<label><input id="2" type="checkbox"
+																class="ag-selection-checkbox"><span id="white2"
+																class="ag-header-cell-text whitebox"></span></label>
+														</div>
+													</div>
+													<div role="row" row-index="1" aria-rowindex="3" row-id="1"
+														comp-id="52"
+														class="ag-row ag-row-odd ag-row-level-0 ag-row-position-absolute ag-row-focus"
+														style="height: 40px; transform: translateY(40px);">
+														<div tabindex="-1" unselectable="on" role="gridcell"
+															comp-id="53" col-id="0"
+															class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-focus"
+															style="width: 50px; left: 0px;">
+															<div ref="eCellWrapper" class="ag-cell-wrapper">
+																<span class="ag-selection-checkbox" unselectable="on">
+																	<i class="seller-icon grid-checkbox-checked ag-hidden"
+																	aria-label="선택됨"></i> <i
+																	class="seller-icon grid-checkbox-unchecked"
+																	aria-label="선택안함"></i> <i
+																	class="seller-icon grid-checkbox-indeterminate ag-hidden"
+																	aria-label="선택안됨"></i>
+																</span> <span ref="eCellValue" class="ag-cell-value"
+																	unselectable="on"></span>
+															</div>
+														</div>
+														<!-- 나머지 셀들 -->
+													</div>
+
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="148" col-id="channelProductNo"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 50px;">4897977260</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="87" col-id="representImageUrl"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 150px;">
+														<span><img
+															src="https://sell.smartstore.naver.com/shop1.phinf.naver.net/20200418_210/15871866582182zgqf_JPEG/24548991791616982_1239311195.jpg?type=f100"
+															style="height: 40px" class="full-img"></span>
+													</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="88" col-id="channelProductName"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 250px; left: 250px;">가구수평패드</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="89" col-id="channelServiceType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 500px;">스마트스토어</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="90" col-id="productStatusType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 600px;">판매중</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="91" col-id="channelProductDisplayStatusType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 700px;">전시중</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="92" col-id="productSearch.salePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 800px;">25,000</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="93" col-id="productSearch.discountedSalePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 900px;">25,000</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="94"
+														col-id="productSearch.mobileDiscountedSalePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1000px;">25,000</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="95"
+														col-id="productSearch.managerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1100px;">1</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="96"
+														col-id="productSearch.mobileManagerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1200px;">5</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="97"
+														col-id="productSearch.sellerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1300px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="98"
+														col-id="productSearch.mobileSellerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1400px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="99" col-id="category1Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1500px;">가구/인테리어</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="100" col-id="category2Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1620px;">DIY자재/용품</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="101" col-id="category3Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1740px;">가구부속품</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="102" col-id="category4Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1860px;">기타가구부속품</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="103" col-id="deliveryFeeType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1980px;">무료</div>
+												</div>
+												<div role="row" row-index="2" aria-rowindex="4" row-id="2"
+													comp-id="104"
+													class="ag-row ag-row-no-focus ag-row-even ag-row-level-0 ag-row-position-absolute ag-row-last"
+													style="height: 40px; transform: translateY(80px);">
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="53" col-id="0"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-focus"
+														style="width: 50px; left: 0px;">
+														<div class="seller-input ag-header-cell-label">
+															<label><input id="3" type="checkbox"
+																class="ag-selection-checkbox"><span id="white3"
+																class="ag-header-cell-text whitebox"></span></label>
+														</div>
+													</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="151" col-id="channelProductNo"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 50px;">4897832395</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="107" col-id="representImageUrl"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 150px;">
+														<span><img
+															src="https://sell.smartstore.naver.com/shop1.phinf.naver.net/20200418_185/1587177491423jftcj_JPEG/24540879945101569_322730714.jpg?type=f100"
+															style="height: 40px" class="full-img"></span>
+													</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="108" col-id="channelProductName"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 250px; left: 250px;">월드온 NBR 요가매트 30mm
+														25mm 필라테스 매트 운동</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="109" col-id="channelServiceType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 500px;">스마트스토어</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="110" col-id="productStatusType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 600px;">판매중</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="111" col-id="channelProductDisplayStatusType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 700px;">전시중</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="112" col-id="productSearch.salePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 800px;">29,900</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="113" col-id="productSearch.discountedSalePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 900px;">29,900</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="114"
+														col-id="productSearch.mobileDiscountedSalePrice"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1000px;">29,900</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="115"
+														col-id="productSearch.managerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1100px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="116"
+														col-id="productSearch.mobileManagerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1200px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="117"
+														col-id="productSearch.sellerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1300px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="118"
+														col-id="productSearch.mobileSellerImmediateDiscountAmount"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1400px;">0</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="119" col-id="category1Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1500px;">스포츠/레저</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="120" col-id="category2Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1620px;">요가/필라테스</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="121" col-id="category3Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1740px;">요가매트</div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="122" col-id="category4Name"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 120px; left: 1860px;"></div>
+													<div tabindex="-1" unselectable="on" role="gridcell"
+														comp-id="123" col-id="deliveryFeeType"
+														class="ag-cell ag-cell-not-inline-editing ag-cell-with-height text-center ag-cell-value"
+														style="width: 100px; left: 1980px;">유료</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ag-pinned-right-cols-container ag-hidden"
+										ref="eRightContainer" role="presentation" unselectable="on"
+										style="height: 120px;">
+										<div role="row" row-index="0" aria-rowindex="2" row-id="0"
+											comp-id="64"
+											class="ag-row ag-row-even ag-row-level-0 ag-row-position-absolute ag-row-first ag-row-focus ag-row-selected"
+											style="height: 40px; transform: translateY(0px);"></div>
+										<div role="row" row-index="1" aria-rowindex="3" row-id="1"
+											comp-id="84"
+											class="ag-row ag-row-no-focus ag-row-odd ag-row-level-0 ag-row-position-absolute"
+											style="height: 40px; transform: translateY(40px);"></div>
+										<div role="row" row-index="2" aria-rowindex="4" row-id="2"
+											comp-id="104"
+											class="ag-row ag-row-no-focus ag-row-even ag-row-level-0 ag-row-position-absolute ag-row-last"
+											style="height: 40px; transform: translateY(80px);"></div>
+									</div>
+									<div class="ag-full-width-container" ref="eFullWidthContainer"
+										role="presentation" unselectable="on" style="height: 120px;"></div>
+								</div>
+								<div class="ag-floating-bottom" ref="eBottom"
+									role="presentation" unselectable="on"
+									style="min-height: 0px; height: 0px; display: none; overflow-y: hidden;">
+									<div class="ag-pinned-left-floating-bottom ag-hidden"
+										ref="eLeftBottom" role="presentation" unselectable="on"></div>
+									<div class="ag-floating-bottom-viewport" ref="eBottomViewport"
+										role="presentation" unselectable="on">
+										<div class="ag-floating-bottom-container"
+											ref="eBottomContainer" role="presentation" unselectable="on"
+											style="transform: translateX(0px);"></div>
+									</div>
+									<div class="ag-pinned-right-floating-bottom ag-hidden"
+										ref="eRightBottom" role="presentation" unselectable="on"></div>
+									<div class="ag-floating-bottom-full-width-container ag-hidden"
+										ref="eBottomFullWidthContainer" role="presentation"
+										unselectable="on"></div>
+								</div>
+								<div class="ag-body-horizontal-scroll"
+									ref="eHorizontalScrollBody" aria-hidden="true"
+									style="height: 17px; max-height: 17px; min-height: 17px;">
+									<div class="ag-horizontal-left-spacer ag-scroller-corner"
+										ref="eHorizontalLeftSpacer"
+										style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+									<div class="ag-body-horizontal-scroll-viewport"
+										ref="eBodyHorizontalScrollViewport"
+										style="height: 17px; max-height: 17px; min-height: 17px;">
+										<div class="ag-body-horizontal-scroll-container"
+											ref="eBodyHorizontalScrollContainer"
+											style="width: 2280px; height: 17px; max-height: 17px; min-height: 17px;"></div>
+									</div>
+									<div class="ag-horizontal-right-spacer ag-scroller-corner"
+										ref="eHorizontalRightSpacer"
+										style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+								</div>
+								<!--AG-OVERLAY-WRAPPER-->
+								<div class="ag-overlay ag-hidden" aria-hidden="true"
+									ref="overlayWrapper">
+									<div class="ag-overlay-panel">
+										<div class="ag-overlay-wrapper ag-layout-normal"
+											ref="eOverlayWrapper"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--AG-PAGINATION-->
+						<nav class="seller-pagination">
+							<span
+								class="ag-paging-row-summary-panel _sell_pageRowSummaryPanel"
+								style="display: none;"> <span ref="lbFirstRowOnPage"
+								class="_sell_firstRowOnPage">1</span>[[TO]] <span
+								ref="lbLastRowOnPage" class="_sell_lastRowOnPage">3</span>[[OF]]
+								<span ref="lbRecordCount" class="_sell_recordCount">3</span> <span
+								ref="lbCurrent" class="_sell_current">1</span> <span
+								ref="lbTotal" class="_sell_total">1</span>
+							</span>
+							<div class="visible-xs">
+								<div class="_mobile_pagination">
+									<button type="button" aria-label="이전 페이지로 이동" ref="btPrevious"
+										data-nclicks-code="" role="button"
+										class="btn btn-default _page" data-page="-1" disabled="">
+										<i class="seller-icon icon-left" aria-hidden="true"></i>
+									</button>
+									<span class="text-primary" aria-label="현재 페이지">1</span>/<span
+										aria-label="전체 페이지">1</span>
+									<button type="button" aria-label="다음 페이지로 이동" ref="btNext"
+										data-nclicks-code="" role="button"
+										class="btn btn-default _page" data-page="1" disabled="">
+										<i class="seller-icon icon-right" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+							<div class="hidden-xs">
+								<ul class="pagination _pc_pagination">
+									<li class="_page active" data-page="0"><a class="btntype1"
+										href="">1 <span ref="lbCurrent" class="sr-only">(현재
+												페이지)</span>
+									</a></li>
+								</ul>
+							</div>
+						</nav>
+						<div class="modal-footer" ng-show="!_.isEmpty(vm.footerHtml)"
+							ng-include="vm.footerHtml" style="">
+							<div class="seller-btn-area btntype">
+								<button class="btn btn-default" type="button"
+									ng-click="vm.closeModal()">취소</button>
+								<!---->
+								<button class="btn btn-primary" type="button"
+									ng-if="!vm.isReadOnly" ng-disabled="vm.isInvalid()"
+									ng-click="vm.save()">상품등록</button>
+								<!---->
+							</div>
+							<div class="modal-footer ng-hide"
+								ng-show="vm.footerHtml == undefined || _.isEmpty(vm.footerHtml)">
+								<div class="seller-btn-area">
+									<span><button class="btn btn-default" type="button"
+											ng-click="vm.closeModal()">닫기</button></span> <span><button
+											class="btn btn-primary" type="submit"
+											ng-disabled="vm.isInvalid()" ng-click="vm.save()">저장</button></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

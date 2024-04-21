@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>톡톡</title>
+<link rel="stylesheet" href="../css/TopSidebar.css" />
+<link rel="stylesheet" href="../css/TalkTalk2_copy2_final_copy.css" />
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+	function parake(_this) { /*$(this)  */
+		let name = _this.attr("src");
+		$(".yg2 > button > img").each(function(index, item) {
+			let name2 = $(item).attr("src").replace("파란", "");
+			$(item).attr("src", name2);
+		});
+		//alert("_this.attr( src ) : " + _this.attr("src"));    // "../Images/말풍선.png"
+		let idx1 = _this.attr("src").lastIndexOf("/") + 1;  
+		let idx2 = _this.attr("src").lastIndexOf(".") - 1;  
+		let filename = _this.attr("src").substring(idx1, idx2 + 1); // '말풍선' : 마지막 슬래쉬(/)부터 쩜(.) 직전까지.
+		//alert("filename : " + filename);
+
+		// 파란말풍선 <--> 말풍선
+		if (name.indexOf("파란") > -1) {
+			_this.attr("src", "../Images/" + filename + ".png");
+			$(".yg4").removeClass("on");
+		} else {
+			_this.attr("src", "../Images/파란" + filename + ".png");
+			$(".yg4").removeClass("on");
+			_this.parent().find(".yg4").addClass("on");
+		}
+	}
+	document.addEventListener("DOMContentLoaded", function() {
+		  let textarea = document.querySelector("#consultation_info3 textarea");
+		  let counter = document.querySelector("#consultation_info3 .q_st2");
+
+		  textarea.addEventListener("input", function() {
+			  let content = textarea.value;
+			  let maxLength = 200;
+			  let currentLength = content.length;
+
+		    counter.textContent = currentLength;
+
+		    if (currentLength > maxLength) {
+		      textarea.value = content.substring(0, maxLength);
+		      counter.textContent = maxLength;
+		    }
+		  });
+		});
+	$(function() {
+		/* $(".ygstyle19 textarea").keyup(function(e) {
+		    let content = $(this).val();
+		    let maxLength = 1000; // 최대 문자 수 설정
+
+		    if (content.length > maxLength) {
+		      alert("최대 " + maxLength + "자까지 입력 가능합니다.");
+		      $(this).val(content.substring(0, maxLength)); // 문자 수 초과 시 입력 제한
+		    }
+
+		    $(".q_st4 .q_st2").text(content.length); // 문자 수 표시
+		    $(".q_st4 .q_st2_2").text("/" + maxLength);
+		  }); */
+		$(".tagstyle").click(function(){
+			alert("준비중입니다!");
+		});
+		$(".yg2 > button > img").click(function() {
+			parake($(this));
+		});
+		$(".yg4").click(function() {
+			parake($(this).parent().find("img"));
+		});
+		$("#bt1").click(function() {
+			if ($(".drop_down_wrap").css('display') === 'none') {
+				$(".drop_down_wrap").css('display', 'block');
+			} else if ($(".drop_down_wrap").css('display') === 'block') {
+				$(".drop_down_wrap").css('display', 'none');
+			}
+		});
+		$("#bt2").click(function() {
+			if ($(".drop_down_wrap1").css('display') === 'none') {
+				$(".drop_down_wrap1").css('display', 'block');
+			} else if ($(".drop_down_wrap1").css('display') === 'block') {
+				$(".drop_down_wrap1").css('display', 'none');
+			}
+		});
+		$("#bt3").click(function() {
+			if ($(".drop_down_wrap2").css('display') === 'none') {
+				$(".drop_down_wrap2").css('display', 'block');
+			} else if ($(".drop_down_wrap2").css('display') === 'block') {
+				$(".drop_down_wrap2").css('display', 'none');
+			}
+		});
+
+		/* 		let num = 0;
+		 $("#but2").click(function () {
+		 if(num == 0) {
+		 $(this).attr("src", "../Images/파란말풍선2.png");
+		 num = 1;
+		 }else {
+		 $(this).attr("src", "../Images/말풍선2.png");
+		 num = 0;
+		 }
+		 }); */
+	});
+	/* 	$(function () {
+	 let num = 0;
+	 $("#but3").click(function () {
+	 if(num == 0) {
+	 $(this).attr("src", "../Images/파란말풍선3.png");
+	 num = 1;
+	 }else {
+	 $(this).attr("src", "../Images/말풍선3.png");
+	 num = 0;
+	 }
+	 });
+	 }); */
+	/* $(function () {
+		let num = 0;
+		$("#but4").click(function () {
+			if(num == 0) {
+				$(this).attr("src", "../Images/파란말풍선4.png");
+				num = 1;
+			}else {
+				$(this).attr("src", "../Images/말풍선4.png");
+				num = 0;
+			}
+		});
+	}); */
+
+	/* 	$(function() {
+	 $(".yg4").click(function() {
+	 $(".yg4").removeClass("on");
+	 $(this).addClass("on");
+	 });
+	 $(".yg13").click(function() {
+	 $(".yg13").removeClass("on");
+	 $(this).addClass("on");
+	 });
+	 });  */
+	/* $(function() {
+		$("#but1").click(function() {
+			$(".yg4").removeClass("on");
+			$(this).addClass("on");
+		});
+	}); */
+
+	/* $(function(){
+		(".bs").click(function(){});
+	}); */
+
+	$(function() {
+		$('#chat1').click(function() {
+			$('#talktalk_dis2').show();
+			$("#talktalk_dis3").show();
+			$("#talktalk_dis1").hide();
+		});
+	});
+
+	$(function() {
+		$(".buttonstyle6").click(function() {
+			$(".buttonstyle6").removeClass("on");
+			$(this).addClass("on");
+		});
+	});
+
+	/* 	function fnspread(id, show) {
+	 var purchaseHistory = document.getElementById('purchase_history');
+	 var consultationInfo = document.getElementById('consultation_info');
+
+	 if (id === 'purchase_history') {
+	 purchaseHistory.style.display = show ? 'block' : 'none';
+	 consultationInfo.style.display = 'none';
+	 } else if (id === 'consultation_info') {
+	 purchaseHistory.style.display = 'none';
+	 consultationInfo.style.display = show ? 'block' : 'none';
+	 }
+	 } */
+
+	function fnspread(id, show) {
+		let purchaseHistory = document.getElementById('purchase_history');
+		let consultationInfo = document.getElementById('consultation_info');
+		let consultationInfo1 = document.getElementById('consultation_info1');
+		let consultationInfo2 = document.getElementById('consultation_info2');
+		let consultationInfo3 = document.getElementById('consultation_info3');
+
+		if (id === 'purchase_history') {
+			purchaseHistory.style.display = show ? 'block' : 'none';
+			//consultationInfo.style.display = 'none';
+			$("#consultation_info").css('display', 'none');
+			$("#consultation_info1").css('display', 'none');
+			$("#consultation_info2").css('display', 'none');
+			$("#consultation_info3").css('display', 'none');
+		} else if (id === 'consultation_info') {
+			purchaseHistory.style.display = show ? 'none' : 'block';
+			consultationInfo.style.display = show ? 'block' : 'none';
+			consultationInfo1.style.display = show ? 'block' : 'none';
+			consultationInfo2.style.display = show ? 'block' : 'none';
+			consultationInfo3.style.display = show ? 'block' : 'none';
+		}
+	}
+	function spread2(id, show) {
+		let chatroom1 = document.getElementById('chatroom1');
+		let chatroom2 = document.getElementById('chatroom2');
+
+		if (id === 'chatroom1') {
+			chatroom1.style.display = show ? 'block' : 'none';
+			$("#chatroom2").css('display', 'none');
+		} else if (id === 'chatroom2') {
+			chatroom2.style.display = show ? 'block' : 'none';
+			chatroom1.style.display = show ? 'none' : 'none';
+		}
+	}
+
+	function spread3(id, show) {
+		var total_counsel = document.getElementById('total_counsel');
+		var wait_counsel = document.getElementById('wait_counsel');
+		var complete_counsel = document.getElementById('complete_counsel');
+		var hold_counsel = document.getElementById('hold_counsel');
+		var cut_counsel = document.getElementById('cut_counsel');
+
+		if (id === 'total_counsel') {
+			total_counsel.style.display = show ? 'block' : 'none';
+			wait_counsel.style.display = show ? 'none' : 'block';
+			complete_counsel.style.display = show ? 'none' : 'block';
+			hold_counsel.style.display = show ? 'none' : 'block';
+			cut_counsel.style.display = show ? 'none' : 'block';
+		} else if (id === 'wait_counsel') {
+			wait_counsel.style.display = show ? 'block' : 'none';
+			total_counsel.style.display = show ? 'none' : 'block';
+			complete_counsel.style.display = show ? 'none' : 'block';
+			hold_counsel.style.display = show ? 'none' : 'block';
+			cut_counsel.style.display = show ? 'none' : 'block';
+		} else if (id === 'complete_counsel') {
+			complete_counsel.style.display = show ? 'block' : 'none';
+			wait_counsel.style.display = show ? 'none' : 'block';
+			total_counsel.style.display = show ? 'none' : 'block';
+			hold_counsel.style.display = show ? 'none' : 'block';
+			cut_counsel.style.display = show ? 'none' : 'block';
+		} else if (id === 'hold_counsel') {
+			hold_counsel.style.display = show ? 'block' : 'none';
+			complete_counsel.style.display = show ? 'none' : 'block';
+			wait_counsel.style.display = show ? 'none' : 'block';
+			total_counsel.style.display = show ? 'none' : 'block';
+			cut_counsel.style.display = show ? 'none' : 'block';
+		} else if (id === 'cut_counsel') {
+			cut_counsel.style.display = show ? 'block' : 'none';
+			hold_counsel.style.display = show ? 'none' : 'block';
+			complete_counsel.style.display = show ? 'none' : 'block';
+			wait_counsel.style.display = show ? 'none' : 'block';
+			total_counsel.style.display = show ? 'none' : 'block';
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="header">
+		<div class="left-header fl">
+			<div class="fl smartlogo"></div>
+			<div class="fl topmenu">
+				<span>쇼핑파트너센터</span> <span>커머스솔루션마켓</span> <span>네이버광고 <img
+					src="../Images/headerlogo.png">
+				</span>
+			</div>
+		</div>
+		<div class="right-header fr">
+			<div class="topright fl">
+				<div class="fl">
+					<span class="topid">mpkung</span>님 <span class="myhome">내정보</span>
+				</div>
+				<div class="fl">
+					<i class="bell"></i> <i class="newicon"></i>
+				</div>
+				<div class="logout fl">로그아웃</div>
+				<div class="imformation fl">도움말</div>
+				<div class="header-talk fl">
+					<img src="../Images/headertalk.png" /> <span>톡톡상담</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+
+	<!-- 왼쪽 사이드바 -->
+	<div id="left_side" class="fl">
+		<div>
+			<img src="https://sell.smartstore.naver.com/images/no-img.jpg">
+			<p>CustomerDaily</p>
+		</div>
+		<!-- 2번쨰________________ -->
+		<div>
+			<div class="top">
+				<label>수취인명 <span class="fr"><img
+						src="../Images/dropicon.png" /></span>
+				</label>
+
+				<!-- <select>
+					<option value="addressee_name">수취인명</option>
+					<option value="buyer_name">구매자명</option>
+					<option value="buyer_phone">구매자연락처</option>
+					<option value="buyer_id">구매자ID</option>
+					<option value="ordernumber">주문번호</option>
+					<option value="order_pnumber">상품주문번호</option>
+					<option value="pnumber">상품번호</option>
+				</select>  -->
+			</div>
+			<div class="input_title">
+				<input type="text" /> <img src="../Images/searchicon.png" />
+			</div>
+		</div>
+		<!-- 3번쨰________________________-->
+		<div>
+			<div class="menu">
+				<div>상품관리</div>
+			</div>
+			<div class="menu">
+				<div>
+					판매관리 <i></i>
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					정산관리 <i></i>
+				</div>
+			</div>
+			<div class="menu">
+				<div>문의/리뷰관리</div>
+			</div>
+			<div class="menu">
+				<div class="talk">
+					톡톡상담관리 <img src="../Images/talkicon.png" />
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					스토어 전시관리 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>노출관리</div>
+			</div>
+			<div class="menu">
+				<div>
+					고객혜택관리 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>마케팅메세지</div>
+			</div>
+			<div class="menu">
+				<div>
+					커머스솔루션 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					통계 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>
+					원쁠딜 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>판매자지원프로그램</div>
+			</div>
+			<div class="menu">
+				<div>판매자정보</div>
+			</div>
+			<div class="menu">
+				<div>지식재산권침해관리</div>
+			</div>
+			<div class="menu">
+				<div>
+					물류 관리 <span class="upicon">N</span>
+				</div>
+			</div>
+			<div class="menu">
+				<div>공지사항</div>
+			</div>
+		</div>
+		<div id="menuline"></div>
+		<!-- 4번쨰 _______________________-->
+		<div>
+			<h2 class="title">교육 프로그램 바로가기</h2>
+			<div class="shortcut">
+				<div>
+					온라인 교육 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					쇼핑 라이브 교육 <img src="../Images/shorcuticon.png" />
+				</div>
+			</div>
+			<h2 class="title mg35">네이버 비즈니스 금융센터</h2>
+			<div class="shortcut">
+				<div>
+					정책지원금 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					빠른정산 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					사업자 대출 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					사업자 보험 <img src="../Images/shorcuticon.png" />
+				</div>
+			</div>
+			<h2 class="title mg35">공식 블로그 바로가기</h2>
+			<div class="shortcut">
+				<div>
+					네이버쇼핑 파트너 <img src="../Images/shorcuticon.png" />
+				</div>
+				<div class="subtitle">
+					쇼핑윈도 <img src="../Images/shorcuticon.png" />
+				</div>
+			</div>
+		</div>
+
+		<!-- 5번째 ______________ -->
+		<div>
+			<div class="clicktalk">
+				<img src="../Images/talkicon2.png" />톡톡상담
+			</div>
+		</div>
+
+		<!-- 6번째 ______________ -->
+
+	</div>
+	<div id="right_side" class="fl">
+		<div class="backgroundtheme">
+			<div class="fl yg1 linestyle">
+
+				<div class="yg3">
+					<input type="text" id="chatsearch" placeholder="대화내용, 닉네임, 태그 검색">
+
+					<button class="buttonstyle">
+						<svg class="deletebutton">
+					<span class="buttonfont">x</span>
+					</svg>
+					</button>
+					<button class="buttonstyle1">
+						<svg class="searchbutton">
+					<img class="glass" src="../Images/돋보기.png">
+					</svg>
+					</button>
+					<div style="clear: both;"></div>
+				</div>
+
+				<div id="chatroom1" class="yg1 yg2">
+					<button type="button" id="chatid1"
+						class="buttonstyle2 buttonstyle8"
+						onclick="spread3('total_counsel',true)">
+						<img src="../Images/말풍선.png" id="but1" class="imgstyle"> <span
+							id="but1" class="yg4"><span class="ygfont">전체</span><span
+							id="but1" class="ygfont1">4</span></span>
+					</button>
+					<button type="button" id="chatid2" class="buttonstyle3"
+						onclick="spread3('wait_counsel',true)">
+						<img src="../Images/말풍선2.png" id="but2"
+							class="imgstyle1 imgstyle21"> <span class="yg4"><span
+							class="ygfont">대기</span><span class="ygfont1">0</span></span>
+					</button>
+					<button type="button" id="chatid3"
+						class="buttonstyle2 buttonstyle8">
+						<img src="../Images/말풍선3.png" id="but3" class="imgstyle2"> <span
+							class="yg4 yg5"><span class="ygfont">진행중</span><span
+							class="ygfont1">4</span></span>
+					</button>
+					<button type="button" id="chatid4"
+						class="buttonstyle2 buttonstyle4 buttonstyle8"
+						onclick="spread3('hold_counsel',true)">
+						<img src="../Images/말풍선4.png" id="but4" class="imgstyle3"> <span
+							class="yg4 yg6"><span class="ygfont">보류</span><span
+							class="ygfont1">0</span></span>
+					</button>
+					<button type="button" class="buttonstyle2 yg16 buttonstyle8"
+						onclick="spread2('chatroom2', true);">
+						<img src="../Images/화살표1.png" class="imgstyle4 yg17">
+					</button>
+					<div style="clear: both;"></div>
+				</div>
+
+
+				<div id="chatroom2" class="yg1 yg2" style="display: none;">
+					<button type="button" class="buttonstyle2 yg16 buttonstyle8"
+						onclick="spread2('chatroom1', true);">
+						<img src="../Images/화살표5.png" class="imgstyle22 yg17">
+					</button>
+					<button type="button" id="chatid5"
+						class="buttonstyle2 buttonstyle8"
+						onclick="spread3('complete_counsel',true)">
+						<img src="../Images/말풍선5.png" id="but1" class="imgstyle"> <span
+							id="but1" class="yg4"><span class="ygfont">완료</span></span>
+					</button>
+					<button type="button" id="chatid6" class="buttonstyle3"
+						onclick="spread3('cut_counsel',true)">
+						<img src="../Images/말풍선6.png" id="but2"
+							class="imgstyle1 imgstyle21"> <span class="yg4"><span
+							class="ygfont">차단</span></span>
+					</button>
+				</div>
+
+
+
+
+				<div class="yg7 yg9 buttonstyle9">
+					<button id="bt1" type="button" class="buttonstyle2 buttonstyle9" style="right: 20px;">
+						<span class="yg6 yg10"><span class="yg8">최근 3개월</span> <img
+							src="../Images/화살표2.png" class="imgstyle5"> </span>
+					</button>
+					<div class="drop_down_wrap">
+						<ul class="list_dropDown static">
+							<li><button type="button" class="N=a:srt.week">최근
+									1주일</button></li>
+							<li><button type="button" class="N=a:srt.month">최근
+									1개월</button></li>
+							<li><button type="button" class="N=a:srt.quarter">최근
+									3개월</button></li>
+							<li><button type="button" class="N=a:srt.year">최근
+									1년</button></li>
+							<li><div class="set_date">
+									<p class="text_title">직접입력</p>
+									<div class="box_setDate">
+										<div class="form_wrap">
+											<div class="column_middle">
+												<label for="date_picker_from" class="form_field"><span
+													class="blind">검색기간</span><input type="text"
+													id="date_picker_from" class="basic_input"
+													placeholder="2023.03.25" readonly>
+													<button type="button" class="btn_calendar calendar_st">
+														<span class="blind">달력 열기</span> <img
+															src="../Images/달력.png">
+													</button></label>
+											</div>
+										</div>
+									</div>
+									<div class="box_setDate">
+										<div class="form_wrap">
+											<div class="column_middle">
+												<label for="date_picker_to" class="form_field"><span
+													class="blind">검색기간</span><input type="text"
+													id="date_picker_to" class="basic_input"
+													placeholder="2023.06.25" readonly>
+													<button type="button" class="btn_calendar calendar_st">
+														<span class="blind">달력 열기</span> <img
+															src="../Images/달력.png">
+													</button></label>
+											</div>
+										</div>
+									</div>
+									<button type="button"
+										class="btn btn_default full N=a:srt.self talkst">
+										<span>적용하기</span>
+									</button>
+								</div></li>
+						</ul>
+					</div>
+					<button id="bt2" type="button" class="buttonstyle2 buttonstyle9">
+						<span class="yg6 yg10"><span class="yg8">읽음여부</span> <img
+							src="../Images/화살표2.png" class="imgstyle5"> </span>
+					</button>
+					<div class="sorting_item read">
+						<div class="drop_down">
+							<button type="button" class="title_drop static N=a:srt.read">
+								<span class="name_item ellipsis">읽음여부</span>
+							</button>
+							<div class="drop_down_wrap1">
+								<ul class="list_dropDown">
+									<li><button type="button" class="N=a:srt.unread">안읽음</button></li>
+									<li><button type="button" class="N=a:srt.all">전체</button></li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+					<button id="bt3" type="button" class="buttonstyle2 buttonstyle9 buttonstyle11 ">
+						<span class="yg6 yg10"><span class="yg11 yg40">최근 대화순</span> <img
+							src="../Images/화살표3.png" class="imgstyle6"> </span>
+					</button>
+					<div class="sorting_item condition">
+						<div class="drop_down">
+							<button type="button" class="title_drop static N=a:srt.listing">
+								<span class="name_item">최근 대화순</span>
+							</button>
+							<div class="drop_down_wrap2">
+								<ul class="list_dropDown">
+									<li><button type="button" class="N=a:srt.lasttalk">최근
+											대화순</button></li>
+									<li><button type="button" class="N=a:srt.ascend">먼저
+											문의순</button></li>
+									<li><button type="button" class="N=a:srt.descend">최근
+											문의순</button></li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+					<div style="clear: both;"></div>
+				</div>
+
+				<div id="cut_counsel"
+					style="background: white; height: 830px; display: none;">
+					<div class="contentno">
+						<div>
+							<img src="../Images/느낌표.png" class="wait"> <strong
+								class="wait1 wait2">차단한 상담이 없습니다.</strong>
+							<button class="searchbutton2">
+								<span>전체목록보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="hold_counsel"
+					style="background: white; height: 830px; display: none;">
+					<div class="contentno">
+						<div class="wait4">
+							<img src="../Images/느낌표.png" class="wait5"> <strong
+								class="wait3">보류한 상담이 없습니다.</strong>
+							<button class="searchbutton3">
+								<span>전체목록보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="complete_counsel"
+					style="background: white; height: 830px; display: none;">
+					<div class="contentno">
+						<div>
+							<img src="../Images/느낌표.png" class="wait"> <strong
+								class="wait1">완료된 상담이 없습니다.</strong>
+							<button id="searchbutton1">
+								<span>전체목록보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="wait_counsel"
+					style="background: white; height: 830px; display: none;">
+					<div class="contentno">
+						<div>
+							<img src="../Images/느낌표.png" class="wait"> <strong
+								class="wait1">대기 중인 상담이 없습니다.</strong>
+							<button id="searchbutton1">
+								<span>전체목록보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="total_counsel" class="yg12">
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div id="chat1">
+							<p class="ygfont2">
+								<span class="ygfont3">jyd</span> <span class="ygfont4">5월
+									23일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">안녕하세용</span>
+							</p>
+							<p class="ygstyle1">가구수평패드</p>
+							<button type="button" class="buttonstyle2 buttonstyle10">
+								<img src="../Images/화살표4.png" class="imgstyle8">
+							</button>
+						</div>
+					</div>
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div>
+							<p class="ygfont2">
+								<span class="ygfont3 ygfont7">긍정부자</span><span class="ygfont6">YG</span>
+								<span class="ygfont4 ygfont8">5월 15일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">ㅇㅇㅇㅇ</span>
+							</p>
+							<button type="button" class="buttonstyle2 buttonstyle10">
+								<img src="../Images/화살표4.png"
+									class="imgstyle8 yg14 buttonstyle10">
+							</button>
+						</div>
+					</div>
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div>
+							<p class="ygfont2">
+								<span class="ygfont3">sarah</span><span class="ygfont6">예쁜이</span>
+								<span class="ygfont4 ygfont9">4월 18일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">너냐</span>
+							</p>
+							<p class="ygstyle1">가구수평패드</p>
+							<button type="button" class="buttonstyle2 buttonstyle10">
+								<img src="../Images/화살표4.png" class="imgstyle8">
+							</button>
+						</div>
+					</div>
+					<div class="yg13 linestyle1">
+						<div>
+							<img class="imgstyle7"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div>
+							<p class="ygfont2">
+								<span class="ygfont3">mgw0****</span> <span
+									class="ygfont4 ygfont10">4월 9일</span>
+							</p>
+							<p class="ygstyle">
+								<b class="ygfont5">정지윤</b> <span class="ygfont5">?</span>
+							</p>
+							<p class="ygstyle1">가구수평패드</p>
+							<button type="button" class="buttonstyle2 buttonstyle10">
+								<img src="../Images/화살표4.png" class="imgstyle8">
+							</button>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+
+			<div class="fl">
+
+				<div id="talktalk_dis2" class="fl ygstyle26" style="display: none;">
+					<div class="ygstyle4">
+						<div class="fl">
+							<img class="imgstyle11 imgstyle10"
+								src="https://talk.sell.smartstore.naver.com/nstatic/images/common/partner_default_profile.png?20230601185700">
+						</div>
+						<div class="fl nicknamest">
+							<strong>jyd</strong>
+							<div>
+								<button class="ygstyle5">
+									<span>닉네임을 입력하세요.</span> <img src="../Images/연필.png"
+										class="imgstyle12">
+								</button>
+							</div>
+						</div>
+						<div class="fl ygstyle6">
+							<button type="button" class="buttonstyle5">상담완료</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/점.png" class="imgstyle13">
+							</button>
+						</div>
+					</div>
+
+					<div class="ygstyle25">
+						<div class="message_balloon card_message rgt">
+							<p class="ygfont13 ygfont14">읽음</p>
+							<span class="ygfont13 ">오후 <span>3:42</span></span>
+							<p class="hi speechbubble">안녕하세용</p>
+						</div>
+
+						<div class="message_balloon card_message rgt">
+							<p class="ygfont13 ygfont14">읽음</p>
+							<span class="ygfont13 ">오후 <span>3:46</span></span>
+							<p class="hi speechbubble">반가워용</p>
+						</div>
+
+						<span class="ygfont15 speechbubble1"><strong>5.17.</strong>(수)</span>
+
+						<div class="message_balloon card_message rgt">
+							<p class="ygfont13 ygfont16">읽음</p>
+							<span class="ygfont13 speechbubble3">오후 <span>5:14</span></span>
+							<p class="hi speechbubble2">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+						</div>
+
+						<span class="ygfont15 speechbubble1"><strong>5.23.</strong>(화)</span>
+
+						<div class="message_balloon card_message rgt">
+							<p class="ygfont13 ygfont17">읽음</p>
+							<span class="ygfont13 ygfont18">오후 <span>2:21</span></span>
+							<p class="hi speechbubble4">
+								상품을 문의 주셨습니다. <br />어떤 점이 궁금하신가요?
+							</p>
+						</div>
+						<div class="yg19">
+							<div>
+								<img class="imgstyle14"
+									src="https://shop-phinf.pstatic.net/20200418_210/15871866582182zgqf_JPEG/24548991791616982_1239311195.jpg?type=f344">
+							</div>
+							<div class="ygstyle7 yg20">상품문의</div>
+							<div class="ygstyle7">
+								<p class="yg21">가구수평패드</p>
+							</div>
+							<p class="yg22">25,000원</p>
+						</div>
+
+						<div class="message_balloon card_message rgt">
+							<img src="../Images/사람.png" class="imgstyle15">
+							<p class="hi speechbubble5">안녕하세용</p>
+							<span class="ygfont19">오후 <span>2:21</span></span>
+						</div>
+
+						<span class="ygfont15 speechbubble1"><strong>6.09.</strong>(금)</span>
+
+						<div class="message_balloon card_message rgt">
+							<span class="ygfont20 ">오후 <span>3:42</span></span>
+							<p class="hi speechbubble6">안녕하세용</p>
+						</div>
+					</div>
+
+
+					<div class="ygstyle23">
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/스마일.png" class="imgstyle16">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/사진.png" class="imgstyle17">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/연필2.png" class="imgstyle18">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/좋아요.png" class="imgstyle19">
+							</button>
+						</div>
+						<div>
+							<button class="ygstyle5">
+								<img src="../Images/파일.png" class="imgstyle20">
+							</button>
+						</div>
+					</div>
+
+
+
+
+					<div class="ygstyle27">
+						<div class="ygstyle8">
+							<input type="text" placeholder="메시지를 입력해 주세요" class="ygstyle9">
+							<button id="searchbutton">
+								<span>전송</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="talktalk_dis3" class="fl"
+					style="width: 380px; height: 768px; display: none;">
+					<div class="yg25 ygstyle24">
+						<div class="yg26">
+							<h3 class="yg27">
+								스마트 요약<span class="betastyle">Beta</span>
+							</h3>
+						</div>
+						<div class="yg29">
+							<img
+								src="https://shop-phinf.pstatic.net/20200418_210/15871866582182zgqf_JPEG/24548991791616982_1239311195.jpg?type=f344"
+								class="yg30">
+							<p class="yg31">
+								<u class="ygfont21">가구수평패드</u>에서 문의했어요.
+							</p>
+							<p class="ygstyle10">https://smartstore.naver.com/inflow/outlink/product?p=4897977260&amp;tr=tsf&amp;frm=chat</p>
+						</div>
+					</div>
+					<div class="ygstyle24 buttonstyle8 yg38 bordercolor">
+						<button class="bs buttonstyle6"
+							onclick="fnspread('purchase_history', true);">
+							<span>구매이력</span>
+						</button>
+						<button class="bs on buttonstyle6 ygstyle28"
+							onclick="fnspread('consultation_info', true);">
+							<span>상담정보</span>
+						</button>
+
+						<div id="purchase_history"
+							style="background: white; height: 830px; display: none;">
+							<div class="contentno">
+								<div>
+									<img src="../Images/느낌표.png" class="question"> <strong
+										class="question1">구매이력이 없습니다.</strong>
+									<p class="question2">상담고객의 구매이력이 없습니다.</p>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div id=consultation_info class="yg32"">
+							<h3 class="ygfont22">상담정보</h3>
+							<div class="ygfont23">
+								<div>상담시작</div>
+								<div class="yg33">오후 15:41 2023/05/15</div>
+							</div>
+							<div class="ygfont23 yg34">
+								<div>첫 응대시작</div>
+								<div class="yg33">오후 15:42 2023/05/15</div>
+							</div>
+						</div>
+					</div>
+					<div id=consultation_info1 class="buttonstyle8 yg38 bordercolor"
+						style="width: 380px; height: 160px;">
+						<div class="yg36 yg37">
+							<h3 class="ygstyle13">태그</h3>
+							<div class="ygstyle14">
+								<button type="button" class="tagstyle">+태그 추가</button>
+							</div>
+						</div>
+					</div>
+					<div id=consultation_info2 class="buttonstyle8 bordercolor yg39"
+						style="width: 380px; height: 160px;">
+						<div class="ygstyle22">
+							<h3 class="ygstyle15">이전 대화 이력</h3>
+							<div class="ygstyle16">이전 대화 이력이 없습니다.</div>
+						</div>
+					</div>
+					<div id=consultation_info3 class="ygstyle18 bordercolor yg39"
+						style="width: 380px; height: 160px;">
+						<div class="ygstyle19">
+							<h3 class="ygfont24">고객메모</h3>
+							<div class="ygfont25"><span class="q_st2">0</span>
+						<span class="q_st2_2">/200</span></div>
+						</div>
+						<div class="ygstyle20">
+							<textarea cols="30" rows="3" maxlength="200"
+								placeholder="고객메모를 입력해 주세요." class="ygstyle21"></textarea>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="talktalk_dis1" class="fl yg2 yg15">
+				<div class="ygstyle2">
+					<div>
+						<img src="../Images/아이콘.png" class="imgstyle9"> <strong
+							class="ygfont11">대화내역이 없습니다.</strong>
+						<p class="ygfont12">기간과 기준, 필터를 확인한 후 다시 조회해 주세요.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

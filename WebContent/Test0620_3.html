@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.member {
+	position: relative;
+	left: 41px;
+}
+
+.member1 {
+	position: relative;
+	left: 24px;
+}
+
+.member2 {
+	position: relative;
+	left: 55px;
+}
+
+.fl {
+	float: left;
+}
+
+.member3 {
+	position: relative;
+	left: 44px;
+}
+
+.member4 {
+	position: relative;
+	left: 48px;
+}
+
+.member5 {
+	position: relative;
+    left: 54px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<form action="next_page.html">
+			<div>
+				아이디 <input type="text" class="member" placeholder="아이디" name="id"
+					required>
+			</div>
+			<div>
+				비밀번호 <input type="password" class="member1" placeholder="비밀번호"
+					name="pw">
+			</div>
+			<div>
+				이름 <input type="text" class="member2" placeholder="이름">
+			</div>
+			<div>
+				나이 <input type="text" class="member2" placeholder="나이">
+			</div>
+			<div>
+				이메일<input type="text" placeholder="이메일" class="member3"><span
+					class="member4">@</span><input type="text" placeholder="직접 입력"
+					class="member5">
+			</div>
+			<div>
+				성별 <input type="radio" class="member2" name="gender">여자 <input
+					type="radio" class="member2" name="gender">남자
+			</div>
+			<div>
+				취미 <label><input type="checkbox" name="hobby"
+					class="member2">운동</label> <label><input type="checkbox"
+					name="hobby">영화</label> <label><input type="checkbox"
+					name="hobby">게임</label> <label><input type="checkbox"
+					name="hobby">책</label>
+			</div>
+			<div>
+				서식지 <select>
+					<option>서식지 선택</option>
+					<option>서울</option>
+					<option>대전</option>
+					<option>부산</option>
+					<option>광주</option>
+					<option>인천</option>
+					<option>제주</option>
+					<option>국외</option>
+				</select>
+			</div>
+			</br>
+			<div>
+				개인정보취급방침에 동의함 <input type="radio" name="agree">동의함 <input
+					type="radio" name="agree">동의안함
+			</div>
+			<div>
+				<label><input type="submit" value="제출하기"></label> <label><input
+					type="reset" value="내용 비우기"></label>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

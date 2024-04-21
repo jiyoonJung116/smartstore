@@ -1,0 +1,149 @@
+@charset "UTF-8";
+	body {
+		height: 100%;
+	    font-family: -apple-system,BlinkMacSystemFont,helvetica,"Apple SD Gothic Neo",sans-serif;
+	    font-size: 1rem;
+	    margin: 0;
+    	padding: 0;
+    	background-color: #fff;
+	}
+	.header {
+		position: relative;
+	}
+	.header_logo {
+	    padding: 108px 0 20px;
+	    box-sizing: border-box;
+    	text-align: center;
+	}
+	.logo {
+		background-image: url(https://ssl.pstatic.net/static/nid/identify/m_sp_00_common_347a7059.png);
+	    background-size: 155px 89px;
+	    background-position: 0 0;
+	    background-repeat: no-repeat;
+	    width: 155px;
+	    height: 30px;
+	    display: inline-block;
+   		vertical-align: top;
+   		cursor: pointer;
+	}
+	.find_cell {
+		width: 500px;
+	    margin: 0 auto;
+	    padding: 0 20px;
+	    box-sizing: border-box;
+	}
+	a {
+    text-decoration: none;
+    cursor: pointer;
+	}
+	.logo a {
+		display: inline-block;
+		width: 155px;
+		height: 30px;
+	}
+	.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+	.center_text { 
+		text-align: center;
+	    padding-bottom: 40px;
+	}
+	.center_text span {
+		font-size: 18px;
+	    line-height: 30px;
+	    letter-spacing: -.33px;
+	    font-weight: 600;
+        color: #1e1e23;
+	}
+	.input_id {
+		position: relative;
+	    display: block;
+	    padding: 16px 17px 14px 50px;
+	    border-radius: 6px;
+	    border: solid 1px #bbbbbd;
+	    background-color: #fff;
+	    box-sizing: border-box;
+	    text-align: left;
+	}
+	.id_icon {
+	    position: absolute;
+		background-position: -32px -32px;
+	    background-repeat: no-repeat;
+	    width: 30px;
+	    height: 30px;
+        background-image: url(https://ssl.pstatic.net/static/nid/identify/m_sp_01_idpw_fdd53d03.png);
+    	background-size: 82px 62px;
+    	top: 11px;
+    	left: 12px;
+	}
+	.input_userid {
+		position: relative;
+	    display: block;
+	    width: 100%;
+	    border-radius: 6px;
+	    font-size: 16px;
+	    line-height: 22px;
+	    letter-spacing: -.8px;
+	    color: #303038;
+	    box-sizing: border-box;
+	    z-index: 5;
+	    cursor: pointer;
+	    outline: none;
+	    border: 0 solid black;
+	}
+	.delete_icon {
+		position: absolute;
+	    top: 17px;
+	    right: 17px;
+	    background-position: -64px 0 !important;
+	    background-repeat: no-repeat;
+	    width: 18px;
+	    height: 18px;
+	    z-index: 6;
+	    background-image: url(https://ssl.pstatic.net/static/nid/identify/m_sp_01_idpw_fdd53d03.png) !important;
+    	background-size: 82px 62px !important;
+    	border-radius: 0;
+	    border: none;
+	    background: 0 0;
+	    cursor: pointer;
+	}
+	.next_btn {
+		width: 100%;
+	    margin-top: 14px;
+	    padding: 15px 0 16px;
+	    border-radius: 6px;
+	    border: solid 1px rgba(0,0,0,.05);
+	    background-color: #09aa5c;
+	    cursor: pointer;
+	}
+	.btn_text {
+	    font-size: 18px;
+	    font-weight: 700;
+	    color: #fff;
+	    cursor: pointer;
+	}
+	.link_findid {
+		margin-top: 40px;
+    	text-align: center;
+	}
+	.link_text {
+		font-size: 14px;
+	    line-height: 20px;
+	    letter-spacing: -.5px;
+	    color: #929294;
+	}
+	.click_findid {
+	    display: inline-block;
+	    padding-left: 5px;
+	    cursor: pointer;
+	    font-size: 14px;
+	    line-height: 20px;
+	    font-weight: 500;
+	    letter-spacing: -.5px;
+	    color: #09aa5c;
+	}

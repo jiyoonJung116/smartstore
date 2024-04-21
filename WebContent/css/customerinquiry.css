@@ -1,0 +1,403 @@
+@charset "UTF-8";
+.wrap {
+	background-color :#fff;
+	position: relative;
+    width: 100%;
+    min-width: 1080px;
+    padding-bottom: 150px;
+}
+.right_content {
+    min-height: 640px;
+    zoom: 1;
+}
+.right_content {
+	padding: 30px 20px 85px 26px;
+    zoom: 1;
+}
+.right_hd {
+	position: relative;
+    z-index: 10;
+    width: 100%;
+    border-bottom: 3px solid #454545;
+}
+.right_hd h2 {
+	width: 94px;
+    background-position: 0 0 !important;
+    display: block;
+    height: 19px;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_sp_tit.png) no-repeat;
+}
+.blind {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.serach_box {
+	width: 100%;
+    border: 1px solid #ebebeb;
+    border-width: 0 0 1px 1px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    
+}
+table {
+	padding:0; border-spacing:0px; border:0; border-collapse:collapse;
+}
+.serach_table th {
+	background-color: #fcfcfc;
+    line-height: 15px;
+}
+.serach_table th,td {
+	padding: 11px 16px 9px;
+    border: 1px solid #ebebeb;
+    border-width: 1px 1px 0 0;
+    text-align: left;
+}
+.serach_table td {
+	background-color: #fff;
+    line-height: 15px;
+}
+.th_txt {
+	vertical-align: middle !important;
+}
+ul, ol {
+    list-style: none;
+}
+.quick_btn li{
+	float: left;
+    height: 21px;
+    margin-right: 3px;
+}
+ul,li {
+	margin: 0;
+	padding: 0;
+}
+.quick_btn {
+	display: inline-block;
+}
+.per {
+    width: 33px;
+    background-position: 0 0 !important;
+}
+.serach_table td a {
+	text-decoration: underline;
+}
+a {
+    color: #555;
+    text-decoration: none;
+}
+.td_div {
+	display: inline-block;
+}
+.quick_btn li a {
+	display: inline-block;
+    height: 21px;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_sp_jindo_btn.png) no-repeat;
+}
+.per2 {
+    width: 28px;
+    background-position: 0 -180px !important;
+}
+.per3 {
+    width: 36px;
+    background-position: 0 -30px !important;
+}
+.per4 {
+    width: 36px;
+    background-position: 0 -60px !important;
+}
+.per5 {
+    width: 37px;
+    background-position: 0 -90px !important;
+}
+.h_bar {
+	margin: 0 10px 0 9px;
+    color: #e1e1e1;
+    top: -6px;
+    position: relative;
+}
+select {
+	vertical-align: middle;
+}
+.quick_ipt {
+    width: 167px;
+    height: 18px;
+    padding-left: 5px;
+    border: 1px solid;
+    border-color: #c9c9c9 #ebebeb #ebebeb #c9c9c9;
+    line-height: 18px;
+    vertical-align: top;
+}
+.btn_quickserach {
+	margin-top: 20px;
+    text-align: center;
+}
+.serach_a {
+    min-width: 26px;
+    height: 28px;
+    background-position: 0 0 !important;
+    font-weight: bold;
+    line-height: 28px;
+    color: #00d2b9 !important;
+    vertical-align: middle;
+    display: inline-block;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_bg_btn.png) no-repeat;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.serach_a span {
+	margin-left: 11px;
+    padding-right: 12px;
+    background-position: 100% 0 !important;
+    min-width: 26px;
+    height: 28px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #00d2b9 !important;
+    display: inline-block;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_bg_btn.png) no-repeat;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.information {
+   	margin-top: 10px !important;
+    margin: 0 0 7px;
+    padding-left: 6px;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_bu_help.png) no-repeat 0 5px;
+}
+.box_column {
+	width: 100%;
+	overflow: hidden;
+}
+.columnbox {
+    width: 49%;
+}
+.hdcbox {
+	width: 100%;
+    padding: 30px 0 9px;
+    zoom: 1;
+}
+.left_hdcbox h3 {
+	background-position: 0 4px !important;
+	margin: 0;
+    padding-right: 10px;
+    padding-left: 8px;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_sp_bu.png) no-repeat 0 0;
+    color: #222;
+    font-size: 12px;
+    font-weight: bold;
+}
+.inquiry_contable {
+	width: 100%;
+    border: 1px solid #ebebeb;
+    border-width: 0 0 1px 1px;
+    table-layout: fixed;
+    word-break: break-all;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table_type th {
+	background-color: #fcfcfc;
+    line-height: 15px;
+    vertical-align: top;
+}
+.table_type th, .table td {
+	padding: 11px 16px 9px;
+    border: 1px solid #ebebeb;
+    border-width: 1px 1px 0 0;
+    text-align: left;
+}
+.line_h18 {
+	line-height: 18px !important;
+}
+.tamplete_btn {
+	margin: -5px 0 -5px;
+}
+.tam_btn, .tam_btn span {
+	height: 20px;
+    background-position: 0 -30px !important;
+    font-size: 11px;
+    line-height: 21px;
+    color: #555 !important;
+    vertical-align: middle;
+    display: inline-block;
+    background: url(https://sell.smartstore.naver.com/u/static/img/npay/npay_bg_btn.png) no-repeat;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.tam_btn span {
+    margin-left: 8px;
+    padding-right: 8px;
+    background-position: 100% -31px !important;
+}
+.inquiry_contable label {
+	vertical-align: middle;
+}
+.ta {
+	overflow: auto;
+    padding: 2px 0 2px 5px;
+    border: 1px solid;
+    border-color: #c9c9c9 #ebebeb #ebebeb #c9c9c9;
+    line-height: 18px;
+    vertical-align: middle;
+}
+.space_h {
+	position: relative;
+    margin-top: 8px;
+}
+.maxchar {
+	margin: 3px -6px 0 0;
+	display: inline-block;
+    padding-left: 3px;
+    font-family: tahoma;
+    font-size: 11px;
+    color: #b4b4b4;
+    text-align: left;
+}
+.maxchar em {
+	margin-right: 1px;
+    font-weight: bold;
+    color: #00b5a6;
+    font-style: normal;
+}
+.maxchar strong {
+    margin-left: 1px;
+    color: #959595;
+}
+.footer_area {
+	padding-bottom: 72px;
+	width: 100%;
+    border-top: 1px solid #ebebeb;
+}
+.footer_box {
+	width: 1365px;
+	margin: 0 auto;
+    padding: 27px 0;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+}
+.top_footer {
+    margin-bottom: 11px;
+}
+.top_footer a {
+	color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+.top_footer a+a::before {
+	display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 5px 5px 0 4px;
+    background-color: #d7d7d7;
+    vertical-align: top;
+    content: '';
+}
+.marketing_footer {
+	margin-bottom: 11px;
+    color: #888888;
+    letter-spacing: -1px;
+}
+.address {
+	margin-bottom: 9px;
+	font-style: normal;
+}
+.address span,a {
+	display: inline-block;
+    vertical-align: top;
+}
+.address a {
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+.address span+span::before {
+	display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 5px 6px 0 9px;
+    background-color: #d7d7d7;
+    vertical-align: top;
+    content: '';
+}
+.footer_copyright {
+	font-size: 10px;
+    font-family: verdana;
+    color: #494948;
+}
+.footer_navericon {
+	color: #494948;
+    background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20210605_1730/img/sprite/png/spSv_global_210723.png);
+    background-size: 427px 419px;
+    background-position: -189px -209px !important;
+    width: 63px;
+    height: 11px;
+    display: inline-block;
+    position: relative;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+}
+.toast {
+	    margin-top: 125px;
+}
+.footer_copyright a {
+	text-decoration: none;
+}
+.navercorp {
+	color: #494948;
+}
+
+.ui-datepicker-trigger {
+	background-color: white;
+	border: 1px solid #dbdde2;
+	position: relative;
+	top: 10px;
+	height: 34px;
+}
+.calendar_st {
+	margin-top: -14px !important;
+}
+#div_date_date {
+	display:inline-block;
+}
+#input_date, #input_date2 {
+	width: 80px;
+}
+.ui-datepicker-trigger {
+	padding: none;
+	width: 49px;
+	height: 35px;
+}
+.tbl_type td a {
+    text-decoration: underline;
+}
+.btn_d span {
+    margin-left: 9px;
+    padding-right: 9px;
+}
+.btn_d, .btn_d span {
+    height: 23px;
+    font-weight: bold;
+    line-height: 24px;
+    _line-height: 25px;
+    color: #00b5a6 !important;
+    vertical-align : middle;
+}
+.btn_d{
+    border: 1px solid #00b5a6;
+	display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+}

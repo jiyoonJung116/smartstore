@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DatePicker</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="js/jquery-3.7.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+$(function() {
+    $("#input_date").datepicker({
+        dateFormat: "yy-mm-dd",
+        onSelect: function(dateText, inst) {
+            var dateObj = $(this).datepicker('getDate');
+            var formattedDate = $.datepicker.formatDate("yy-F-DDDD", dateObj);
+            $("#formatted_date").text(formattedDate);
+        }
+    });
+});
+</script>
+</head>
+<body>
+	날짜 선택 :
+	<input type="text" id="input_date" />
+</body>
+</html>

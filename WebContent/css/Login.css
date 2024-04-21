@@ -1,0 +1,528 @@
+@charset "UTF-8";
+
+	body { 
+	height: 100%;
+    color: #222;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,helvetica,"Apple SD Gothic Neo",sans-serif;
+    letter-spacing: -.5px;
+    font-size: 14px; 
+	}	
+	.fl { float: left;}
+	.border { border:1px solid red; }
+	.header{
+	   padding-bottom: 33px;
+	}
+	.header-center {
+		position: relative;
+	    width: 743px;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.header-logo {
+		margin-top: 108px;
+	    vertical-align: top;
+	    background-position: 0 -51px !important; 
+	    background-repeat: no-repeat;
+	    width: 155px;
+	    height: 30px;
+	    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+  		background-size: 244px 107px;
+  		display: inline-block;
+  		cursor: pointer;
+	}
+	.header-lang {
+	    position: absolute;
+	    top: 20px;
+	    right: 0;
+	    z-index: 2;
+	}
+	
+	.droplang {
+	    font-size: 12px;
+	    line-height: 18px;
+	    width: 100%;
+	    min-width: 95px;
+	    height: 30px;
+	    padding: 4px 10px 6px 8px;
+	    color: #333;
+	    border: 1px solid #ccc;
+	    border-radius: 0;
+	    cursor: pointer;
+	    -webkit-appearance: none;
+	    z-index: 1;
+	}
+	
+	.header-lang::after {
+	    content: '';
+	    position: absolute;
+	    top: 8px;
+	    right: 8px;
+	    background-position: -147px -203px;
+	    background-repeat: no-repeat;
+	    width: 16px;
+	    height: 14px;
+	    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+	    background-size: 266px 225px;
+	    z-index: 0;
+	}
+	.login {
+	    width: 460px;
+    	margin: 0 auto;	
+	}
+	.logintop {
+		display: table;
+	    table-layout: fixed;
+	    width: 100%;
+	    border-collapse: collapse;
+	}
+	.loginmenu {
+	    position: relative;
+    	display: table-cell;
+    	vertical-align: top;
+	}
+	.menu_st, .menu_nd, .menu_th {
+		display: block;
+	    position: relative;
+	    height: 61px;
+	    padding-top: 17px;
+	    border: 1px solid #e3e3e3;
+	    border-bottom: 0;
+	    border-radius: 6px 6px 0 0;
+	    background-color: #f8f9fa;
+	    text-align: center;
+	    box-sizing: border-box;
+	    z-index: 2;
+	    cursor: pointer;
+	}
+	.menu_text {
+		color: #333;
+		position: relative;
+	    padding-left: 24px;
+	    font-size: 16px;
+	    font-weight: 500;
+	    line-height: 20px;
+	    letter-spacing: -.5px;
+    	vertical-align: middle;
+	}
+	.menu_st {
+		border-color: #c6c6c6;
+	    background-color: #fff;
+	    z-index: 5;
+	    border-right: 0;
+	    border-radius: 6px 0 0 0;
+	}
+	.menu_nd {
+		border-right: 0;
+   		border-radius: 0;
+	}
+	.menu_th {
+		border-radius: 0 6px 0 0;
+	}
+	.menu_st > .menu_text::before {
+		background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+    	background-size: 266px 225px;
+    	background-position: -142px -172px !important;
+	    background-repeat: no-repeat;
+	    width: 16px;
+	    height: 16px;
+	    content: '';
+	    position: absolute;
+	    top: 1px;
+	    left: 0;
+	}
+	.menu_nd > .menu_text::before {
+		background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+    	background-size: 266px 225px;
+    	background-position: -160px -172px !important;
+	    background-repeat: no-repeat;
+	    width: 16px;
+	    height: 16px;
+	    content: '';
+	    position: absolute;
+	    top: 1px;
+	    left: 0;
+	}
+	.menu_th > .menu_text::before {
+		background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+    	background-size: 266px 225px;
+    	background-position: -124px -172px !important;
+	    background-repeat: no-repeat;
+	    width: 16px;
+	    height: 16px;
+	    content: '';
+	    position: absolute;
+	    top: 1px;
+	    left: 0;
+	}
+	.menu_st > span {
+	    color: #333;
+	} 
+	.textco {
+	    color: #777;
+	}
+	.login_center {
+		border: 1px solid #c6c6c6;
+	    border-radius: 6px;
+	    background-color: #fff;
+	    box-shadow: 0 5px 8px 0 rgba(68,68,68,.04);
+	    box-sizing: border-box;
+	}
+	.center_inner {
+		padding: 20px 28px;
+	}
+	.top_msg {
+		margin-top: 10px;
+		padding-bottom: 23px;
+	    text-align: center;
+	    box-sizing: border-box;
+	}
+	.msg_text { 
+		font-size: 17px;
+	    color: #666;
+	    font-weight: 500;
+    	line-height: 24px;
+    	vertical-align: middle;
+	}
+	.accent {
+		color: #03c75a;
+	    font-weight: 700;
+	    font-style: normal;
+	}
+	.id_input {
+		border-radius: 6px 6px 0 0;
+		display: table;
+	    table-layout: fixed;
+	    width: 100%;
+	    padding: 14px 17px 13px;
+	    height: 100%;
+    	border: 1px solid #dadada;
+    	position: relative;
+    	box-sizing: border-box;
+	}
+	.icon_cell {
+		display: table-cell;
+	    width: 24px;
+	    vertical-align: middle;
+	}
+	.id_icon {
+		background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+	    background-size: 266px 225px;
+        position: absolute;
+	    top: 50%;
+	    left: 17px;
+	    margin-top: -8px;
+	    background-position: -93px -203px !important;
+	    background-repeat: no-repeat;
+	    width: 16px;
+	    height: 16px;
+	    text-align: left;
+	    box-sizing: border-box;
+	}
+	.input_text {
+		display: table-cell;
+    	padding-right: 30px;
+   	  	position: relative;
+	    width: 100%;
+	    font-size: 16px;
+	    font-weight: 400;
+	    line-height: 19px;
+	    letter-spacing: -.5px;
+	    color: #222;
+	    z-index: 4;
+      	box-sizing: border-box;
+   	    border: 0 solid black;
+   	    outline: none;
+	}
+	.login_text > input {
+		border-radius: 0;
+	    border: none;
+	    background: 0 0;
+	    appearance: none;
+	    outline: 0;
+	    text-decoration: none;
+	    cursor: pointer;
+	    -webkit-text-size-adjust: none;
+	}
+	.btn_delete {
+		position: absolute;
+	    top: 6px;
+	    right: 8px;
+	    width: 35px;
+	    height: 35px;
+	    z-index: 5;
+	    background-color: #fff;
+	    text-align: left;
+	}
+	.btnicon {
+		display: inline-block;
+	    margin: 8px 0 0 8px;
+	    background-position: -244px -187px !important;
+	    background-repeat: no-repeat;
+	    width: 18px;
+	    height: 18px;
+	    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+	    background-size: 266px 225px;
+	}
+	.pw_icon {
+		background-position: -129px -203px !important;
+	    background-repeat: no-repeat;
+	    width: 16px;
+	    height: 16px;
+	    position: absolute;
+	    top: 50%;
+	    left: 17px;
+	    margin-top: -8px;
+	    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+	    background-size: 266px 225px;
+    
+	}
+	.pw_input {
+	    border-radius: 0 0 6px 6px;
+	    margin-top: -1px;
+	    display: table;
+	    table-layout: fixed;
+	    width: 100%;
+	    padding: 14px 17px 13px;
+	    height: 100%;
+    	border: 1px solid #dadada;
+    	position: relative;
+    	box-sizing: border-box;
+	}
+	.keep_login {
+		position: relative;
+	    margin-top: 13px;
+	    padding-right: 90px;
+	}
+	.keep_click {
+		position: relative;
+    	padding-left: 23px;
+	}
+	.keep_box {
+		position: absolute;
+	    top: 2px;
+	    left: 3px;
+	    width: 15px;
+	    height: 15px;
+	    display: none;
+	}
+	.keep_click input:checked+.keep_text::before {
+		background-position: -244px -167px;
+	    background-repeat: no-repeat;
+	    width: 18px;
+	    height: 18px;
+        background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+  		background-size: 266px 225px;
+	}
+	.keep_text {
+		display: inline-block;
+		font-size: 14px;
+	    font-weight: 500;
+	    line-height: 17px;
+	    color: #777;
+	    cursor: pointer;
+	}
+	.keep_text::before {
+		content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    background-position: -244px -87px;
+	    background-repeat: no-repeat;
+	    width: 18px;
+	    height: 18px;
+	    background-color: #fff;
+	    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+	    background-size: 266px 225px;
+	}
+	.idsecurity {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    padding-right: 38px;
+	}
+	.security_text {
+		font-size: 14px;
+	    font-weight: 500;
+	    line-height: 17px;
+	    letter-spacing: -.41px;
+	    color: #777;
+	    cursor: pointer;
+	}
+	.security_box {
+		position: absolute;
+	    top: 50%;
+	    right: 0;
+	    margin-top: -9px;
+	    text-align: center;
+	    box-sizing: border-box;
+	}
+	.security_switch {
+		position: absolute;
+	    top: 5px;
+	    right: 5px;
+	    display: none;
+	}
+	.switch_btn {
+		display: block;
+	    position: relative;
+	    width: 33px;
+	    height: 18px;
+	    margin: 0 auto;
+	    border-radius: 12px;
+	    background-color: #c3c8c9;
+	    box-sizing: border-box;
+	}
+	.switch_btn::before {
+		content: '';
+	    display: block;
+	    position: absolute;
+	    top: 50%;
+	    left: 2px;
+	    width: 14px;
+	    height: 14px;
+	    margin-top: -7px;
+	    border-radius: 50%;
+	    background-color: #fff;
+	    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+	    box-sizing: border-box;
+        cursor: pointer;
+	}
+	.login_btn {
+		margin-top: 38px;
+	}
+	.click_login {
+	    width: 100%;
+	    padding: 13px 0 13px;
+	    border-radius: 6px;
+	    border: solid 1px rgba(0,0,0,.15);
+	    background-color: #03c75a;
+	    box-sizing: border-box;
+	    cursor: pointer;
+	    font-size: 20px;
+	    font-weight: 700;
+	    line-height: 24px;
+	    color: #fff;
+	}
+	
+	.find_menu {
+		padding: 20px 0 35px;
+    	text-align: center;
+    	position: relative;
+	}
+	.find_cell{
+		position: relative;
+   		display: inline-block;
+	}
+	.find_text {
+	    display: inline-block;
+	    font-size: 14px;
+	    line-height: 17px;
+	}
+	.find_font {
+		text-decoration: none!important;
+	    color: #888 !important;
+	}
+	.find_cell div+div {
+	    padding-left: 28px;
+	}
+	
+	.find_cell div+div::before {
+		content: '';
+	    position: absolute;
+	    top: 3px;
+	    left: 12px;
+	    width: 1px;
+	    height: 12px;
+	    border-radius: 0.5px;
+	    background-color: #dadada;
+	}
+	a {
+    text-decoration: none;
+    cursor: pointer;
+}
+	.banner {
+	    width: 460px;
+	    height: 147px;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.bannerpt {
+		width: 100%;
+	    height: auto;
+	    margin: 0px auto;
+	    line-height: 0;
+	}
+	.bannerpt img {
+		    width: 100%;
+	    height: 147px;
+	    visibility: inherit;
+	    border: 0px;
+	    vertical-align: bottom;
+	}
+	.footer {
+		padding: 63px 0 32px;
+    	box-sizing: border-box;
+	}
+	.footer_inner {
+		position: relative;
+	    text-align: center;
+    }
+    ul {
+    	list-style: none;
+    }
+    a {
+	    text-decoration: none;
+	    cursor: pointer;
+    }
+    .footer_text {
+	    font-size: 12px;
+	    line-height: 15px;
+	    letter-spacing: -.5px;
+	    color: #888;
+    }
+    .footer_link li+li::before {
+    	content: '';
+	    position: absolute;
+	    top: 4px;
+	    left: 4px;
+	    width: 1px;
+	    height: 11px;
+	    background-color: #dadada;
+    }
+    .footer .footer_link li {
+    	display: inline-block;
+	}
+	.footer .footer_link li+li {
+	    position: relative;
+	    padding-left: 13px;
+	}
+	.footer .footer_link+.footer_copy {
+    margin-top: 9px;
+	}
+	.footer_copyright {
+	font-size: 10px;
+    font-family: verdana;
+    color: #494948;
+}
+.footer_navericon {
+	color: #494948;
+    background-image: url(https://shopv.pstatic.net/web/modules/gnb/p/static/20210605_1730/img/sprite/png/spSv_global_210723.png);
+    background-size: 427px 419px;
+    background-position: -189px -209px !important;
+    width: 63px;
+    height: 11px;
+    display: inline-block;
+    position: relative;
+    margin: -2px 10px 0 0;
+    vertical-align: middle;
+}
+.footer_copyright a {
+	text-decoration: none;
+}
+.navercorp {
+	color: #494948;
+}
+	

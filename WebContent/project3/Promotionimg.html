@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로모션 이미지</title>
+<link rel="stylesheet" href="../css/PromotioniImg.css" />
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script>
+	$(function() {
+		/*  이미지 삽입 구간*/
+		$(".piimgst7").click(function() {
+			$(".background").css('display', 'block');
+		});
+		$(".popupbt").click(function() {
+			$(".background").css('display', 'none');
+		});
+
+		/* $(".pist6").click(function(){
+		/* alert("_this.attr( src ) : " + $(this).parent().find('.piimgst24').css('display','block')); */
+		/*if($(this).parent().find('.piimgst24').css('display')==='none'){
+		$(this).parent().find('.piimgst24').css('display','block');
+		} else if($(this).parent().find('.piimgst24').css('display')==='block'){
+			$(this).parent().find('.piimgst24').css('display','none');	
+		}
+		}); */
+
+		/*  $(document).on("click", ".pist6", function() {
+			 if($(this).parent().find('.piimgst24').css('display')==='none'){
+					$(this).parent().find('.piimgst24').css('display','block');
+					} else if($(this).parent().find('.piimgst24').css('display')==='block'){
+						$(this).parent().find('.piimgst24').css('display','none');	
+					}
+			});  */
+
+		$(document).on("click", ".pist6", function() {
+			let piimgst24 = $(this).next('.piimgst24');
+			if (piimgst24.css('display') === 'none') {
+				piimgst24.css('display', 'block');
+			} else if (piimgst24.css('display') === 'block') {
+				piimgst24.css('display', 'none');
+			}
+		});
+
+		$(document).on("click", ".pist11", function() {
+			$(this).parent().parent().remove();
+			/* $(this).parents('.pist3').find('.pist6','piimgst24').remove(); */
+
+		});
+
+		$(document).on("click", ".pist11", function() {
+			$(this).parents('.pist3').find('.pist6, .piimgst24').remove();
+		});
+
+		$(".pist6").click(function() {
+			$(this).toggleClass("rotate");
+		});
+
+		$(".pisbt")
+				.click(
+						function() {
+							let addbt = $(".pist6").length + 2;
+							/*  alert ( $(".pist6").length + 2 ); */
+							let asd = '<div id="pist6_1" class="pist6">'
+									+ '<div class="pist7">'
+									+ '<div class="pist8" style="background-image: url(https://shop-phinf.pstatic.net/20230404_12/16805891579145KtrD_JPEG/https___kr.hypebeast.com_files_2021_12_makoto-shinkai-new-anime-movie-suzume-no-.jpg?type=f80_80);"></div>'
+									+ '</div>'
+									+ '<div class="pist9">'
+									+ '<strong class="pist10">프로모션 준비중입니다</strong>'
+									+ '</div>'
+									+ '<button class="pist11" type="button">'
+									+ '<span class="blind">삭제</span>'
+									+ '</button>'
+									+ '<div class="pist12">'
+									+ '<div class="pist13">'
+									+ '<input id="'+addbt+'" class="blind" type="checkbox" checked><label class="piimg" for="'+addbt+'"></label>'
+									+ '</div>'
+									+ '</div>'
+									+ '<a class="pist14" role="button"><span class="blind">상품'
+									+ '클릭</span></a>'
+									+ '</div>'
+									+ '<div class="piimgst piimgst24"'+
+		'style="height: 444px; display: none;">'
+									+ '<div class="piimgst1">'
+									+ '<div>'
+									+ '<div class="piimgst2">'
+									+ '<strong class="piimgst3">PC 이미지</strong>'
+									+ '<button type="button" class="piimgst4"'+
+						'style="height: 120px;"></button>'
+									+ '<p class="piimgst5">'
+									+ '권장 사이즈 (1920x400)<br>최대 2,000KB, 확장자 jpg, jpeg, png 가능'
+									+ '</p>'
+									+ '<div class="piimgst6">'
+									+ '<button class="piimgst7" type="button">등록</button>'
+									+ '<button class="piimgst7" type="button" disabled>삭제</button>'
+									+ '</div>'
+									+ '</div>'
+									+ '</div>'
+									+ '</div>'
+									+ '<div class="piimgst8"></div>'
+									+ '<div class="piimgst2">'
+									+ '<strong class="piimgst9">제목</strong>'
+									+ '</div>'
+									+ '<ul class="piimgst12">'
+									+ '<li class="_2khXtKwxFo"><div class="piimgst13 piimgst15">'
+									+ '<input id="promotion-banner-title-color-WHITE"'+
+						'class="piimgst18 blind" type="radio" name="textColor"'+
+						'value="WHITE" checked=""><label class="piimgst14"'+
+						'for="promotion-banner-title-color-WHITE"><span'+
+						'class="piimgst16"></span><span class="piimgst17">흰색</span></label>'
+									+ '</div></li>'
+									+ '<li class="_2khXtKwxFo"><div class="piimgst13 piimgst15">'
+									+ '<input id="promotion-banner-title-color-BLACK"'+
+						'class="piimgst18 blind" type="radio" name="textColor"'+
+						'value="BLACK"><label class="piimgst14"'+
+						'for="promotion-banner-title-color-BLACK"><span'+
+						'class="piimgst16"></span><span class="piimgst17">검정색</span></label>'
+									+ '</div></li></ul>'
+									+ '<div class="piimgst19 piimgst20" style="margin-top: 3px;">'
+									+ '<textarea name="title" placeholder="Enter로 줄바꿈 처리, 최대 3줄 가능"'+
+				'class="piimgst21" maxlength="30" style="height: 23px;">제목을 입력하세요.</textarea>'
+									+ '<div class="piimgst22">'
+									+ '<em class="piimgst23">10</em>/30'
+									+ '</div></div></div>';
+							$(".pist5").append(asd);
+						});
+	});
+</script>
+</head>
+<body>
+	<div class="background" style="display: none;">
+		<div class="window">
+			<div class="popup popup1">
+				<div class="popup2">
+					<strong class="popupfont1">이미지 편집 및 적용 스토어 로고 PC</strong>
+					<button type="button" class="popupbt">
+						<span class="blind">닫기</span>
+					</button>
+				</div>
+				<div class="popup3">
+					<div class="popup4">
+						<div class="popup5">
+							<div class="popup6">
+								<p class="popup7">이미지를 등록하세요.</p>
+							</div>
+						</div>
+						<div class="popup8">
+							<div>
+								<div class="popup9">
+									<form>
+										<label for="fileUpload" class="popup10">이미지찾기</label> <input
+											id="fileUpload" class="blind" type="file" accept="image/*">
+									</form>
+								</div>
+							</div>
+							<ul class="mg1">
+								<li class="footerli">권장 사이즈 <span class="footerli1">(30
+										~ 660) x (30 ~ 30)</span></li>
+								<li class="footerli">파일용량 <span class="footerli1">2,000KB</span>초과불가
+								</li>
+								<li class="footerli">확장자 jpg, jpeg, png가능</li>
+								</br>
+								<li class="footerli">좌/우 여백없는 크롭된 이미지 권장</li>
+							</ul>
+							<div class="footerdi">
+								<button class="footbut footbut1" type="button">적용하기</button>
+								<button class="footbut1" type="button">취소</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="border fl"
+		style="position: relative; overflow: hidden; width: 865px; height: 896px;">
+		<div
+			style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
+			<div class="pist">
+				<strong class="pist1">프로모션 이미지 관리</strong>
+				<button class="pist2" type="button">
+					<span class="blind">닫기</span>
+				</button>
+			</div>
+			<div class="pist3">
+				<div>
+					<div class="pist4">
+						<strong>이미지 관리</strong>
+					</div>
+					<p class="pistfont" style="margin-top: 16px;">
+						프로모션 이미지는 최대 10장까지 등록할 수 있습니다.</br>Drag&amp;Drop 으로 노출순서를 설정할 수 있습니다.
+					</p>
+					<div class="mg1"></div>
+					<div style="margin-top: 24px;">
+						<div>
+							<div class="pist5">
+
+								<div class="pist6">
+									<div class="pist7">
+										<div class="pist8"
+											style="background-image: url(https://shop-phinf.pstatic.net/20230404_12/16805891579145KtrD_JPEG/https___kr.hypebeast.com_files_2021_12_makoto-shinkai-new-anime-movie-suzume-no-.jpg?type=f80_80);"></div>
+									</div>
+									<div class="pist9">
+										<strong class="pist10">프로모션 준비중입니다</strong>
+									</div>
+									<button class="pist11" type="button">
+										<span class="blind">삭제</span>
+									</button>
+									<div class="pist12">
+										<div class="pist13">
+											<input id="2" class="blind" type="checkbox" checked><label
+												class="piimg" for="2"></label>
+										</div>
+									</div>
+									<a class="pist14" role="button"><span class="blind">상품
+											클릭</span></a>
+								</div>
+								<div class="piimgst piimgst24 piimgst24_1"
+									style="height: 444px; display: none;">
+									<div class="piimgst1">
+										<div>
+											<div class="piimgst2">
+												<strong class="piimgst3">PC 이미지</strong>
+												<button type="button" class="piimgst4"
+													style="height: 120px;"></button>
+												<p class="piimgst5">
+													권장 사이즈 (1920x400)<br>최대 2,000KB, 확장자 jpg, jpeg, png 가능
+												</p>
+												<div class="piimgst6">
+													<button class="piimgst7" type="button">등록</button>
+													<button class="piimgst7" type="button" disabled>삭제</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="piimgst8"></div>
+									<div class="piimgst2">
+										<strong class="piimgst9">제목</strong>
+									</div>
+									<ul class="piimgst12">
+										<li class="_2khXtKwxFo"><div class="piimgst13 piimgst15">
+												<input id="promotion-banner-title-color-WHITE"
+													class="piimgst18 blind" type="radio" name="textColor"
+													value="WHITE" checked=""><label class="piimgst14"
+													for="promotion-banner-title-color-WHITE"><span
+													class="piimgst16"></span><span class="piimgst17">흰색</span></label>
+											</div></li>
+										<li class="_2khXtKwxFo"><div class="piimgst13 piimgst15">
+												<input id="promotion-banner-title-color-BLACK"
+													class="piimgst18 blind" type="radio" name="textColor"
+													value="BLACK"><label class="piimgst14"
+													for="promotion-banner-title-color-BLACK"><span
+													class="piimgst16"></span><span class="piimgst17">검정색</span></label>
+											</div></li>
+									</ul>
+									<div class="piimgst19 piimgst20" style="margin-top: 3px;">
+										<textarea name="title" placeholder="Enter로 줄바꿈 처리, 최대 3줄 가능"
+											class="piimgst21" maxlength="30" style="height: 23px;">제목을 입력하세요.</textarea>
+										<div class="piimgst22">
+											<em class="piimgst23">10</em>/30
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="pisbt" type="button" style="margin-top: 24px;">이미지
+						추가</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
