@@ -7,10 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.취소관리Dto;
+import dto.CancelManagementDto;
 
-public class 취소관리Dao {
-	public ArrayList<취소관리Dto> get취소관리List(String menu, String date, String date2, String choose, String name, String pcs,
+public class CancelManagementDao {
+	public ArrayList<CancelManagementDto> getCancelManagementList(String menu, String date, String date2, String choose, String name, String pcs,
 			long n) {
 		if(menu==null)
 			menu = "결제일";
@@ -19,7 +19,7 @@ public class 취소관리Dao {
 		if(pcs==null)
 			pcs = "취소요청";	
 		Connection conn = Jdbc.connect();
-		ArrayList<취소관리Dto> listCancelManage = new ArrayList<취소관리Dto>();
+		ArrayList<CancelManagementDto> listCancelManage = new ArrayList<CancelManagementDto>();
 		String sql = "SELECT po.product_order_num, d.delivery_num, po.order_status, po.cancle_status, po.pay_date,"
 				+ " po.cancle_request_date, po.cancle_reason, po.cancle_approval_date,"
 				+ " po.cancle_completed_date, po.pnumber, p.pcode, p.pname,"
@@ -107,7 +107,7 @@ public class 취소관리Dao {
 				String da = rs.getString("delivery_address");
 				int postn = rs.getInt("postnum");
 
-				취소관리Dto dto = new 취소관리Dto(pon, den, os, cs, pd, crd, cr, cad, ccd, pnumber, pc, pn, sales, pa, opp, p,
+				CancelManagementDto dto = new CancelManagementDto(pon, den, os, cs, pd, crd, cr, cad, ccd, pnumber, pc, pn, sales, pa, opp, p,
 						tp, nm, id, rn, dct, dc, phone, da, postn);
 				listCancelManage.add(dto);
 			}
@@ -124,9 +124,9 @@ public class 취소관리Dao {
 		}
 		return listCancelManage;
 	}
-	public ArrayList<취소관리Dto> get취소상태List(String sellerId, String pcs) {
+	public ArrayList<CancelManagementDto> getCancelManagementStatusList(String sellerId, String pcs) {
 		Connection conn = Jdbc.connect();
-		ArrayList<취소관리Dto> listCancelManage = new ArrayList<취소관리Dto>();
+		ArrayList<CancelManagementDto> listCancelManage = new ArrayList<CancelManagementDto>();
 		String sql = "SELECT po.product_order_num, d.delivery_num, po.order_status, po.cancle_status, po.pay_date,"
 				+ " po.cancle_request_date, po.cancle_reason, po.cancle_approval_date,"
 				+ " po.cancle_completed_date, po.pnumber, p.pcode, p.pname,"
@@ -181,7 +181,7 @@ public class 취소관리Dao {
 				String da = rs.getString("delivery_address");
 				int postn = rs.getInt("postnum");
 				
-				취소관리Dto dto = new 취소관리Dto(pon, den, os, cs, pd, crd, cr, cad, ccd, pnumber, pc, pn, sales, pa, opp, p,
+				CancelManagementDto dto = new CancelManagementDto(pon, den, os, cs, pd, crd, cr, cad, ccd, pnumber, pc, pn, sales, pa, opp, p,
 						tp, nm, id, rn, dct, dc, phone, da, postn);
 				listCancelManage.add(dto);
 			}
