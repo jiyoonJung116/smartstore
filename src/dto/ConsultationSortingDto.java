@@ -1,6 +1,6 @@
 package dto;
 
-public class 상담정렬Dto {
+public class ConsultationSortingDto {
 	private String customerId;
 	private String nickName;
 	private String talkContent;
@@ -10,7 +10,7 @@ public class 상담정렬Dto {
 	private String strTime;
 	private double diff;
 	
-	public 상담정렬Dto(String customerId, String nickName, String talkContent, String pname, String talkTime,
+	public ConsultationSortingDto(String customerId, String nickName, String talkContent, String pname, String talkTime,
 			String strDate, String strTime, double diff) {
 		this.customerId = customerId;
 		this.nickName = nickName;
