@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 import dto.ExchangeDto;
 
-public class 교환관리Dao {
-	public ArrayList<ExchangeDto> get교환관리List(String menu, String date, String date2, String choose, String name, String ps, long n) {
+public class ExchangeManagementDao {
+	public ArrayList<ExchangeDto> getExchangeManagementList(String menu, String date, String date2, String choose, String name, String ps, long n) {
 		if(menu==null)
 			menu="교환요청일";
 		if(choose==null)
@@ -18,7 +18,7 @@ public class 교환관리Dao {
 		if(ps==null)
 			ps="교환완료";
 		Connection conn = Jdbc.connect();
-		ArrayList<교환Dto> listExchangeMng = new ArrayList<교환Dto>();
+		ArrayList<ExchangeDto> listExchangeMng = new ArrayList<ExchangeDto>();
 		String sql = "SELECT po.product_order_num, po.delivery_num, po.order_status, e.exchange_processing_status," + 
 				"po.pay_date, e.exchange_request_date, e.exchange_reason, e.exchange_approval_date," + 
 				"e.exchange_completed_date, po.pnumber, p.pcode, p.pname,e.collection_status," + 
@@ -126,7 +126,7 @@ public class 교환관리Dao {
 		}
 		return listExchangeMng;
 	}
-	public ArrayList<ExchangeDto> get교환상태List(String sellerId,String ps) {
+	public ArrayList<ExchangeDto> getExchangeStatusList(String sellerId,String ps) {
 		Connection conn = Jdbc.connect();
 		ArrayList<ExchangeDto> listExchangeMng = new ArrayList<ExchangeDto>();
 		String sql = "SELECT po.product_order_num, po.delivery_num, po.order_status, e.exchange_processing_status," + 
