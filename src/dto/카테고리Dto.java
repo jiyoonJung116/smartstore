@@ -6,7 +6,7 @@ public class 카테고리Dto {
 	private String sub;
 	private String small;
 	
-	public 카테고리Dto(String large) {
+	public CategoryDto(String large) {
 		this.large = large;
 	}
 	public 카테고리Dto(String large, String middle) {
