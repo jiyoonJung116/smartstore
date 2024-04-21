@@ -1,6 +1,6 @@
 package dto;
 
-public class 주문통합검색Dto {
+public class OrderConfirmSearchDto {
 	private long pon;	//상품주문번호
 	private String payd; //결제일자
 	private String os;	//주문상태
@@ -12,7 +12,7 @@ public class 주문통합검색Dto {
 	private String bi;	//구매자ID
 	private String rn;	//수취인명
 	
-	public 주문통합검색Dto(long pon, String payd, String os, String c, long pnumber, String pname, int pa, String na,
+	public OrderConfirmSearchDto(long pon, String payd, String os, String c, long pnumber, String pname, int pa, String na,
 			String bi, String rn) {
 		this.pon = pon;
 		this.payd = payd;
