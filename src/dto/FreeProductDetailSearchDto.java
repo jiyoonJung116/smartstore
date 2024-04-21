@@ -1,6 +1,6 @@
 package dto;
 
-public class 자유상품상세검색Dto {
+public class FreeProductDetailSearchDto {
 	private long pnumber;	//상품번호
 	private String image;	//이미지
 	private String pname;	//상품명
@@ -15,7 +15,7 @@ public class 자유상품상세검색Dto {
 	private int reviewCount;	//리뷰수
 	private double grade;	//평점
 	
-	public 자유상품상세검색Dto(long pnumber, String image, String pname, String salesStatus, String displayStatus, int price,
+	public FreeProductDetailSearchDto(long pnumber, String image, String pname, String salesStatus, String displayStatus, int price,
 			String large, String middle, String sub, String small, String dct, int reviewCount, double grade) {
 		this.pnumber = pnumber;
 		this.image = image;
@@ -138,7 +138,7 @@ public class 자유상품상세검색Dto {
 
 	@Override
 	public String toString() {
-		return "자유상품상세검색Dto [pnumber=" + pnumber + ", image=" + image + ", pname=" + pname + ", salesStatus="
+		return "FreeProductDetailSearchDto [pnumber=" + pnumber + ", image=" + image + ", pname=" + pname + ", salesStatus="
 				+ salesStatus + ", displayStatus=" + displayStatus + ", price=" + price + ", large=" + large
 				+ ", middle=" + middle + ", sub=" + sub + ", small=" + small + ", dct=" + dct + ", reviewCount="
 				+ reviewCount + ", grade=" + grade + "]";
