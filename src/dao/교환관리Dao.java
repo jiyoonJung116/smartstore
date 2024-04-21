@@ -7,10 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.교환Dto;
+import dto.ExchangeDto;
 
 public class 교환관리Dao {
-	public ArrayList<교환Dto> get교환관리List(String menu, String date, String date2, String choose, String name, String ps, long n) {
+	public ArrayList<ExchangeDto> get교환관리List(String menu, String date, String date2, String choose, String name, String ps, long n) {
 		if(menu==null)
 			menu="교환요청일";
 		if(choose==null)
@@ -110,7 +110,7 @@ public class 교환관리Dao {
 				String da = rs.getString("delivery_address");
 				int postn = rs.getInt("postnum");
 				
-				교환Dto dto = new 교환Dto(pon, den, os, eps, pd, erd, er, ead, ecd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
+				ExchangeDto dto = new ExchangeDto(pon, den, os, eps, pd, erd, er, ead, ecd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
 				listExchangeMng.add(dto);
 			}
 		} catch (SQLException e) {
@@ -126,9 +126,9 @@ public class 교환관리Dao {
 		}
 		return listExchangeMng;
 	}
-	public ArrayList<교환Dto> get교환상태List(String sellerId,String ps) {
+	public ArrayList<ExchangeDto> get교환상태List(String sellerId,String ps) {
 		Connection conn = Jdbc.connect();
-		ArrayList<교환Dto> listExchangeMng = new ArrayList<교환Dto>();
+		ArrayList<ExchangeDto> listExchangeMng = new ArrayList<ExchangeDto>();
 		String sql = "SELECT po.product_order_num, po.delivery_num, po.order_status, e.exchange_processing_status," + 
 				"po.pay_date, e.exchange_request_date, e.exchange_reason, e.exchange_approval_date," + 
 				"e.exchange_completed_date, po.pnumber, p.pcode, p.pname,e.collection_status," + 
@@ -188,7 +188,7 @@ public class 교환관리Dao {
 				String da = rs.getString("delivery_address");
 				int postn = rs.getInt("postnum");
 				
-				교환Dto dto = new 교환Dto(pon, den, os, eps, pd, erd, er, ead, ecd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
+				ExchangeDto dto = new ExchangeDto(pon, den, os, eps, pd, erd, er, ead, ecd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
 				listExchangeMng.add(dto);
 			}
 		} catch (SQLException e) {
