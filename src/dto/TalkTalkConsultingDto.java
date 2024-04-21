@@ -1,6 +1,6 @@
 package dto;
 
-public class 톡톡상담Dto {
+public class TalkTalkConsultingDto {
 	private int talk_num;	//대화방 번호
 	private String name;	//실명
 	private String final_date; //톡대화 최근날짜
@@ -12,7 +12,7 @@ public class 톡톡상담Dto {
 	private double diff;
 	
 	
-	public 톡톡상담Dto(int talk_num, String name, String final_date, String sender_id, String talk_content,
+	public TalkTalkConsultingDto(int talk_num, String name, String final_date, String sender_id, String talk_content,
 			String talk_time, String strDate, String strTime, double diff) {
 		this.talk_num = talk_num;
 		this.name = name;
