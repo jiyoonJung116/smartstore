@@ -6,11 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.반품Dto;
+import dto.ReturnGoodsDto;
 
 
-public class 반품Dao {
-	public ArrayList<반품Dto> get반품관리list(String menu, String date, String date2, String choose, String name, String res, long n) {
+public class ReturnGoodsDao {
+	public ArrayList<ReturnGoodsDto> getReturnGoodsList(String menu, String date, String date2, String choose, String name, String res, long n) {
 		if(menu==null)
 			menu="반품요청일";
 		if(choose==null)
@@ -20,7 +20,7 @@ public class 반품Dao {
 		
 		Connection conn = Jdbc.connect();
 		
-		ArrayList<반품Dto> listReturnManage = new ArrayList<반품Dto>();
+		ArrayList<ReturnGoodsDto> listReturnManage = new ArrayList<ReturnGoodsDto>();
 		
 		String sql = "SELECT po.product_order_num, po.delivery_num, po.order_status, pr.return_status,"
 				+ " po.pay_date, pr.return_request_date, pr.return_reason,pr.return_approval_date, pr.return_completed_date,po.pnumber,p.pcode,p.pname,pr.collection_status,"
@@ -110,7 +110,7 @@ public class 반품Dao {
 				int postn = rs.getInt("postnum");
 				
 				
-				반품Dto dto = new 반품Dto(pon, den, os, rss, pd, rrd, rr, rad, rcd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
+				ReturnGoodsDto dto = new ReturnGoodsDto(pon, den, os, rss, pd, rrd, rr, rad, rcd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
 				listReturnManage.add(dto);
 			}
 		} catch (SQLException e) {
@@ -127,10 +127,10 @@ public class 반품Dao {
 		return listReturnManage;
 
 	}
-	public ArrayList<반품Dto> get반품상태list(String sellerId,String res) {
+	public ArrayList<ReturnGoodsDto> getReturnGoodsStatusList(String sellerId,String res) {
 		Connection conn = Jdbc.connect();
 		
-		ArrayList<반품Dto> listReturnManage = new ArrayList<반품Dto>();
+		ArrayList<ReturnGoodsDto> listReturnManage = new ArrayList<ReturnGoodsDto>();
 		
 		String sql = "SELECT po.product_order_num, po.delivery_num, po.order_status, pr.return_status,"
 				+ " po.pay_date, pr.return_request_date, pr.return_reason,pr.return_approval_date, pr.return_completed_date,po.pnumber,p.pcode,p.pname,pr.collection_status,"
@@ -188,7 +188,7 @@ public class 반품Dao {
 				int postn = rs.getInt("postnum");
 				
 				
-				반품Dto dto = new 반품Dto(pon, den, os, rss, pd, rrd, rr, rad, rcd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
+				ReturnGoodsDto dto = new ReturnGoodsDto(pon, den, os, rss, pd, rrd, rr, rad, rcd, pnumber, pc, pn, cs, sales, pa, opp, p, tp, na, id, rn, dct, dc, phone, da, postn);
 				listReturnManage.add(dto);
 			}
 		} catch (SQLException e) {
