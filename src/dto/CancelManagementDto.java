@@ -1,6 +1,6 @@
 package dto;
 
-public class 취소관리Dto {
+public class CancelManagementDto {
 	private long pon; // 상품주문번호
 	private long den; // 주문번호
 	private String os; // 주문상태
@@ -28,7 +28,7 @@ public class 취소관리Dto {
 	private int postn;   //우편번호
 
 
-	public 취소관리Dto(long pon, long den, String os, String cs, String pd, String crd, String cr, String cad, String ccd,
+	public CancelManagementDto(long pon, long den, String os, String cs, String pd, String crd, String cr, String cad, String ccd,
 			long pnumber, String pc, String pn, String sales, int pa, String opp, int p, int tp, String nm, String id,
 			String rn, String dct, int dc, String phone, String da, int postn) {
 		super();
