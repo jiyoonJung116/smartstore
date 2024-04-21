@@ -1,6 +1,6 @@
 package dto;
 
-public class 교환Dto {
+public class ExchangeDto {
 		private long pon; //상품주문번호
 		private long den; //주문번호
 		private String os;	//주문상태
