@@ -9,16 +9,16 @@ public class 카테고리Dto {
 	public CategoryDto(String large) {
 		this.large = large;
 	}
-	public 카테고리Dto(String large, String middle) {
+	public CategoryDto(String large, String middle) {
 		this.large = large;
 		this.middle = middle;
 	}
-	public 카테고리Dto(String large, String middle, String sub) {
+	public CategoryDto(String large, String middle, String sub) {
 		this.large = large;
 		this.middle = middle;
 		this.sub = sub;
 	}
-	public 카테고리Dto(String large, String middle, String sub, String small) {
+	public CategoryDto(String large, String middle, String sub, String small) {
 		this.large = large;
 		this.middle = middle;
 		this.sub = sub;
