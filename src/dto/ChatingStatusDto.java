@@ -1,10 +1,10 @@
 package dto;
 
-public class 톡톡채팅상태Dto {
+public class ChatingStatusDto {
 	private int talk_num;
 	private String customer_id;
 	
-	public 톡톡채팅상태Dto(int talk_num, String customer_id) {
+	public ChatingStatusDto(int talk_num, String customer_id) {
 		super();
 		this.talk_num = talk_num;
 		this.customer_id = customer_id;
